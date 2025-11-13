@@ -43,7 +43,9 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="glow-box border-primary/30 neon-border rounded-sm max-w-md w-full p-8 space-y-6 animate-slide-up">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-primary uppercase tracking-widest">$ login</h2>
+          <h2 className="text-2xl font-bold text-primary uppercase tracking-widest">
+            $ login
+          </h2>
           <button
             onClick={onClose}
             className="p-2 hover:bg-card rounded-sm transition-colors text-primary/70 hover:text-primary"

@@ -2,7 +2,28 @@ import Layout from "@/components/Layout";
 import LoginModal from "@/components/LoginModal";
 import MachineDetailsModal from "@/components/MachineDetailsModal";
 import { Button } from "@/components/ui/button";
-import { Shield, Target, Trophy, Users, Zap, BookOpen, ArrowRight, Lock, Code2, Clock, Terminal, Database, Cpu, Radio, Search, Shuffle, Calendar, Award, Lightbulb, Map } from "lucide-react";
+import {
+  Shield,
+  Target,
+  Trophy,
+  Users,
+  Zap,
+  BookOpen,
+  ArrowRight,
+  Lock,
+  Code2,
+  Clock,
+  Terminal,
+  Database,
+  Cpu,
+  Radio,
+  Search,
+  Shuffle,
+  Calendar,
+  Award,
+  Lightbulb,
+  Map,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 
 function Typewriter({ text, delay = 50 }: { text: string; delay?: number }) {
@@ -24,15 +45,64 @@ function Typewriter({ text, delay = 50 }: { text: string; delay?: number }) {
 
 // Sample machines data
 const MACHINES = [
-  { id: 1, name: "Linux Privesc", technique: "Privilege Escalation", difficulty: "Intermediate", os: "Linux", cert: "CEH" },
-  { id: 2, name: "WAF Bypass", technique: "Web Exploitation", difficulty: "Advanced", os: "Windows", cert: "OSCP" },
-  { id: 3, name: "AD Enumeration", technique: "Active Directory", difficulty: "Beginner", os: "Windows", cert: "CEH" },
-  { id: 4, name: "Buffer Overflow", technique: "Reverse Engineering", difficulty: "Advanced", os: "Linux", cert: "OSCP" },
-  { id: 5, name: "SQL Injection", technique: "Web Exploitation", difficulty: "Beginner", os: "Linux", cert: "CEH" },
-  { id: 6, name: "Kerberoast", technique: "Active Directory", difficulty: "Intermediate", os: "Windows", cert: "OSCP" },
+  {
+    id: 1,
+    name: "Linux Privesc",
+    technique: "Privilege Escalation",
+    difficulty: "Intermediate",
+    os: "Linux",
+    cert: "CEH",
+  },
+  {
+    id: 2,
+    name: "WAF Bypass",
+    technique: "Web Exploitation",
+    difficulty: "Advanced",
+    os: "Windows",
+    cert: "OSCP",
+  },
+  {
+    id: 3,
+    name: "AD Enumeration",
+    technique: "Active Directory",
+    difficulty: "Beginner",
+    os: "Windows",
+    cert: "CEH",
+  },
+  {
+    id: 4,
+    name: "Buffer Overflow",
+    technique: "Reverse Engineering",
+    difficulty: "Advanced",
+    os: "Linux",
+    cert: "OSCP",
+  },
+  {
+    id: 5,
+    name: "SQL Injection",
+    technique: "Web Exploitation",
+    difficulty: "Beginner",
+    os: "Linux",
+    cert: "CEH",
+  },
+  {
+    id: 6,
+    name: "Kerberoast",
+    technique: "Active Directory",
+    difficulty: "Intermediate",
+    os: "Windows",
+    cert: "OSCP",
+  },
 ];
 
-const TECHNIQUES = ["All", "Web Exploitation", "Privilege Escalation", "Reverse Engineering", "Active Directory", "Cryptography"];
+const TECHNIQUES = [
+  "All",
+  "Web Exploitation",
+  "Privilege Escalation",
+  "Reverse Engineering",
+  "Active Directory",
+  "Cryptography",
+];
 const DIFFICULTIES = ["All", "Beginner", "Intermediate", "Advanced", "Insane"];
 const OS_OPTIONS = ["All", "Linux", "Windows", "macOS", "IoT"];
 const CERTIFICATIONS = ["All", "CEH", "OSCP", "Security+", "CompTIA"];
@@ -43,20 +113,34 @@ export default function Index() {
   const [selectedDifficulty, setSelectedDifficulty] = useState("All");
   const [selectedOS, setSelectedOS] = useState("All");
   const [selectedCert, setSelectedCert] = useState("All");
-  const [randomMachine, setRandomMachine] = useState<typeof MACHINES[0] | null>(null);
+  const [randomMachine, setRandomMachine] = useState<
+    (typeof MACHINES)[0] | null
+  >(null);
   const [loginModalOpen, setLoginModalOpen] = useState(false);
-  const [selectedMachine, setSelectedMachine] = useState<typeof MACHINES[0] | null>(null);
+  const [selectedMachine, setSelectedMachine] = useState<
+    (typeof MACHINES)[0] | null
+  >(null);
   const [detailsModalOpen, setDetailsModalOpen] = useState(false);
 
   // Filter machines based on selected filters
-  const filteredMachines = MACHINES.filter(machine => {
-    const matchesSearch = machine.name.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesTechnique = selectedTechnique === "All" || machine.technique === selectedTechnique;
-    const matchesDifficulty = selectedDifficulty === "All" || machine.difficulty === selectedDifficulty;
+  const filteredMachines = MACHINES.filter((machine) => {
+    const matchesSearch = machine.name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+    const matchesTechnique =
+      selectedTechnique === "All" || machine.technique === selectedTechnique;
+    const matchesDifficulty =
+      selectedDifficulty === "All" || machine.difficulty === selectedDifficulty;
     const matchesOS = selectedOS === "All" || machine.os === selectedOS;
     const matchesCert = selectedCert === "All" || machine.cert === selectedCert;
-    
-    return matchesSearch && matchesTechnique && matchesDifficulty && matchesOS && matchesCert;
+
+    return (
+      matchesSearch &&
+      matchesTechnique &&
+      matchesDifficulty &&
+      matchesOS &&
+      matchesCert
+    );
   });
 
   // Get random machine
@@ -65,7 +149,7 @@ export default function Index() {
     setRandomMachine(MACHINES[randomIdx]);
   };
 
-  const handleMachineClick = (machine: typeof MACHINES[0]) => {
+  const handleMachineClick = (machine: (typeof MACHINES)[0]) => {
     setSelectedMachine(machine);
     setDetailsModalOpen(true);
   };
@@ -76,7 +160,10 @@ export default function Index() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-32 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-20 animate-pulse" />
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl opacity-20 animate-pulse" style={{animationDelay: "1s"}} />
+          <div
+            className="absolute bottom-10 left-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl opacity-20 animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -87,7 +174,7 @@ export default function Index() {
                 <Terminal className="w-8 h-8 text-background" />
               </div>
             </div>
-            
+
             <div className="space-y-3">
               <h1 className="text-6xl md:text-7xl font-bold tracking-tighter">
                 <span className="glow-text">[HACKING VAULT]</span>
@@ -131,9 +218,11 @@ export default function Index() {
               <div className="space-y-4">
                 {/* Techniques */}
                 <div>
-                  <label className="text-xs font-bold text-primary/70 uppercase tracking-widest mb-2 block">$ técnica</label>
+                  <label className="text-xs font-bold text-primary/70 uppercase tracking-widest mb-2 block">
+                    $ técnica
+                  </label>
                   <div className="flex flex-wrap gap-2">
-                    {TECHNIQUES.map(tech => (
+                    {TECHNIQUES.map((tech) => (
                       <button
                         key={tech}
                         onClick={() => setSelectedTechnique(tech)}
@@ -151,9 +240,11 @@ export default function Index() {
 
                 {/* Difficulty */}
                 <div>
-                  <label className="text-xs font-bold text-secondary/70 uppercase tracking-widest mb-2 block">$ dificultad</label>
+                  <label className="text-xs font-bold text-secondary/70 uppercase tracking-widest mb-2 block">
+                    $ dificultad
+                  </label>
                   <div className="flex flex-wrap gap-2">
-                    {DIFFICULTIES.map(diff => (
+                    {DIFFICULTIES.map((diff) => (
                       <button
                         key={diff}
                         onClick={() => setSelectedDifficulty(diff)}
@@ -171,9 +262,11 @@ export default function Index() {
 
                 {/* OS */}
                 <div>
-                  <label className="text-xs font-bold text-accent/70 uppercase tracking-widest mb-2 block">$ sistema operativo</label>
+                  <label className="text-xs font-bold text-accent/70 uppercase tracking-widest mb-2 block">
+                    $ sistema operativo
+                  </label>
                   <div className="flex flex-wrap gap-2">
-                    {OS_OPTIONS.map(os => (
+                    {OS_OPTIONS.map((os) => (
                       <button
                         key={os}
                         onClick={() => setSelectedOS(os)}
@@ -191,9 +284,11 @@ export default function Index() {
 
                 {/* Certification */}
                 <div>
-                  <label className="text-xs font-bold text-primary/70 uppercase tracking-widest mb-2 block">$ certificación</label>
+                  <label className="text-xs font-bold text-primary/70 uppercase tracking-widest mb-2 block">
+                    $ certificación
+                  </label>
                   <div className="flex flex-wrap gap-2">
-                    {CERTIFICATIONS.map(cert => (
+                    {CERTIFICATIONS.map((cert) => (
                       <button
                         key={cert}
                         onClick={() => setSelectedCert(cert)}
@@ -216,26 +311,38 @@ export default function Index() {
               <div className="glow-box p-6 border-secondary/40 neon-border-secondary rounded-sm animate-slide-up space-y-3">
                 <div className="flex items-center gap-2 text-secondary font-mono text-sm">
                   <Shuffle className="w-4 h-4" />
-                  <span className="uppercase tracking-widest">Máquina sugerida</span>
+                  <span className="uppercase tracking-widest">
+                    Máquina sugerida
+                  </span>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <h3 className="text-xl font-bold text-primary mb-2">{randomMachine.name}</h3>
-                    <p className="text-foreground/70 text-sm font-mono">{randomMachine.technique}</p>
+                    <h3 className="text-xl font-bold text-primary mb-2">
+                      {randomMachine.name}
+                    </h3>
+                    <p className="text-foreground/70 text-sm font-mono">
+                      {randomMachine.technique}
+                    </p>
                   </div>
                   <div className="flex items-end gap-3">
                     <div className="space-y-1 flex-1">
                       <div className="flex justify-between text-xs text-foreground/60 font-mono mb-1">
                         <span>Dificultad:</span>
-                        <span className="text-secondary font-bold">{randomMachine.difficulty}</span>
+                        <span className="text-secondary font-bold">
+                          {randomMachine.difficulty}
+                        </span>
                       </div>
                       <div className="flex justify-between text-xs text-foreground/60 font-mono mb-1">
                         <span>SO:</span>
-                        <span className="text-accent font-bold">{randomMachine.os}</span>
+                        <span className="text-accent font-bold">
+                          {randomMachine.os}
+                        </span>
                       </div>
                       <div className="flex justify-between text-xs text-foreground/60 font-mono">
                         <span>Cert:</span>
-                        <span className="text-primary font-bold">{randomMachine.cert}</span>
+                        <span className="text-primary font-bold">
+                          {randomMachine.cert}
+                        </span>
                       </div>
                     </div>
                     <Button className="button-glow bg-secondary text-background hover:bg-secondary/90 font-mono uppercase tracking-widest rounded-sm px-6">
@@ -254,7 +361,7 @@ export default function Index() {
                 </span>
               </div>
               <div className="grid md:grid-cols-2 gap-4 max-h-96 overflow-y-auto">
-                {filteredMachines.map(machine => (
+                {filteredMachines.map((machine) => (
                   <button
                     key={machine.id}
                     onClick={() => handleMachineClick(machine)}
@@ -262,13 +369,22 @@ export default function Index() {
                   >
                     <div className="flex items-start justify-between">
                       <div>
-                        <h4 className="font-bold text-sm uppercase tracking-wide text-primary">{machine.name}</h4>
-                        <p className="text-xs text-foreground/60 mt-1 font-mono">{machine.technique}</p>
+                        <h4 className="font-bold text-sm uppercase tracking-wide text-primary">
+                          {machine.name}
+                        </h4>
+                        <p className="text-xs text-foreground/60 mt-1 font-mono">
+                          {machine.technique}
+                        </p>
                       </div>
-                      <span className={`px-2 py-1 rounded-sm bg-background text-xs font-semibold uppercase tracking-wider ${
-                        machine.difficulty === "Beginner" ? "text-primary" :
-                        machine.difficulty === "Intermediate" ? "text-secondary" : "text-accent"
-                      }`}>
+                      <span
+                        className={`px-2 py-1 rounded-sm bg-background text-xs font-semibold uppercase tracking-wider ${
+                          machine.difficulty === "Beginner"
+                            ? "text-primary"
+                            : machine.difficulty === "Intermediate"
+                              ? "text-secondary"
+                              : "text-accent"
+                        }`}
+                      >
                         {machine.difficulty}
                       </span>
                     </div>
@@ -302,49 +418,58 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { 
-                icon: BookOpen, 
-                title: "Tutoriales Detallados", 
+              {
+                icon: BookOpen,
+                title: "Tutoriales Detallados",
                 desc: "Guías paso a paso para cada máquina y exploit",
-                color: "text-primary border-primary/30"
+                color: "text-primary border-primary/30",
               },
-              { 
-                icon: Trophy, 
-                title: "Progreso Gamificado", 
+              {
+                icon: Trophy,
+                title: "Progreso Gamificado",
                 desc: "Puntos, badges y leaderboards por logros",
-                color: "text-secondary border-secondary/30"
+                color: "text-secondary border-secondary/30",
               },
-              { 
-                icon: Map, 
-                title: "Roadmaps por Certificación", 
+              {
+                icon: Map,
+                title: "Roadmaps por Certificación",
                 desc: "Caminos estructurados para CEH, OSCP y más",
-                color: "text-accent border-accent/30"
+                color: "text-accent border-accent/30",
               },
-              { 
-                icon: Lightbulb, 
-                title: "Notas con Timestamp", 
+              {
+                icon: Lightbulb,
+                title: "Notas con Timestamp",
                 desc: "Guarda apuntes con marcas de tiempo durante prácticas",
-                color: "text-primary border-primary/30"
+                color: "text-primary border-primary/30",
               },
-              { 
-                icon: Calendar, 
-                title: "Calendario de Progreso", 
+              {
+                icon: Calendar,
+                title: "Calendario de Progreso",
                 desc: "Visualiza tu consistencia y racha de entrenamiento",
-                color: "text-secondary border-secondary/30"
+                color: "text-secondary border-secondary/30",
               },
-              { 
-                icon: Award, 
-                title: "Certificaciones Tracked", 
+              {
+                icon: Award,
+                title: "Certificaciones Tracked",
                 desc: "Prepárate y sigue el progreso hacia tus certs",
-                color: "text-accent border-accent/30"
+                color: "text-accent border-accent/30",
               },
             ].map((feature, idx) => (
-              <div key={idx} className={`glow-box p-6 border rounded-sm card-hover space-y-3 ${feature.color}`}>
+              <div
+                key={idx}
+                className={`glow-box p-6 border rounded-sm card-hover space-y-3 ${feature.color}`}
+              >
                 <div className="w-10 h-10 rounded-sm bg-background/50 flex items-center justify-center">
-                  <feature.icon className={`w-6 h-6 ${feature.color.split(" ")[0]}`} />
+                  <feature.icon
+                    className={`w-6 h-6 ${feature.color.split(" ")[0]}`}
+                  />
                 </div>
-                <h3 className="text-lg font-bold font-mono uppercase tracking-wide">{feature.title}</h3>
-                <p className="text-foreground/70 text-sm font-mono">{feature.desc}</p>
+                <h3 className="text-lg font-bold font-mono uppercase tracking-wide">
+                  {feature.title}
+                </h3>
+                <p className="text-foreground/70 text-sm font-mono">
+                  {feature.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -365,17 +490,39 @@ export default function Index() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: "01", title: "Busca & Filtra", desc: "Encuentra máquinas por técnica, dificultad o certificación" },
-              { step: "02", title: "Estudia", desc: "Accede a tutoriales y documentación detallada" },
-              { step: "03", title: "Practica", desc: "Exploita la máquina y toma notas durante el proceso" },
-              { step: "04", title: "Aprende", desc: "Gana puntos, badges y avanza en tu roadmap" },
+              {
+                step: "01",
+                title: "Busca & Filtra",
+                desc: "Encuentra máquinas por técnica, dificultad o certificación",
+              },
+              {
+                step: "02",
+                title: "Estudia",
+                desc: "Accede a tutoriales y documentación detallada",
+              },
+              {
+                step: "03",
+                title: "Practica",
+                desc: "Exploita la máquina y toma notas durante el proceso",
+              },
+              {
+                step: "04",
+                title: "Aprende",
+                desc: "Gana puntos, badges y avanza en tu roadmap",
+              },
             ].map((item, idx) => (
               <div key={idx} className="relative">
                 <div className="glow-box p-6 border-primary/30 neon-border rounded-sm space-y-4">
-                  <div className="text-4xl font-bold text-primary/30 font-mono">{item.step}</div>
+                  <div className="text-4xl font-bold text-primary/30 font-mono">
+                    {item.step}
+                  </div>
                   <div>
-                    <h3 className="text-lg font-bold font-mono uppercase tracking-wide text-primary mb-2">{item.title}</h3>
-                    <p className="text-sm text-foreground/70 font-mono">{item.desc}</p>
+                    <h3 className="text-lg font-bold font-mono uppercase tracking-wide text-primary mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-foreground/70 font-mono">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
                 {idx < 3 && (
@@ -400,7 +547,8 @@ export default function Index() {
               <span className="glow-text">COMIENZA YA</span>
             </h2>
             <p className="text-xl text-foreground/70">
-              Únete a miles de hackers éticos. Acceso gratuito a máquinas principiantes.
+              Únete a miles de hackers éticos. Acceso gratuito a máquinas
+              principiantes.
             </p>
           </div>
 
@@ -409,7 +557,10 @@ export default function Index() {
               $ acceso
               <ArrowRight className="w-4 h-4" />
             </Button>
-            <Button variant="outline" className="neon-border text-base h-12 px-8 font-mono uppercase tracking-widest rounded-sm hover:bg-card/50 hover:shadow-lg hover:shadow-primary/20">
+            <Button
+              variant="outline"
+              className="neon-border text-base h-12 px-8 font-mono uppercase tracking-widest rounded-sm hover:bg-card/50 hover:shadow-lg hover:shadow-primary/20"
+            >
               $ explora
             </Button>
           </div>
@@ -417,8 +568,15 @@ export default function Index() {
       </section>
 
       {/* Modals */}
-      <LoginModal isOpen={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
-      <MachineDetailsModal isOpen={detailsModalOpen} machine={selectedMachine} onClose={() => setDetailsModalOpen(false)} />
+      <LoginModal
+        isOpen={loginModalOpen}
+        onClose={() => setLoginModalOpen(false)}
+      />
+      <MachineDetailsModal
+        isOpen={detailsModalOpen}
+        machine={selectedMachine}
+        onClose={() => setDetailsModalOpen(false)}
+      />
     </Layout>
   );
 }

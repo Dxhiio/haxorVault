@@ -13,7 +13,10 @@ export default function Header({ onLoginClick }: HeaderProps) {
   const { isAuthenticated, user, logout } = useAuth();
 
   return (
-    <header className="fixed w-full top-0 z-50 backdrop-blur-sm bg-background/90 border-b border-primary/30 neon-border" style={{ boxShadow: "0 0 20px rgba(0, 255, 0, 0.1)" }}>
+    <header
+      className="fixed w-full top-0 z-50 backdrop-blur-sm bg-background/90 border-b border-primary/30 neon-border"
+      style={{ boxShadow: "0 0 20px rgba(0, 255, 0, 0.1)" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo with terminal style */}
@@ -21,18 +24,29 @@ export default function Header({ onLoginClick }: HeaderProps) {
             <div className="p-2 rounded-sm bg-gradient-to-br from-primary to-secondary group-hover:shadow-lg group-hover:shadow-primary/50 transition-all">
               <Terminal className="w-5 h-5 text-background" />
             </div>
-            <span className="text-xl font-bold glow-text tracking-widest">[VAULT]</span>
+            <span className="text-xl font-bold glow-text tracking-widest">
+              [VAULT]
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide">
+            <a
+              href="#features"
+              className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
+            >
               &gt; features
             </a>
-            <a href="#machines" className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide">
+            <a
+              href="#machines"
+              className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
+            >
               &gt; machines
             </a>
-            <a href="#certifications" className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide">
+            <a
+              href="#certifications"
+              className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
+            >
               &gt; certs
             </a>
           </nav>
