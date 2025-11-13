@@ -1,4 +1,6 @@
 import Layout from "@/components/Layout";
+import LoginModal from "@/components/LoginModal";
+import MachineDetailsModal from "@/components/MachineDetailsModal";
 import { Button } from "@/components/ui/button";
 import { Shield, Target, Trophy, Users, Zap, BookOpen, ArrowRight, Lock, Code2, Clock, Terminal, Database, Cpu, Radio, Search, Shuffle, Calendar, Award, Lightbulb, Map } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -42,6 +44,9 @@ export default function Index() {
   const [selectedOS, setSelectedOS] = useState("All");
   const [selectedCert, setSelectedCert] = useState("All");
   const [randomMachine, setRandomMachine] = useState<typeof MACHINES[0] | null>(null);
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const [selectedMachine, setSelectedMachine] = useState<typeof MACHINES[0] | null>(null);
+  const [detailsModalOpen, setDetailsModalOpen] = useState(false);
 
   // Filter machines based on selected filters
   const filteredMachines = MACHINES.filter(machine => {
@@ -60,8 +65,13 @@ export default function Index() {
     setRandomMachine(MACHINES[randomIdx]);
   };
 
+  const handleMachineClick = (machine: typeof MACHINES[0]) => {
+    setSelectedMachine(machine);
+    setDetailsModalOpen(true);
+  };
+
   return (
-    <Layout>
+    <Layout onLoginClick={() => setLoginModalOpen(true)}>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -245,7 +255,11 @@ export default function Index() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 max-h-96 overflow-y-auto">
                 {filteredMachines.map(machine => (
-                  <div key={machine.id} className="glow-box p-4 border-primary/20 rounded-sm card-hover space-y-2">
+                  <button
+                    key={machine.id}
+                    onClick={() => handleMachineClick(machine)}
+                    className="glow-box p-4 border-primary/20 rounded-sm card-hover space-y-2 text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 cursor-pointer"
+                  >
                     <div className="flex items-start justify-between">
                       <div>
                         <h4 className="font-bold text-sm uppercase tracking-wide text-primary">{machine.name}</h4>
@@ -263,7 +277,7 @@ export default function Index() {
                       <span>•</span>
                       <span>{machine.cert}</span>
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>
@@ -401,6 +415,10 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Modals */}
+      <LoginModal isOpen={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
+      <MachineDetailsModal isOpen={detailsModalOpen} machine={selectedMachine} onClose={() => setDetailsModalOpen(false)} />
     </Layout>
   );
 }
