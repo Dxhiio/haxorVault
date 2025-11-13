@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Shield, Target, Trophy, Users, Zap, BookOpen, ArrowRight, Lock, Code2, Clock, Terminal, Database, Cpu, Radio } from "lucide-react";
+import { Shield, Target, Trophy, Users, Zap, BookOpen, ArrowRight, Lock, Code2, Clock, Terminal, Database, Cpu, Radio, Search, Shuffle, Calendar, Award, Lightbulb, Map } from "lucide-react";
 import { useState, useEffect } from "react";
 
 function Typewriter({ text, delay = 50 }: { text: string; delay?: number }) {
@@ -20,7 +20,46 @@ function Typewriter({ text, delay = 50 }: { text: string; delay?: number }) {
   return <span>{displayedText}</span>;
 }
 
+// Sample machines data
+const MACHINES = [
+  { id: 1, name: "Linux Privesc", technique: "Privilege Escalation", difficulty: "Intermediate", os: "Linux", cert: "CEH" },
+  { id: 2, name: "WAF Bypass", technique: "Web Exploitation", difficulty: "Advanced", os: "Windows", cert: "OSCP" },
+  { id: 3, name: "AD Enumeration", technique: "Active Directory", difficulty: "Beginner", os: "Windows", cert: "CEH" },
+  { id: 4, name: "Buffer Overflow", technique: "Reverse Engineering", difficulty: "Advanced", os: "Linux", cert: "OSCP" },
+  { id: 5, name: "SQL Injection", technique: "Web Exploitation", difficulty: "Beginner", os: "Linux", cert: "CEH" },
+  { id: 6, name: "Kerberoast", technique: "Active Directory", difficulty: "Intermediate", os: "Windows", cert: "OSCP" },
+];
+
+const TECHNIQUES = ["All", "Web Exploitation", "Privilege Escalation", "Reverse Engineering", "Active Directory", "Cryptography"];
+const DIFFICULTIES = ["All", "Beginner", "Intermediate", "Advanced", "Insane"];
+const OS_OPTIONS = ["All", "Linux", "Windows", "macOS", "IoT"];
+const CERTIFICATIONS = ["All", "CEH", "OSCP", "Security+", "CompTIA"];
+
 export default function Index() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedTechnique, setSelectedTechnique] = useState("All");
+  const [selectedDifficulty, setSelectedDifficulty] = useState("All");
+  const [selectedOS, setSelectedOS] = useState("All");
+  const [selectedCert, setSelectedCert] = useState("All");
+  const [randomMachine, setRandomMachine] = useState<typeof MACHINES[0] | null>(null);
+
+  // Filter machines based on selected filters
+  const filteredMachines = MACHINES.filter(machine => {
+    const matchesSearch = machine.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesTechnique = selectedTechnique === "All" || machine.technique === selectedTechnique;
+    const matchesDifficulty = selectedDifficulty === "All" || machine.difficulty === selectedDifficulty;
+    const matchesOS = selectedOS === "All" || machine.os === selectedOS;
+    const matchesCert = selectedCert === "All" || machine.cert === selectedCert;
+    
+    return matchesSearch && matchesTechnique && matchesDifficulty && matchesOS && matchesCert;
+  });
+
+  // Get random machine
+  const getRandomMachine = () => {
+    const randomIdx = Math.floor(Math.random() * MACHINES.length);
+    setRandomMachine(MACHINES[randomIdx]);
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -30,106 +69,265 @@ export default function Index() {
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl opacity-20 animate-pulse" style={{animationDelay: "1s"}} />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-float-up">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          {/* Logo & Tagline */}
+          <div className="text-center space-y-6 mb-12 animate-float-up">
+            <div className="flex items-center justify-center gap-3">
+              <div className="p-3 rounded-sm bg-gradient-to-br from-primary to-secondary">
+                <Terminal className="w-8 h-8 text-background" />
+              </div>
+            </div>
+            
+            <div className="space-y-3">
+              <h1 className="text-6xl md:text-7xl font-bold tracking-tighter">
+                <span className="glow-text">[HACKING VAULT]</span>
+              </h1>
+              <p className="text-2xl md:text-3xl font-mono text-primary/80 uppercase tracking-widest">
+                Tu entrenador personal de hacking ético
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center gap-2 font-mono text-sm text-primary">
+              <Radio className="w-4 h-4 animate-pulse" />
+              <span>Sistema listo para entrenar</span>
+            </div>
+          </div>
+
+          {/* Advanced Search & Filters */}
+          <div className="max-w-5xl mx-auto space-y-6">
+            {/* Main Search Bar */}
+            <div className="glow-box p-6 border-primary/30 neon-border rounded-sm space-y-4 animate-slide-up">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-4 top-3.5 w-5 h-5 text-primary/50" />
+                  <input
+                    type="text"
+                    placeholder="$ buscar máquinas..."
+                    className="w-full bg-background border border-primary/30 rounded-sm pl-12 pr-4 py-3 text-foreground font-mono text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                </div>
+                <Button
+                  onClick={getRandomMachine}
+                  className="button-glow bg-secondary text-background hover:bg-secondary/90 font-mono uppercase tracking-widest rounded-sm h-12 px-6 gap-2 whitespace-nowrap"
+                >
+                  <Shuffle className="w-4 h-4" />
+                  sugerencia aleatoria
+                </Button>
+              </div>
+
+              {/* Filter Tags */}
               <div className="space-y-4">
-                <div className="flex items-center gap-2 text-primary font-mono text-sm">
-                  <Radio className="w-4 h-4 animate-pulse" />
-                  <span className="uppercase tracking-widest">System online</span>
+                {/* Techniques */}
+                <div>
+                  <label className="text-xs font-bold text-primary/70 uppercase tracking-widest mb-2 block">$ técnica</label>
+                  <div className="flex flex-wrap gap-2">
+                    {TECHNIQUES.map(tech => (
+                      <button
+                        key={tech}
+                        onClick={() => setSelectedTechnique(tech)}
+                        className={`px-3 py-1 rounded-sm text-xs font-mono uppercase tracking-wider transition-all ${
+                          selectedTechnique === tech
+                            ? "bg-primary text-background font-bold shadow-lg shadow-primary/50"
+                            : "bg-card border border-primary/30 text-foreground/70 hover:border-primary/60 hover:text-primary"
+                        }`}
+                      >
+                        {tech}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <h1 className="text-6xl md:text-7xl font-bold tracking-tighter">
-                  <span className="glow-text">[VAULT]</span>
-                </h1>
-                <div className="space-y-2 font-mono text-base">
-                  <p className="text-primary glow-text">$ init ethical-hacking</p>
-                  <p className="text-foreground/70 text-sm">
-                    Practice on real vulnerable machines<br/>
-                    Earn industry certifications<br/>
-                    Become a cybersecurity expert
-                  </p>
-                </div>
-              </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="button-glow bg-primary text-background hover:bg-primary/90 text-base h-12 px-8 font-mono uppercase tracking-widest rounded-sm">
-                  $ start
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-                <Button variant="outline" className="neon-border text-base h-12 px-8 font-mono uppercase tracking-widest rounded-sm hover:bg-card/50 hover:shadow-lg hover:shadow-primary/20">
-                  $ explore
-                </Button>
-              </div>
+                {/* Difficulty */}
+                <div>
+                  <label className="text-xs font-bold text-secondary/70 uppercase tracking-widest mb-2 block">$ dificultad</label>
+                  <div className="flex flex-wrap gap-2">
+                    {DIFFICULTIES.map(diff => (
+                      <button
+                        key={diff}
+                        onClick={() => setSelectedDifficulty(diff)}
+                        className={`px-3 py-1 rounded-sm text-xs font-mono uppercase tracking-wider transition-all ${
+                          selectedDifficulty === diff
+                            ? "bg-secondary text-background font-bold shadow-lg shadow-secondary/50"
+                            : "bg-card border border-secondary/30 text-foreground/70 hover:border-secondary/60 hover:text-secondary"
+                        }`}
+                      >
+                        {diff}
+                      </button>
+                    ))}
+                  </div>
+                </div>
 
-              <div className="grid grid-cols-3 gap-6 pt-4 font-mono">
-                <div className="glow-box p-4 border-primary/40 neon-border rounded-sm">
-                  <div className="text-2xl font-bold text-primary glow-text">500+</div>
-                  <p className="text-xs text-foreground/60 uppercase">Machines</p>
+                {/* OS */}
+                <div>
+                  <label className="text-xs font-bold text-accent/70 uppercase tracking-widest mb-2 block">$ sistema operativo</label>
+                  <div className="flex flex-wrap gap-2">
+                    {OS_OPTIONS.map(os => (
+                      <button
+                        key={os}
+                        onClick={() => setSelectedOS(os)}
+                        className={`px-3 py-1 rounded-sm text-xs font-mono uppercase tracking-wider transition-all ${
+                          selectedOS === os
+                            ? "bg-accent text-background font-bold shadow-lg shadow-accent/50"
+                            : "bg-card border border-accent/30 text-foreground/70 hover:border-accent/60 hover:text-accent"
+                        }`}
+                      >
+                        {os}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <div className="glow-box p-4 border-secondary/40 neon-border rounded-sm">
-                  <div className="text-2xl font-bold text-secondary glow-text-secondary">50K+</div>
-                  <p className="text-xs text-foreground/60 uppercase">Hackers</p>
-                </div>
-                <div className="glow-box p-4 border-accent/40 neon-border rounded-sm">
-                  <div className="text-2xl font-bold text-accent">∞</div>
-                  <p className="text-xs text-foreground/60 uppercase">Access</p>
+
+                {/* Certification */}
+                <div>
+                  <label className="text-xs font-bold text-primary/70 uppercase tracking-widest mb-2 block">$ certificación</label>
+                  <div className="flex flex-wrap gap-2">
+                    {CERTIFICATIONS.map(cert => (
+                      <button
+                        key={cert}
+                        onClick={() => setSelectedCert(cert)}
+                        className={`px-3 py-1 rounded-sm text-xs font-mono uppercase tracking-wider transition-all ${
+                          selectedCert === cert
+                            ? "bg-primary text-background font-bold shadow-lg shadow-primary/50"
+                            : "bg-card border border-primary/30 text-foreground/70 hover:border-primary/60 hover:text-primary"
+                        }`}
+                      >
+                        {cert}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative hidden md:block">
-              <div className="glow-box border-primary/30 neon-border p-6 space-y-4 rounded-sm font-mono text-sm">
-                <div className="flex items-center justify-between text-xs text-primary/70">
-                  <span className="uppercase tracking-widest">Terminal</span>
-                  <span className="text-primary glow-text animate-terminal-blink">●</span>
+            {/* Random Machine Suggestion */}
+            {randomMachine && (
+              <div className="glow-box p-6 border-secondary/40 neon-border-secondary rounded-sm animate-slide-up space-y-3">
+                <div className="flex items-center gap-2 text-secondary font-mono text-sm">
+                  <Shuffle className="w-4 h-4" />
+                  <span className="uppercase tracking-widest">Máquina sugerida</span>
                 </div>
-                <div className="space-y-3 text-foreground/70">
-                  <div><span className="text-primary">$</span> <span className="text-secondary">nmap</span> -sV 192.168.1.100</div>
-                  <div className="text-xs">Starting Nmap 7.92 ( https://nmap.org )</div>
-                  <div className="text-xs">Nmap scan report for 192.168.1.100</div>
-                  <div className="text-xs">Host is up (0.024s latency)</div>
-                  <div className="text-primary/80">22/tcp open ssh OpenSSH 7.4</div>
-                  <div className="text-primary/80">80/tcp open http Apache httpd 2.4.6</div>
-                  <div className="text-primary/80">443/tcp open https</div>
-                  <div className="text-xs mt-2 text-accent">3389/tcp open rdp</div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-primary mb-2">{randomMachine.name}</h3>
+                    <p className="text-foreground/70 text-sm font-mono">{randomMachine.technique}</p>
+                  </div>
+                  <div className="flex items-end gap-3">
+                    <div className="space-y-1 flex-1">
+                      <div className="flex justify-between text-xs text-foreground/60 font-mono mb-1">
+                        <span>Dificultad:</span>
+                        <span className="text-secondary font-bold">{randomMachine.difficulty}</span>
+                      </div>
+                      <div className="flex justify-between text-xs text-foreground/60 font-mono mb-1">
+                        <span>SO:</span>
+                        <span className="text-accent font-bold">{randomMachine.os}</span>
+                      </div>
+                      <div className="flex justify-between text-xs text-foreground/60 font-mono">
+                        <span>Cert:</span>
+                        <span className="text-primary font-bold">{randomMachine.cert}</span>
+                      </div>
+                    </div>
+                    <Button className="button-glow bg-secondary text-background hover:bg-secondary/90 font-mono uppercase tracking-widest rounded-sm px-6">
+                      $ ir
+                    </Button>
+                  </div>
                 </div>
-                <div className="border-t border-primary/20 pt-3 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-glow-pulse" />
-                  <span className="text-xs text-foreground/60 uppercase">Connected</span>
-                </div>
+              </div>
+            )}
+
+            {/* Results */}
+            <div className="glow-box p-6 border-primary/30 neon-border rounded-sm">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-sm font-mono text-primary/70 uppercase tracking-widest">
+                  $ resultados: {filteredMachines.length} máquinas
+                </span>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4 max-h-96 overflow-y-auto">
+                {filteredMachines.map(machine => (
+                  <div key={machine.id} className="glow-box p-4 border-primary/20 rounded-sm card-hover space-y-2">
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <h4 className="font-bold text-sm uppercase tracking-wide text-primary">{machine.name}</h4>
+                        <p className="text-xs text-foreground/60 mt-1 font-mono">{machine.technique}</p>
+                      </div>
+                      <span className={`px-2 py-1 rounded-sm bg-background text-xs font-semibold uppercase tracking-wider ${
+                        machine.difficulty === "Beginner" ? "text-primary" :
+                        machine.difficulty === "Intermediate" ? "text-secondary" : "text-accent"
+                      }`}>
+                        {machine.difficulty}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-foreground/60 font-mono">
+                      <span>{machine.os}</span>
+                      <span>•</span>
+                      <span>{machine.cert}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 md:py-32 border-t border-primary/30">
+      {/* Key Features Section */}
+      <section className="py-20 md:py-32 border-t border-primary/30 bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <div className="font-mono text-primary text-sm uppercase tracking-widest">
-              &gt; capabilities
+              &gt; funcionalidades principales
             </div>
             <h2 className="text-5xl md:text-6xl font-bold tracking-tighter">
-              <span className="glow-text">[FEATURES]</span>
+              <span className="glow-text">[CARACTERÍSTICAS]</span>
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto font-mono">
-              Everything needed to master cybersecurity
+              Herramientas para dominar la ciberseguridad
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Target, title: "Machines", desc: "Real-world vulnerabilities in safe sandbox", color: "text-primary" },
-              { icon: Trophy, title: "Certifications", desc: "CEH, OSCP, Security+ preparation paths", color: "text-secondary" },
-              { icon: Users, title: "Community", desc: "50K+ ethical hackers sharing knowledge", color: "text-accent" },
-              { icon: BookOpen, title: "Learning", desc: "Tutorials, guides, and comprehensive docs", color: "text-primary" },
-              { icon: Code2, title: "Challenges", desc: "Exploit writing and security challenges", color: "text-secondary" },
-              { icon: Zap, title: "Progress", desc: "Track your journey and achievements", color: "text-accent" },
+              { 
+                icon: BookOpen, 
+                title: "Tutoriales Detallados", 
+                desc: "Guías paso a paso para cada máquina y exploit",
+                color: "text-primary border-primary/30"
+              },
+              { 
+                icon: Trophy, 
+                title: "Progreso Gamificado", 
+                desc: "Puntos, badges y leaderboards por logros",
+                color: "text-secondary border-secondary/30"
+              },
+              { 
+                icon: Map, 
+                title: "Roadmaps por Certificación", 
+                desc: "Caminos estructurados para CEH, OSCP y más",
+                color: "text-accent border-accent/30"
+              },
+              { 
+                icon: Lightbulb, 
+                title: "Notas con Timestamp", 
+                desc: "Guarda apuntes con marcas de tiempo durante prácticas",
+                color: "text-primary border-primary/30"
+              },
+              { 
+                icon: Calendar, 
+                title: "Calendario de Progreso", 
+                desc: "Visualiza tu consistencia y racha de entrenamiento",
+                color: "text-secondary border-secondary/30"
+              },
+              { 
+                icon: Award, 
+                title: "Certificaciones Tracked", 
+                desc: "Prepárate y sigue el progreso hacia tus certs",
+                color: "text-accent border-accent/30"
+              },
             ].map((feature, idx) => (
-              <div key={idx} className="group glow-box p-6 border-primary/20 rounded-sm card-hover space-y-3">
-                <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
-                  <feature.icon className={`w-6 h-6 ${feature.color}`} />
+              <div key={idx} className={`glow-box p-6 border rounded-sm card-hover space-y-3 ${feature.color}`}>
+                <div className="w-10 h-10 rounded-sm bg-background/50 flex items-center justify-center">
+                  <feature.icon className={`w-6 h-6 ${feature.color.split(" ")[0]}`} />
                 </div>
                 <h3 className="text-lg font-bold font-mono uppercase tracking-wide">{feature.title}</h3>
                 <p className="text-foreground/70 text-sm font-mono">{feature.desc}</p>
@@ -139,123 +337,38 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Machines Section */}
-      <section id="machines" className="py-20 md:py-32 border-t border-primary/30 bg-card/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div>
-                <div className="font-mono text-primary text-sm uppercase tracking-widest mb-2">&gt; execution</div>
-                <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-4">
-                  <span className="glow-text">LEARN</span><br/><span className="text-foreground">BY DOING</span>
-                </h2>
-                <p className="text-lg text-foreground/70 font-mono">
-                  From beginner to insane difficulty. Start with fundamentals, progress to advanced exploitation.
-                </p>
-              </div>
-
-              <div className="space-y-3 font-mono">
-                {[
-                  { icon: Lock, title: "Reverse Engineering", desc: "Analyze binaries and security mechanisms" },
-                  { icon: Code2, title: "Web Exploitation", desc: "SQL injection, XSS, and modern vulns" },
-                  { icon: Shield, title: "Privilege Escalation", desc: "Elevate access on target systems" },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex gap-3 glow-box p-4 border-primary/20 rounded-sm hover:border-primary/50 transition-all">
-                    <div className="flex-shrink-0 text-primary">
-                      <item.icon className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-sm uppercase tracking-wide">{item.title}</h4>
-                      <p className="text-xs text-foreground/60">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <Button className="button-glow bg-primary text-background hover:bg-primary/90 text-base h-12 px-8 w-full md:w-auto font-mono uppercase tracking-widest rounded-sm">
-                $ execute
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </div>
-
-            <div className="space-y-4 font-mono">
-              {[
-                { title: "Linux Privesc", users: "1,234", difficulty: "Intermediate", diffColor: "text-secondary" },
-                { title: "WAF Bypass", users: "789", difficulty: "Advanced", diffColor: "text-accent" },
-                { title: "AD Enumeration", users: "3,456", difficulty: "Beginner", diffColor: "text-primary" },
-              ].map((machine, idx) => (
-                <div key={idx} className="glow-box p-5 border-primary/20 rounded-sm card-hover space-y-2">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h4 className="font-bold text-sm uppercase tracking-wide">{machine.title}</h4>
-                      <p className="text-xs text-foreground/60 mt-1 font-mono">Practice machine</p>
-                    </div>
-                    <span className={`px-2 py-1 rounded-sm bg-background text-xs font-semibold uppercase tracking-wider ${machine.diffColor}`}>
-                      {machine.difficulty}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs text-foreground/60 font-mono">
-                    <Users className="w-4 h-4" />
-                    <span>{machine.users} completed</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications Section */}
-      <section id="certifications" className="py-20 md:py-32 border-t border-primary/30">
+      {/* How It Works */}
+      <section className="py-20 md:py-32 border-t border-primary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <div className="font-mono text-primary text-sm uppercase tracking-widest">
-              &gt; credentials
+            <div className="font-mono text-secondary text-sm uppercase tracking-widest">
+              &gt; flujo de trabajo
             </div>
             <h2 className="text-5xl md:text-6xl font-bold tracking-tighter">
-              <span className="glow-text">[CERTIFICATIONS]</span>
+              Tu Entrenamiento
             </h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto font-mono">
-              Industry-recognized credentials employers are looking for
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-6">
             {[
-              { 
-                icon: Trophy, 
-                title: "CEH v12", 
-                color: "border-primary/40 neon-border",
-                desc: "Certified Ethical Hacker is the industry standard",
-                items: ["Complete exam prep", "50+ practice machines", "Video tutorials"]
-              },
-              { 
-                icon: Shield, 
-                title: "OSCP", 
-                color: "border-secondary/40 neon-border",
-                desc: "Most respected credential in cybersecurity",
-                items: ["Advanced labs", "Real-world scenarios", "Report writing"]
-              },
-            ].map((cert, idx) => (
-              <div key={idx} className={`glow-box p-8 rounded-sm space-y-4 ${cert.color}`}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center">
-                    <cert.icon className="w-6 h-6 text-primary" />
+              { step: "01", title: "Busca & Filtra", desc: "Encuentra máquinas por técnica, dificultad o certificación" },
+              { step: "02", title: "Estudia", desc: "Accede a tutoriales y documentación detallada" },
+              { step: "03", title: "Practica", desc: "Exploita la máquina y toma notas durante el proceso" },
+              { step: "04", title: "Aprende", desc: "Gana puntos, badges y avanza en tu roadmap" },
+            ].map((item, idx) => (
+              <div key={idx} className="relative">
+                <div className="glow-box p-6 border-primary/30 neon-border rounded-sm space-y-4">
+                  <div className="text-4xl font-bold text-primary/30 font-mono">{item.step}</div>
+                  <div>
+                    <h3 className="text-lg font-bold font-mono uppercase tracking-wide text-primary mb-2">{item.title}</h3>
+                    <p className="text-sm text-foreground/70 font-mono">{item.desc}</p>
                   </div>
-                  <h3 className="text-2xl font-bold font-mono uppercase tracking-wide">{cert.title}</h3>
                 </div>
-                <p className="text-foreground/70 text-sm font-mono">{cert.desc}</p>
-                <ul className="space-y-2 text-sm font-mono">
-                  {cert.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-foreground/70">
-                      <span className="text-primary">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button className="w-full button-glow bg-primary text-background hover:bg-primary/90 font-mono uppercase tracking-widest rounded-sm mt-4">
-                  $ explore
-                </Button>
+                {idx < 3 && (
+                  <div className="hidden md:block absolute -right-3 top-1/2 transform -translate-y-1/2">
+                    <ArrowRight className="w-6 h-6 text-primary/30" />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -270,37 +383,21 @@ export default function Index() {
               &gt; ready
             </div>
             <h2 className="text-5xl md:text-6xl font-bold tracking-tighter">
-              <span className="glow-text">LEVEL UP</span>
+              <span className="glow-text">COMIENZA YA</span>
             </h2>
             <p className="text-xl text-foreground/70">
-              Join 50K+ ethical hackers. Start with free machines and unlock premium content.
+              Únete a miles de hackers éticos. Acceso gratuito a máquinas principiantes.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="button-glow bg-primary text-background hover:bg-primary/90 text-base h-12 px-8 font-mono uppercase tracking-widest rounded-sm">
-              $ access
+              $ acceso
               <ArrowRight className="w-4 h-4" />
             </Button>
             <Button variant="outline" className="neon-border text-base h-12 px-8 font-mono uppercase tracking-widest rounded-sm hover:bg-card/50 hover:shadow-lg hover:shadow-primary/20">
-              $ browse
+              $ explora
             </Button>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 pt-8 border-t border-primary/30 font-mono">
-            {[
-              { icon: Zap, title: "Free Tier", desc: "50+ beginner machines" },
-              { icon: Clock, title: "Lifetime", desc: "Keep your progress forever" },
-              { icon: Database, title: "Community", desc: "50K+ hackers worldwide" },
-            ].map((feature, idx) => (
-              <div key={idx} className="space-y-2">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <feature.icon className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-semibold text-primary uppercase tracking-wide">{feature.title}</span>
-                </div>
-                <p className="text-sm text-foreground/60">{feature.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
