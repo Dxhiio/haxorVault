@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Shield, Menu, X, Terminal } from "lucide-react";
+import { Shield, Menu, X, Terminal, LogOut } from "lucide-react";
 import { useState } from "react";
+import { useAuth } from "@/context/AuthContext";
 
-export default function Header() {
+interface HeaderProps {
+  onLoginClick?: () => void;
+}
+
+export default function Header({ onLoginClick }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const { isAuthenticated, user, logout } = useAuth();
 
   return (
     <header className="fixed w-full top-0 z-50 backdrop-blur-sm bg-background/90 border-b border-primary/30 neon-border" style={{ boxShadow: "0 0 20px rgba(0, 255, 0, 0.1)" }}>
@@ -33,12 +39,34 @@ export default function Header() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" className="text-sm font-mono uppercase tracking-widest border-primary/40 text-foreground/80 hover:text-primary hover:border-primary hover:shadow-lg hover:shadow-primary/30">
-              $ login
-            </Button>
-            <Button className="text-sm font-mono uppercase tracking-widest button-glow bg-primary text-background hover:bg-primary/90">
-              $ execute
-            </Button>
+            {isAuthenticated ? (
+              <>
+                <div className="text-sm font-mono text-primary/70">
+                  {user?.email}
+                </div>
+                <Button
+                  onClick={logout}
+                  variant="outline"
+                  className="text-sm font-mono uppercase tracking-widest border-destructive/40 text-destructive/80 hover:text-destructive hover:border-destructive hover:shadow-lg hover:shadow-destructive/30 gap-2"
+                >
+                  <LogOut className="w-4 h-4" />
+                  logout
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button
+                  onClick={onLoginClick}
+                  variant="outline"
+                  className="text-sm font-mono uppercase tracking-widest border-primary/40 text-foreground/80 hover:text-primary hover:border-primary hover:shadow-lg hover:shadow-primary/30"
+                >
+                  $ login
+                </Button>
+                <Button className="text-sm font-mono uppercase tracking-widest button-glow bg-primary text-background hover:bg-primary/90">
+                  $ execute
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -79,12 +107,40 @@ export default function Header() {
               &gt; certs
             </a>
             <div className="flex flex-col gap-2 pt-2 border-t border-primary/30">
-              <Button variant="outline" className="w-full text-sm font-mono uppercase border-primary/40 text-primary hover:border-primary">
-                $ login
-              </Button>
-              <Button className="w-full text-sm font-mono uppercase button-glow bg-primary text-background hover:bg-primary/90">
-                $ execute
-              </Button>
+              {isAuthenticated ? (
+                <>
+                  <div className="text-sm font-mono text-primary/70 px-4 py-2">
+                    {user?.email}
+                  </div>
+                  <Button
+                    onClick={() => {
+                      logout();
+                      setIsOpen(false);
+                    }}
+                    variant="outline"
+                    className="w-full text-sm font-mono uppercase border-destructive/40 text-destructive/80 hover:border-destructive gap-2"
+                  >
+                    <LogOut className="w-4 h-4" />
+                    logout
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button
+                    onClick={() => {
+                      onLoginClick?.();
+                      setIsOpen(false);
+                    }}
+                    variant="outline"
+                    className="w-full text-sm font-mono uppercase border-primary/40 text-primary hover:border-primary"
+                  >
+                    $ login
+                  </Button>
+                  <Button className="w-full text-sm font-mono uppercase button-glow bg-primary text-background hover:bg-primary/90">
+                    $ execute
+                  </Button>
+                </>
+              )}
             </div>
           </div>
         )}
