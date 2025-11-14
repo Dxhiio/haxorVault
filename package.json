@@ -21,7 +21,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "dotenv": "^17.2.1",
+    "@supabase/supabase-js": "^2.81.1",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "zod": "^3.25.76"
   },
