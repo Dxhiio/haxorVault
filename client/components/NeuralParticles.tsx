@@ -28,11 +28,12 @@ export default function NeuralParticles() {
         const connectionDistance = 200;
         const nodes: Node[] = [];
 
-        // Neon Palette
+        // Sophisticated Cyberpunk Palette
         const COLORS = [
-            { r: 0, g: 243, b: 255 },   // Cyan
-            { r: 0, g: 255, b: 136 },   // Neon Green
-            { r: 255, g: 0, b: 213 }    // Magenta
+            { r: 0, g: 255, b: 170 },   // Matrix Green (primary)
+            { r: 100, g: 100, b: 255 }, // Electric Blue
+            { r: 138, g: 43, b: 226 },  // Deep Purple
+            { r: 0, g: 230, b: 230 }    // Cyan Accent
         ];
 
         class Node {
