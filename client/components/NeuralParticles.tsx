@@ -58,7 +58,7 @@ export default function NeuralParticles() {
                 this.vz = (Math.random() - 0.5) * 2;
 
                 this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
-                this.size = 2;
+                this.size = 1.5; // Smaller base size
             }
 
             update() {
@@ -82,13 +82,13 @@ export default function NeuralParticles() {
                 const scale = 1000 / (1000 + this.z);
                 const x2d = this.x;
                 const y2d = this.y;
-                const size = this.size * scale * 3;
-                const alpha = scale * 0.8;
+                const size = this.size * scale * 1.2; // Much smaller
+                const alpha = scale * 0.5; // More subtle
 
-                // Draw node with glow
+                // Minimal glow
                 const gradient = ctx.createRadialGradient(x2d, y2d, 0, x2d, y2d, size * 2);
-                gradient.addColorStop(0, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${alpha})`);
-                gradient.addColorStop(0.5, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${alpha * 0.5})`);
+                gradient.addColorStop(0, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${alpha * 0.8})`);
+                gradient.addColorStop(0.5, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${alpha * 0.2})`);
                 gradient.addColorStop(1, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, 0)`);
 
                 ctx.fillStyle = gradient;
@@ -96,10 +96,10 @@ export default function NeuralParticles() {
                 ctx.arc(x2d, y2d, size * 2, 0, Math.PI * 2);
                 ctx.fill();
 
-                // Core
-                ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${alpha})`;
+                // Sharp, bright core
+                ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${Math.min(alpha * 1.5, 0.9)})`;
                 ctx.beginPath();
-                ctx.arc(x2d, y2d, size, 0, Math.PI * 2);
+                ctx.arc(x2d, y2d, size * 0.6, 0, Math.PI * 2);
                 ctx.fill();
             }
 
@@ -124,7 +124,7 @@ export default function NeuralParticles() {
                     const distance = nodes[i].getDistance(nodes[j]);
 
                     if (distance < connectionDistance) {
-                        const opacity = (1 - distance / connectionDistance) * 0.3;
+                        const opacity = (1 - distance / connectionDistance) * 0.2; // More subtle
 
                         // Calculate perspective for both nodes
                         const scale1 = 1000 / (1000 + nodes[i].z);
@@ -140,7 +140,7 @@ export default function NeuralParticles() {
                         gradient.addColorStop(1, `rgba(${nodes[j].color.r}, ${nodes[j].color.g}, ${nodes[j].color.b}, ${opacity * scale2})`);
 
                         ctx.strokeStyle = gradient;
-                        ctx.lineWidth = 1;
+                        ctx.lineWidth = 0.8; // Thinner lines
                         ctx.beginPath();
                         ctx.moveTo(nodes[i].x, nodes[i].y);
                         ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -179,7 +179,7 @@ export default function NeuralParticles() {
     return (
         <canvas
             ref={canvasRef}
-            className="fixed inset-0 pointer-events-none z-0 opacity-50"
+            className="fixed inset-0 pointer-events-none z-0 opacity-40"
         />
     );
 }
