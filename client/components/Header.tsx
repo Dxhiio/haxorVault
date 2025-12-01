@@ -10,7 +10,7 @@ interface HeaderProps {
 
 export default function Header({ onLoginClick }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const { isAuthenticated, user, logout } = useAuth();
+  const { isAuthenticated, email, loading, logout } = useAuth();
 
   return (
     <header
@@ -53,10 +53,14 @@ export default function Header({ onLoginClick }: HeaderProps) {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            {isAuthenticated ? (
+            {loading ? (
+              <div className="text-sm font-mono text-primary/70">
+                $ cargando...
+              </div>
+            ) : isAuthenticated ? (
               <>
-                <div className="text-sm font-mono text-primary/70">
-                  {user?.email}
+                <div className="text-sm font-mono text-primary/70 truncate max-w-xs">
+                  {email}
                 </div>
                 <Button
                   onClick={logout}
@@ -121,10 +125,14 @@ export default function Header({ onLoginClick }: HeaderProps) {
               &gt; certs
             </a>
             <div className="flex flex-col gap-2 pt-2 border-t border-primary/30">
-              {isAuthenticated ? (
+              {loading ? (
+                <div className="text-sm font-mono text-primary/70 px-4 py-2">
+                  $ cargando...
+                </div>
+              ) : isAuthenticated ? (
                 <>
-                  <div className="text-sm font-mono text-primary/70 px-4 py-2">
-                    {user?.email}
+                  <div className="text-sm font-mono text-primary/70 px-4 py-2 truncate">
+                    {email}
                   </div>
                   <Button
                     onClick={() => {
