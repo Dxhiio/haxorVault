@@ -6,42 +6,31 @@
 @tailwind utilities;
 
 @layer base {
+
   /**
    * Dark Futuristic Theme - Hacking Vault
-   * Neon green and blue accents on deep black backgrounds
-   * Monospaced typography with terminal aesthetics
    */
   :root {
     --background: 200 15% 3%;
     --foreground: 200 10% 95%;
-
     --card: 200 15% 8%;
     --card-foreground: 200 10% 95%;
-
     --popover: 200 15% 8%;
     --popover-foreground: 200 10% 95%;
-
     --primary: 120 100% 50%;
     --primary-foreground: 200 15% 3%;
-
     --secondary: 200 100% 50%;
     --secondary-foreground: 200 15% 3%;
-
     --muted: 200 15% 20%;
     --muted-foreground: 200 10% 70%;
-
     --accent: 280 100% 50%;
     --accent-foreground: 200 15% 3%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 200 15% 15%;
     --input: 200 15% 12%;
     --ring: 120 100% 50%;
-
     --radius: 0.3rem;
-
     --sidebar-background: 200 15% 8%;
     --sidebar-foreground: 200 10% 95%;
     --sidebar-primary: 120 100% 50%;
@@ -92,31 +81,10 @@
     @apply bg-background text-foreground font-mono;
     font-feature-settings: "rlig" 1 "calt" 1;
     letter-spacing: 0.02em;
-    background: linear-gradient(
-      135deg,
-      hsl(200, 15%, 3%) 0%,
-      hsl(200, 20%, 5%) 100%
-    );
+    background: linear-gradient(135deg,
+        hsl(200, 15%, 3%) 0%,
+        hsl(200, 20%, 5%) 100%);
     position: relative;
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.03),
-      rgba(0, 0, 0, 0.03) 1px,
-      transparent 1px,
-      transparent 2px
-    );
-    pointer-events: none;
-    z-index: 1;
-    animation: scan-lines 8s linear infinite;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
@@ -194,11 +162,9 @@
 
   .glow-box {
     @apply bg-card border border-border rounded-sm shadow-lg;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--card)) 0%,
-      hsl(var(--card) / 0.8) 100%
-    );
+    background: linear-gradient(135deg,
+        hsl(var(--card)) 0%,
+        hsl(var(--card) / 0.8) 100%);
     box-shadow:
       0 0 20px hsl(var(--primary) / 0.1),
       inset 0 0 20px hsl(var(--background) / 0.5);
@@ -232,12 +198,10 @@
 
   .gradient-text {
     @apply bg-gradient-to-r bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      90deg,
-      hsl(var(--primary)),
-      hsl(var(--secondary)),
-      hsl(var(--primary))
-    );
+    background-image: linear-gradient(90deg,
+        hsl(var(--primary)),
+        hsl(var(--secondary)),
+        hsl(var(--primary)));
     filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.3));
   }
 
@@ -248,11 +212,9 @@
 
   .code-block {
     @apply bg-background border border-border rounded-sm p-4 font-mono text-sm overflow-x-auto;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--background)) 0%,
-      hsl(var(--card)) 100%
-    );
+    background: linear-gradient(135deg,
+        hsl(var(--background)) 0%,
+        hsl(var(--card)) 100%);
     box-shadow:
       0 0 20px hsl(var(--primary) / 0.1),
       inset 0 0 10px hsl(var(--primary) / 0.05);
@@ -260,6 +222,347 @@
 
   .scan-effect {
     animation: scan-lines 8s linear infinite;
+  }
+
+  /* --- SPARK / ZAP GLITCH EFFECTS --- */
+  /* These animations are designed to be mostly static with sudden bursts of activity */
+
+  /* Noise Artifacts (Horizontal Lines) - Bursty */
+  @keyframes glitch-anim-noise-burst-1 {
+
+    0%,
+    90% {
+      clip-path: inset(50% 0 50% 0);
+      opacity: 0;
+    }
+
+    91% {
+      clip-path: inset(10% 0 60% 0);
+      opacity: 1;
+    }
+
+    92% {
+      clip-path: inset(80% 0 5% 0);
+      opacity: 1;
+    }
+
+    93% {
+      clip-path: inset(30% 0 40% 0);
+      opacity: 1;
+    }
+
+    94% {
+      clip-path: inset(50% 0 50% 0);
+      opacity: 0;
+    }
+
+    100% {
+      clip-path: inset(50% 0 50% 0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes glitch-anim-noise-burst-2 {
+
+    0%,
+    85% {
+      clip-path: inset(50% 0 50% 0);
+      opacity: 0;
+    }
+
+    86% {
+      clip-path: inset(40% 0 40% 0);
+      opacity: 1;
+    }
+
+    87% {
+      clip-path: inset(10% 0 80% 0);
+      opacity: 1;
+    }
+
+    88% {
+      clip-path: inset(50% 0 50% 0);
+      opacity: 0;
+    }
+
+    95% {
+      clip-path: inset(50% 0 50% 0);
+      opacity: 0;
+    }
+
+    96% {
+      clip-path: inset(70% 0 10% 0);
+      opacity: 1;
+    }
+
+    97% {
+      clip-path: inset(50% 0 50% 0);
+      opacity: 0;
+    }
+
+    100% {
+      clip-path: inset(50% 0 50% 0);
+      opacity: 0;
+    }
+  }
+
+  /* RGB Shift & Transform - Bursty/Sparky */
+  @keyframes spark-easy {
+
+    0%,
+    92% {
+      transform: translate(0);
+      filter: none;
+    }
+
+    93% {
+      transform: translate(-2px, 1px);
+      filter: brightness(1.2) drop-shadow(-2px 0 0 rgba(255, 0, 0, 0.5)) drop-shadow(2px 0 0 rgba(0, 255, 255, 0.5));
+    }
+
+    94% {
+      transform: translate(2px, -1px);
+      filter: brightness(0.9) drop-shadow(2px 0 0 rgba(255, 0, 0, 0.5)) drop-shadow(-2px 0 0 rgba(0, 255, 255, 0.5));
+    }
+
+    95% {
+      transform: translate(0);
+      filter: none;
+    }
+
+    98% {
+      transform: translate(1px, 1px);
+      filter: brightness(1.1);
+    }
+
+    99% {
+      transform: translate(0);
+      filter: none;
+    }
+  }
+
+  @keyframes spark-medium {
+
+    0%,
+    85% {
+      transform: translate(0);
+      filter: none;
+    }
+
+    86% {
+      transform: translate(-3px, 0);
+      filter: hue-rotate(5deg) drop-shadow(-3px 0 0 rgba(255, 0, 0, 0.6)) drop-shadow(3px 0 0 rgba(0, 255, 255, 0.6));
+    }
+
+    87% {
+      transform: translate(3px, 0);
+      filter: hue-rotate(-5deg) drop-shadow(3px 0 0 rgba(255, 0, 0, 0.6)) drop-shadow(-3px 0 0 rgba(0, 255, 255, 0.6));
+    }
+
+    88% {
+      transform: translate(0);
+      filter: none;
+    }
+
+    95% {
+      transform: translate(0);
+      filter: none;
+    }
+
+    96% {
+      transform: translate(0, 2px);
+      filter: brightness(1.3);
+    }
+
+    97% {
+      transform: translate(0, -2px);
+      filter: brightness(0.8);
+    }
+
+    98% {
+      transform: translate(0);
+      filter: none;
+    }
+  }
+
+  @keyframes spark-hard {
+
+    0%,
+    80% {
+      transform: translate(0) scale(1);
+      filter: none;
+    }
+
+    81% {
+      transform: translate(-4px, 2px) scale(1.02);
+      filter: saturate(1.5) drop-shadow(-4px 0 0 rgba(255, 0, 0, 0.7)) drop-shadow(4px 0 0 rgba(0, 255, 255, 0.7));
+    }
+
+    82% {
+      transform: translate(4px, -2px) scale(0.98);
+      filter: saturate(0.5) drop-shadow(4px 0 0 rgba(255, 0, 0, 0.7)) drop-shadow(-4px 0 0 rgba(0, 255, 255, 0.7));
+    }
+
+    83% {
+      transform: translate(0) scale(1);
+      filter: none;
+    }
+
+    90% {
+      transform: translate(0) scale(1);
+      filter: none;
+    }
+
+    91% {
+      transform: translate(2px, 2px) skew(2deg);
+      filter: brightness(1.5) hue-rotate(90deg);
+    }
+
+    92% {
+      transform: translate(-2px, -2px) skew(-2deg);
+      filter: brightness(0.5);
+    }
+
+    93% {
+      transform: translate(0) scale(1);
+      filter: none;
+    }
+  }
+
+  @keyframes spark-insane {
+
+    0%,
+    70% {
+      transform: translate(0) scale(1);
+      filter: none;
+    }
+
+    71% {
+      transform: translate(-5px, 3px) skew(5deg);
+      filter: invert(0.2) drop-shadow(-5px 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(5px 0 0 rgba(0, 255, 255, 0.8));
+    }
+
+    72% {
+      transform: translate(5px, -3px) skew(-5deg);
+      filter: invert(0) drop-shadow(5px 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(-5px 0 0 rgba(0, 255, 255, 0.8));
+    }
+
+    73% {
+      transform: translate(0) scale(1);
+      filter: none;
+    }
+
+    85% {
+      transform: translate(0) scale(1);
+      filter: none;
+    }
+
+    86% {
+      transform: translate(0, 5px);
+      filter: brightness(2) contrast(2);
+    }
+
+    87% {
+      transform: translate(0, -5px);
+      filter: brightness(0.5);
+    }
+
+    88% {
+      transform: translate(0) scale(1);
+      filter: none;
+    }
+
+    95% {
+      transform: translate(3px, 3px);
+      filter: hue-rotate(180deg);
+    }
+
+    96% {
+      transform: translate(0) scale(1);
+      filter: none;
+    }
+  }
+
+  /* --- UTILITY CLASSES --- */
+
+  .glitch-effect-easy,
+  .glitch-effect-medium,
+  .glitch-effect-hard,
+  .glitch-effect-insane {
+    position: relative;
+    /* Ensure hardware acceleration */
+    transform: translateZ(0);
+  }
+
+  .glitch-effect-easy::after,
+  .glitch-effect-medium::after,
+  .glitch-effect-hard::after,
+  .glitch-effect-insane::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* EASY - Occasional spark */
+  .glitch-effect-easy:hover img {
+    animation: spark-easy 3s infinite linear;
+  }
+
+  .glitch-effect-easy:hover::after {
+    animation: glitch-anim-noise-burst-1 3s infinite linear;
+  }
+
+  /* MEDIUM - More frequent spark */
+  .glitch-effect-medium:hover img {
+    animation: spark-medium 2.5s infinite linear;
+  }
+
+  .glitch-effect-medium:hover::after {
+    animation: glitch-anim-noise-burst-2 2.5s infinite linear;
+  }
+
+  /* HARD - Frequent and intense */
+  .glitch-effect-hard:hover img {
+    animation: spark-hard 2s infinite linear;
+  }
+
+  .glitch-effect-hard:hover::after {
+    animation: glitch-anim-noise-burst-1 2s infinite linear;
+  }
+
+  /* INSANE - Very frequent and chaotic */
+  .glitch-effect-insane:hover img {
+    animation: spark-insane 1.5s infinite linear;
+  }
+
+  .glitch-effect-insane:hover::after {
+    animation: glitch-anim-noise-burst-2 1.5s infinite linear;
+  }
+
+  /* Scanline Overlay Class - Permanent CRT effect */
+  .scanline-overlay::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom,
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0.6;
   }
 }
 

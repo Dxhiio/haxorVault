@@ -31,18 +31,18 @@ export default function Header({ onLoginClick }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a
-              href="#features"
+            <Link
+              to="/features"
               className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
             >
               &gt; features
-            </a>
-            <a
-              href="#machines"
+            </Link>
+            <Link
+              to="/machines"
               className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
             >
               &gt; machines
-            </a>
+            </Link>
             <a
               href="#certifications"
               className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
@@ -103,20 +103,20 @@ export default function Header({ onLoginClick }: HeaderProps) {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-3 animate-slide-up border-t border-primary/30 mt-4 pt-4">
-            <a
-              href="#features"
+            <Link
+              to="/features"
               className="block px-4 py-2 rounded-sm hover:bg-card transition-colors text-sm font-mono text-primary hover:glow-pulse uppercase"
               onClick={() => setIsOpen(false)}
             >
               &gt; features
-            </a>
-            <a
-              href="#machines"
+            </Link>
+            <Link
+              to="/machines"
               className="block px-4 py-2 rounded-sm hover:bg-card transition-colors text-sm font-mono text-primary hover:glow-pulse uppercase"
               onClick={() => setIsOpen(false)}
             >
               &gt; machines
-            </a>
+            </Link>
             <a
               href="#certifications"
               className="block px-4 py-2 rounded-sm hover:bg-card transition-colors text-sm font-mono text-primary hover:glow-pulse uppercase"
