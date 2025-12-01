@@ -24,122 +24,144 @@ export default function NeuralParticles() {
         resize();
 
         // Configuration
-        const particleCount = 40; // Fewer particles for a cleaner "rare event" feel
-        const particles: Particle[] = [];
+        const nodeCount = 80;
+        const connectionDistance = 200;
+        const nodes: Node[] = [];
 
         // Neon Palette
         const COLORS = [
-            '0, 243, 255', // Cyan
-            '0, 255, 136', // Neon Green
-            '255, 0, 213'  // Magenta
+            { r: 0, g: 243, b: 255 },   // Cyan
+            { r: 0, g: 255, b: 136 },   // Neon Green
+            { r: 255, g: 0, b: 213 }    // Magenta
         ];
 
-        class Particle {
+        class Node {
             x: number;
             y: number;
+            z: number;
             vx: number;
             vy: number;
-            life: number;
-            decay: number;
-            history: { x: number, y: number }[];
-            color: string;
-            width: number;
+            vz: number;
+            color: { r: number, g: number, b: number };
+            size: number;
 
             constructor() {
+                // Position in 3D space
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
+                this.z = Math.random() * 1000; // Depth
 
-                // Slower velocity for "floating" radioactive particle effect
-                const angle = Math.random() * Math.PI * 2;
-                const speed = Math.random() * 0.5 + 0.2; // Reduced speed
-                this.vx = Math.cos(angle) * speed;
-                this.vy = Math.sin(angle) * speed;
+                // Velocity
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.vz = (Math.random() - 0.5) * 2;
 
-                this.life = 0; // Start invisible
-                this.decay = Math.random() * 0.005 + 0.002; // Slower decay
-                this.history = [];
-
-                const baseColor = COLORS[Math.floor(Math.random() * COLORS.length)];
-                this.color = baseColor;
-                this.width = Math.random() * 2 + 0.5;
-
-                // Start with a random life to stagger spawns
-                this.life = Math.random();
-            }
-
-            reset() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                const angle = Math.random() * Math.PI * 2;
-                const speed = Math.random() * 0.8 + 0.3; // Slightly faster on reset but still slow
-                this.vx = Math.cos(angle) * speed;
-                this.vy = Math.sin(angle) * speed;
-                this.life = 1.0;
-                this.history = [];
+                this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+                this.size = 2;
             }
 
             update() {
                 this.x += this.vx;
                 this.y += this.vy;
-                this.life -= this.decay;
+                this.z += this.vz;
 
-                // Add to trail
-                this.history.push({ x: this.x, y: this.y });
-                if (this.history.length > 20) {
-                    this.history.shift();
-                }
-
-                // Reset if dead or out of bounds
-                if (this.life <= 0 || this.x < -50 || this.x > width + 50 || this.y < -50 || this.y > height + 50) {
-                    this.reset();
-                }
+                // Wrap around edges
+                if (this.x < 0) this.x = width;
+                if (this.x > width) this.x = 0;
+                if (this.y < 0) this.y = height;
+                if (this.y > height) this.y = 0;
+                if (this.z < 0) this.z = 1000;
+                if (this.z > 1000) this.z = 0;
             }
 
             draw() {
-                if (!ctx || this.history.length < 2) return;
+                if (!ctx) return;
 
+                // Calculate perspective (closer = bigger)
+                const scale = 1000 / (1000 + this.z);
+                const x2d = this.x;
+                const y2d = this.y;
+                const size = this.size * scale * 3;
+                const alpha = scale * 0.8;
+
+                // Draw node with glow
+                const gradient = ctx.createRadialGradient(x2d, y2d, 0, x2d, y2d, size * 2);
+                gradient.addColorStop(0, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${alpha})`);
+                gradient.addColorStop(0.5, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${alpha * 0.5})`);
+                gradient.addColorStop(1, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, 0)`);
+
+                ctx.fillStyle = gradient;
                 ctx.beginPath();
-                ctx.moveTo(this.history[0].x, this.history[0].y);
-
-                // Draw the trail
-                for (let i = 1; i < this.history.length; i++) {
-                    ctx.lineTo(this.history[i].x, this.history[i].y);
-                }
-
-                // Fade out trail
-                ctx.strokeStyle = `rgba(${this.color}, ${this.life})`;
-                ctx.lineWidth = this.width;
-                ctx.lineCap = 'round';
-                ctx.lineJoin = 'round';
-
-                // Add glow
-                ctx.shadowBlur = 10;
-                ctx.shadowColor = `rgb(${this.color})`;
-
-                ctx.stroke();
-                ctx.shadowBlur = 0;
-
-                // Draw head
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.width, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(${this.color}, ${this.life})`;
+                ctx.arc(x2d, y2d, size * 2, 0, Math.PI * 2);
                 ctx.fill();
+
+                // Core
+                ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${alpha})`;
+                ctx.beginPath();
+                ctx.arc(x2d, y2d, size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            getDistance(other: Node): number {
+                const dx = this.x - other.x;
+                const dy = this.y - other.y;
+                const dz = this.z - other.z;
+                return Math.sqrt(dx * dx + dy * dy + dz * dz);
             }
         }
 
-        // Initialize particles
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
+        // Initialize nodes
+        for (let i = 0; i < nodeCount; i++) {
+            nodes.push(new Node());
+        }
+
+        function drawConnections() {
+            if (!ctx) return;
+
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const distance = nodes[i].getDistance(nodes[j]);
+
+                    if (distance < connectionDistance) {
+                        const opacity = (1 - distance / connectionDistance) * 0.3;
+
+                        // Calculate perspective for both nodes
+                        const scale1 = 1000 / (1000 + nodes[i].z);
+                        const scale2 = 1000 / (1000 + nodes[j].z);
+
+                        // Create gradient line
+                        const gradient = ctx.createLinearGradient(
+                            nodes[i].x, nodes[i].y,
+                            nodes[j].x, nodes[j].y
+                        );
+
+                        gradient.addColorStop(0, `rgba(${nodes[i].color.r}, ${nodes[i].color.g}, ${nodes[i].color.b}, ${opacity * scale1})`);
+                        gradient.addColorStop(1, `rgba(${nodes[j].color.r}, ${nodes[j].color.g}, ${nodes[j].color.b}, ${opacity * scale2})`);
+
+                        ctx.strokeStyle = gradient;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(nodes[i].x, nodes[i].y);
+                        ctx.lineTo(nodes[j].x, nodes[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
         }
 
         const animate = () => {
-            // Create "fade" effect for trails by not fully clearing, but here we want clean trails
-            // so we clear and redraw history.
             ctx.clearRect(0, 0, width, height);
 
-            particles.forEach(particle => {
-                particle.update();
-                particle.draw();
+            // Draw connections first (behind nodes)
+            drawConnections();
+
+            // Sort nodes by z-depth (far to near) for proper layering
+            nodes.sort((a, b) => b.z - a.z);
+
+            // Update and draw nodes
+            nodes.forEach(node => {
+                node.update();
+                node.draw();
             });
 
             requestAnimationFrame(animate);
@@ -156,7 +178,7 @@ export default function NeuralParticles() {
     return (
         <canvas
             ref={canvasRef}
-            className="fixed inset-0 pointer-events-none z-0 opacity-40"
+            className="fixed inset-0 pointer-events-none z-0 opacity-50"
         />
     );
 }
