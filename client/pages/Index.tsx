@@ -76,7 +76,7 @@ export default function Index() {
     <Layout onLoginClick={() => setLoginModalOpen(true)}>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-[95%] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-mono uppercase tracking-widest animate-fade-in">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -116,7 +116,7 @@ export default function Index() {
 
       {/* Stats Section */}
       <section className="border-y border-primary/30 bg-card/50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="w-[95%] mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { label: "Usuarios", value: "10K+", icon: Users, color: "text-primary" },
@@ -140,7 +140,7 @@ export default function Index() {
 
       {/* Features Grid */}
       <section className="py-24 md:py-40 relative">
-        <div className="w-[95%] max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="w-[95%] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">
               <span className="border-b-4 border-primary/50 pb-2">Arsenal</span> de Herramientas
@@ -196,7 +196,7 @@ export default function Index() {
       {/* Advanced Search & Filters */}
       {/* Random Machine Suggestion */}
       {randomMachine && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="w-[95%] mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <div className="glow-box p-6 border-secondary/40 neon-border-secondary rounded-sm animate-slide-up space-y-3">
             <div className="flex items-center gap-2 text-secondary font-mono text-sm">
               <Shuffle className="w-4 h-4" />
@@ -248,7 +248,7 @@ export default function Index() {
       )}
 
       {/* Latest Active Machines */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 pb-20">
+      <div className="w-[95%] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 pb-20">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold tracking-tighter">
             <span className="glow-text">MÁQUINAS ACTIVAS</span>
