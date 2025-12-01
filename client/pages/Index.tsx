@@ -139,18 +139,18 @@ export default function Index() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          <div className="text-center space-y-4 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter uppercase">
+      <section className="py-24 md:py-40 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center space-y-6 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">
               <span className="border-b-4 border-primary/50 pb-2">Arsenal</span> de Herramientas
             </h2>
-            <p className="text-foreground/70 font-mono">
+            <p className="text-lg md:text-xl text-foreground/70 font-mono">
               Todo lo que necesitas para pasar de script kiddie a elite hacker.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 pt-8">
             {[
               {
                 title: "Laboratorios Virtuales",
@@ -176,15 +176,15 @@ export default function Index() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className={`glow-box p-8 ${feature.border} rounded-sm space-y-4 group hover:-translate-y-1 transition-transform duration-300`}
+                className={`glow-box p-6 lg:p-8 ${feature.border} rounded-sm space-y-4 group hover:-translate-y-2 transition-all duration-300`}
               >
-                <div className={`w-12 h-12 rounded-sm bg-background flex items-center justify-center border ${feature.border}`}>
-                  <feature.icon className={`w-6 h-6 ${feature.color}`} />
+                <div className={`w-14 h-14 rounded-sm bg-background flex items-center justify-center border ${feature.border} group-hover:scale-110 transition-transform`}>
+                  <feature.icon className={`w-7 h-7 ${feature.color}`} />
                 </div>
-                <h3 className="text-xl font-bold font-mono uppercase tracking-wide">
+                <h3 className="text-xl lg:text-2xl font-bold font-mono uppercase tracking-wide">
                   {feature.title}
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-sm lg:text-base leading-relaxed">
                   {feature.desc}
                 </p>
               </div>
