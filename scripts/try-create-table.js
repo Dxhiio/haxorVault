@@ -1,7 +1,13 @@
+import "dotenv/config";
 import axios from "axios";
 
-const PROJECT_REF = "runphepglrlpjsncfymn";
-const TOKEN = "sb_secret_BXsLaoVj8EJEJAtJL9voHQ_7JeOfoTQ"; // Provided by user
+const PROJECT_REF = process.env.SUPABASE_PROJECT_ID;
+const TOKEN = process.env.SUPABASE_ACCESS_TOKEN;
+
+if (!PROJECT_REF || !TOKEN) {
+    console.error("Error: SUPABASE_PROJECT_ID or SUPABASE_ACCESS_TOKEN not set in .env");
+    process.exit(1);
+}
 
 const SQL = `
 create table if not exists public.htb_machines (
@@ -36,7 +42,6 @@ async function run() {
     console.log("Attempting to create table via Supabase Management API...");
 
     try {
-        // Try the query endpoint (often used by the dashboard)
         const response = await axios.post(
             `https://api.supabase.com/v1/projects/${PROJECT_REF}/query`,
             { query: SQL },

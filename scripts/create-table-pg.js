@@ -1,11 +1,13 @@
+import "dotenv/config";
 import pg from 'pg';
 const { Client } = pg;
 
-const PROJECT_REF = "runphepglrlpjsncfymn";
-const PASSWORD = "sb_secret_BXsLaoVj8EJEJAtJL9voHQ_7JeOfoTQ";
+const CONNECTION_STRING = process.env.DATABASE_URL;
 
-// Try standard Supabase connection string
-const connectionString = `postgres://postgres:${PASSWORD}@db.${PROJECT_REF}.supabase.co:5432/postgres`;
+if (!CONNECTION_STRING) {
+  console.error("Error: DATABASE_URL not set in .env");
+  process.exit(1);
+}
 
 const SQL = `
 create table if not exists public.htb_machines (
@@ -37,28 +39,27 @@ create policy "Service role can manage machines"
 `;
 
 async function run() {
-    console.log("Attempting to connect to PostgreSQL directly...");
-    console.log(`Host: db.${PROJECT_REF}.supabase.co`);
+  console.log("Attempting to connect to PostgreSQL directly...");
 
-    const client = new Client({
-        connectionString,
-        ssl: { rejectUnauthorized: false } // Required for Supabase
-    });
+  const client = new Client({
+    connectionString: CONNECTION_STRING,
+    ssl: { rejectUnauthorized: false } // Required for Supabase
+  });
 
-    try {
-        await client.connect();
-        console.log("✅ Connected!");
+  try {
+    await client.connect();
+    console.log("✅ Connected!");
 
-        console.log("Executing SQL...");
-        await client.query(SQL);
-        console.log("✅ Table created successfully!");
+    console.log("Executing SQL...");
+    await client.query(SQL);
+    console.log("✅ Table created successfully!");
 
-        await client.end();
-    } catch (error) {
-        console.error("❌ Failed.");
-        console.error(error.message);
-        if (client) await client.end();
-    }
+    await client.end();
+  } catch (error) {
+    console.error("❌ Failed.");
+    console.error(error.message);
+    if (client) await client.end();
+  }
 }
 
 run();
