@@ -93,8 +93,8 @@ export function MachineCard({ machine, onClick }: MachineCardProps) {
             {machine.name}
           </h3>
           <div className="flex items-center gap-2 mt-1">
-            <CyberBadge variant="ghost" size="sm" intent={osIntent} className="pl-0">
-              {machine.os === 'Windows' ? 'WIN' : machine.os === 'Linux' ? 'LNX' : machine.os}
+            <CyberBadge variant="ghost" size="sm" intent={osIntent}>
+              {machine.os}
             </CyberBadge>
             <span className="text-xs text-foreground/40">•</span>
             <span className="text-xs font-mono text-foreground/60">{machine.points} pts</span>

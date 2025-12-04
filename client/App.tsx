@@ -12,6 +12,9 @@ import Features from "./pages/Features";
 import Machines from "./pages/Machines";
 import SkillTree from "./pages/SkillTree";
 import NotFound from "./pages/NotFound";
+import Profile from "./pages/Profile";
+
+import Roadmap from "./pages/Roadmap";
 
 const queryClient = new QueryClient();
 
@@ -23,10 +26,12 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/features" element={<Features />} />
+            <Route path="/" element={<Machines />} />
+            <Route path="/landing" element={<Index />} />
             <Route path="/machines" element={<Machines />} />
             <Route path="/skill-tree" element={<SkillTree />} />
+            <Route path="/certs" element={<Roadmap />} />
+            <Route path="/profile" element={<Profile />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

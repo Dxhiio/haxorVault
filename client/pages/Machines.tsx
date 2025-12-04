@@ -21,11 +21,11 @@ const TECHNIQUES = [
     "Cryptography",
 ];
 const DIFFICULTIES = ["All", "Easy", "Medium", "Hard", "Insane"];
-const OS_OPTIONS = ["All", "Linux", "Windows", "macOS", "IoT"];
+const OS_OPTIONS = ["All", "Linux", "Windows"];
 
 export default function Machines() {
     const [currentPage, setCurrentPage] = useState(1);
-    const [selectedStatus, setSelectedStatus] = useState("All");
+    const [selectedStatus, setSelectedStatus] = useState("Active");
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedDifficulty, setSelectedDifficulty] = useState("All");
     const [selectedOS, setSelectedOS] = useState("All");
@@ -102,20 +102,21 @@ export default function Machines() {
                         </div>
 
                         {/* Filter Groups */}
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* Status */}
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold text-primary/70 uppercase tracking-widest">
-                                    $ estado
+                            <div className="space-y-3">
+                                <label className="text-xs font-bold text-primary/70 uppercase tracking-widest flex items-center gap-2">
+                                    <span className="w-1 h-1 bg-primary rounded-full"></span>
+                                    estado
                                 </label>
                                 <div className="flex flex-wrap gap-2">
                                     {["All", "Active", "Retired"].map((status) => (
                                         <button
                                             key={status}
                                             onClick={() => { setSelectedStatus(status); setCurrentPage(1); }}
-                                            className={`px-3 py-1 rounded-sm text-xs font-mono uppercase tracking-wider transition-all border ${selectedStatus === status
+                                            className={`px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider transition-all border ${selectedStatus === status
                                                 ? "bg-primary text-background border-primary font-bold shadow-[0_0_10px_rgba(34,197,94,0.4)]"
-                                                : "bg-transparent border-primary/30 text-foreground/70 hover:border-primary hover:text-primary"
+                                                : "bg-transparent border-primary/30 text-foreground/70 hover:border-primary hover:text-primary hover:bg-primary/5"
                                                 }`}
                                         >
                                             {status}
@@ -125,18 +126,19 @@ export default function Machines() {
                             </div>
 
                             {/* Difficulty */}
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold text-secondary/70 uppercase tracking-widest">
-                                    $ dificultad
+                            <div className="space-y-3">
+                                <label className="text-xs font-bold text-secondary/70 uppercase tracking-widest flex items-center gap-2">
+                                    <span className="w-1 h-1 bg-secondary rounded-full"></span>
+                                    dificultad
                                 </label>
                                 <div className="flex flex-wrap gap-2">
                                     {DIFFICULTIES.map((diff) => (
                                         <button
                                             key={diff}
                                             onClick={() => { setSelectedDifficulty(diff); setCurrentPage(1); }}
-                                            className={`px-3 py-1 rounded-sm text-xs font-mono uppercase tracking-wider transition-all border ${selectedDifficulty === diff
+                                            className={`px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider transition-all border ${selectedDifficulty === diff
                                                 ? "bg-secondary text-background border-secondary font-bold shadow-[0_0_10px_rgba(59,130,246,0.4)]"
-                                                : "bg-transparent border-secondary/30 text-foreground/70 hover:border-secondary hover:text-secondary"
+                                                : "bg-transparent border-secondary/30 text-foreground/70 hover:border-secondary hover:text-secondary hover:bg-secondary/5"
                                                 }`}
                                         >
                                             {diff}
@@ -146,18 +148,19 @@ export default function Machines() {
                             </div>
 
                             {/* OS */}
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold text-accent/70 uppercase tracking-widest">
-                                    $ sistema operativo
+                            <div className="space-y-3">
+                                <label className="text-xs font-bold text-accent/70 uppercase tracking-widest flex items-center gap-2">
+                                    <span className="w-1 h-1 bg-accent rounded-full"></span>
+                                    sistema operativo
                                 </label>
                                 <div className="flex flex-wrap gap-2">
                                     {OS_OPTIONS.map((os) => (
                                         <button
                                             key={os}
                                             onClick={() => { setSelectedOS(os); setCurrentPage(1); }}
-                                            className={`px-3 py-1 rounded-sm text-xs font-mono uppercase tracking-wider transition-all border ${selectedOS === os
+                                            className={`px-4 py-2 rounded-sm text-xs font-mono uppercase tracking-wider transition-all border ${selectedOS === os
                                                 ? "bg-accent text-background border-accent font-bold shadow-[0_0_10px_rgba(168,85,247,0.4)]"
-                                                : "bg-transparent border-accent/30 text-foreground/70 hover:border-accent hover:text-accent"
+                                                : "bg-transparent border-accent/30 text-foreground/70 hover:border-accent hover:text-accent hover:bg-accent/5"
                                                 }`}
                                         >
                                             {os}

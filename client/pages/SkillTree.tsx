@@ -390,9 +390,7 @@ export default function SkillTree() {
           
           {/* Header */}
           <div className="text-center space-y-4 mb-8">
-            <CyberBadge variant="neon" intent="accent" size="lg" className="animate-pulse">
-              SYSTEM V5.2 // PHASE_GRID
-            </CyberBadge>
+
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase glow-text">
               Árbol de Habilidades
             </h1>

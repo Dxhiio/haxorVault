@@ -1,63 +1,54 @@
-# Auditoría del Proyecto: Seguridad, SEO y Escalabilidad
+# Reporte de Auditoría del Proyecto: HackingVault Roadmap (Post-Refactorización)
 
-A continuación se presenta un informe de auditoría para el proyecto, cubriendo las áreas de seguridad, optimización para motores de búsqueda (SEO) y escalabilidad.
+## 1. Resumen Ejecutivo
 
-## 1. Auditoría de Seguridad
+Tras la refactorización reciente, el proyecto ha mejorado significativamente en términos de mantenibilidad y limpieza. La arquitectura basada en **React (Vite)** y **Supabase** se mantiene sólida. Se han eliminado scripts redundantes y se ha modularizado el componente principal del roadmap, lo que facilita futuras expansiones. La integración con la API de HTB y la normalización de la base de datos siguen siendo correctas y robustas.
 
-El proyecto tiene una base de seguridad sólida, pero se han identificado algunas áreas de mejora.
+## 2. Arquitectura y Modularidad
 
-**Hallazgos Positivos:**
+### Frontend (`client/`)
 
-*   **Gestión de Secretos:** Las claves de API de Supabase (URL y clave anónima) se gestionan correctamente a través de variables de entorno (`.env`), tanto en el lado del cliente (usando `import.meta.env`) como en los scripts de Node.js.
-*   **No Hay Claves de Servicio Expuestas:** No se encontraron claves de servicio (service\_role\_key) de Supabase en el código fuente, lo cual es una práctica de seguridad excelente.
-*   **Uso Seguro de `dangerouslySetInnerHTML`:** El uso de esta propiedad en el componente de gráficos (`chart.tsx`) es para inyectar CSS dinámico de forma segura, sin procesar entradas de usuario, lo que minimiza el riesgo de ataques XSS en este contexto.
+- **Mejora Significativa**: El componente `Roadmap.tsx` ha sido refactorizado exitosamente.
+  - **`CertSelector.tsx`**: Maneja la lógica de selección de certificaciones.
+  - **`WeekCard.tsx`**: Encapsula la visualización de cada semana, incluyendo la lógica de bloqueo y expansión.
+- **Resultado**: `Roadmap.tsx` es ahora mucho más legible y actúa principalmente como un orquestador de estado y datos.
+- **Estructura General**: Se mantiene la organización limpia en `components`, `hooks`, `pages`, etc.
 
-**Áreas de Mejora y Riesgos:**
+### Backend / Scripts (`scripts/`)
 
-*   **(Medio) Configuración de CORS Permisiva:** El servidor de Express está configurado con `app.use(cors())` sin ninguna opción, lo que permite peticiones desde **cualquier origen**. Esto es aceptable para el desarrollo, pero en producción representa un riesgo de seguridad.
-    *   **Recomendación:** Restringir los orígenes permitidos a dominios específicos en el entorno de producción.
-      ```javascript
-      // Ejemplo de configuración de CORS más segura
-      app.use(cors({
-        origin: 'https://tu-dominio.com' 
-      }));
-      ```
-*   **(Bajo) Vulnerabilidades de Dependencias (Solucionado):** Se encontraron 2 vulnerabilidades en las dependencias (`body-parser` y `glob`) que fueron solucionadas automáticamente ejecutando `npm audit fix`.
-    *   **Recomendación:** Mantener un proceso regular de auditoría de dependencias.
+- **Limpieza**: Se han eliminado los scripts redundantes (`sync-htb.js`, `htb-sync.mjs`).
+- **Fuente de Verdad**: `full-sync.js` se ha consolidado como el único script de sincronización, eliminando la ambigüedad sobre qué proceso utilizar para actualizar los datos desde HTB.
 
-## 2. Auditoría de SEO
+## 3. Integración con API de HackTheBox
 
-El proyecto es una Single Page Application (SPA), lo que presenta desafíos para el SEO. Se han encontrado varias áreas críticas de mejora.
+La integración se mantiene funcional y optimizada:
 
-**Hallazgos Positivos:**
+- **Endpoint**: `https://labs.hackthebox.com/api/v4`.
+- **Manejo de Datos**: Paginación, Rate Limiting y obtención de detalles siguen operando correctamente en `full-sync.js`.
+- **Consistencia**: Al tener un solo script de sincronización, se garantiza que los datos en la base de datos (`htb_machines`) sean consistentes y provengan de una única lógica de transformación.
 
-*   **`robots.txt`:** El archivo `robots.txt` está correctamente configurado para permitir el rastreo de todo el sitio a los principales motores de búsqueda.
-*   **Atributo `lang`:** El HTML principal tiene el atributo `lang="en"`, lo cual es correcto.
+## 4. Base de Datos y Normalización
 
-**Áreas de Mejora Críticas:**
+El esquema de base de datos no ha sufrido cambios estructurales, manteniendo su buen diseño:
 
-*   **(Alto) Título de Página Genérico:** El título actual es `<title>Hello world project</title>`. Este es el elemento más importante para el SEO en la página.
-    *   **Recomendación:** Usar un título descriptivo y único para cada página. En una SPA, esto se gestiona dinámicamente con librerías como `react-helmet` o actualizando `document.title`.
-*   **(Alto) Ausencia de `meta description`:** No existe una etiqueta `<meta name="description" ...>`. Esta etiqueta es crucial ya que su contenido aparece en los resultados de búsqueda debajo del título.
-    *   **Recomendación:** Añadir una meta descripción única y atractiva para cada página, también gestionada dinámicamente.
-*   **(Medio) Ausencia de Sitemap:** No se ha encontrado ninguna herramienta o configuración para generar un `sitemap.xml`. Un sitemap es vital para que los motores de búsqueda descubran todas las páginas de la aplicación.
-    *   **Recomendación:** Integrar una herramienta como `vite-plugin-sitemap` para generar automáticamente un sitemap durante el proceso de build.
-*   **(Bajo) Uso de Semántica HTML:** Aunque no se puede analizar estáticamente, es crucial que los componentes de React utilicen etiquetas HTML semánticas (ej. un solo `<h1>` por vista, `<nav>`, `<main>`, etc.) para dar estructura al contenido.
+- **Tablas**: `htb_machines`, `techniques`, `certifications` y sus tablas de relación (`machine_techniques`, `roadmap_weeks`, `roadmap_week_machines`).
+- **Integridad**: El uso de IDs originales de HTB y claves foráneas asegura la integridad referencial.
 
-## 3. Auditoría de Escalabilidad
+## 5. Estado Actual y Próximos Pasos
 
-La arquitectura del proyecto es moderna y está bien preparada para la escalabilidad.
+El proyecto se encuentra en un estado **excelente** para continuar con el desarrollo de nuevas funcionalidades.
 
-**Hallazgos Positivos:**
+### Puntos Fuertes
 
-*   **Arquitectura Serverless:** El uso de Netlify Functions para el backend significa que la infraestructura puede escalar automáticamente con la demanda sin necesidad de gestionar servidores.
-*   **Frontend Estático en CDN:** El frontend es una aplicación estática (`dist/spa`) servida a través de la red de Netlify (CDN), lo que garantiza una entrega global rápida y altamente escalable.
-*   **Base de Datos Escalable:** Supabase es un servicio gestionado que se encarga de la escalabilidad de la base de datos, liberando al equipo de desarrollo de esta tarea.
-*   **Backend sin Estado (Stateless):** Las rutas de la API existentes son stateless, lo cual es un requisito fundamental para escalar horizontalmente en un entorno serverless.
+- Código limpio y modular.
+- Deuda técnica reducida (scripts eliminados, componentes divididos).
+- Base de datos normalizada.
 
-**Consideraciones a Futuro:**
+### Recomendaciones Futuras
 
-*   **Monolito Serverless (API Única):** Actualmente, toda la API se gestiona en una única función serverless. Para aplicaciones muy grandes, esto podría llevar a "cold starts" más lentos y a un mantenimiento más complejo.
-    *   **Recomendación (a largo plazo):** Si la aplicación crece significativamente, considerar dividir la API en múltiples funciones más pequeñas (microservicios), cada una responsable de una entidad o dominio de negocio específico (ej. `api/users`, `api/products`). Para el estado actual y futuro cercano del proyecto, la configuración actual es perfectamente adecuada.
-*   **Dependencias Desactualizadas:** Hay una cantidad considerable de dependencias desactualizadas, incluyendo algunas importantes como React, Vite y Tailwind CSS.
-    *   **Recomendación:** Planificar una actualización progresiva de las dependencias para acceder a mejoras de rendimiento, seguridad y nuevas funcionalidades que pueden impactar positivamente la escalabilidad y el mantenimiento.
+- **Tests**: Implementar pruebas unitarias para los nuevos componentes (`WeekCard`, `CertSelector`) y para la lógica de sincronización.
+- **Tipado**: Reforzar el tipado en TypeScript para las respuestas de la API de HTB en `full-sync.js` (actualmente usa JSDoc/JavaScript plano en gran parte).
+
+## 6. Conclusión Final
+
+La refactorización ha sido exitosa. El código es ahora más robusto, fácil de leer y mantener. Se han cumplido los objetivos de modularidad, escalabilidad y limpieza solicitados.

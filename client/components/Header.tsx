@@ -32,13 +32,13 @@ export default function Header({ onLoginClick }: HeaderProps) {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              to="/features"
+              to="/landing"
               className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
             >
-              &gt; features
+              &gt; home
             </Link>
             <Link
-              to="/machines"
+              to="/"
               className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
             >
               &gt; machines
@@ -49,12 +49,20 @@ export default function Header({ onLoginClick }: HeaderProps) {
             >
               &gt; skill tree
             </Link>
-            <a
-              href="#certifications"
+            <Link
+              to="/certs"
               className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
             >
               &gt; certs
-            </a>
+            </Link>
+            {!isAuthenticated && (
+              <Link
+                to="/features"
+                className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
+              >
+                &gt; features
+              </Link>
+            )}
           </nav>
 
           {/* Desktop CTA Buttons */}
@@ -65,9 +73,9 @@ export default function Header({ onLoginClick }: HeaderProps) {
               </div>
             ) : isAuthenticated ? (
               <>
-                <div className="text-sm font-mono text-primary/70 truncate max-w-xs">
+                <Link to="/profile" className="text-sm font-mono text-primary/70 truncate max-w-xs hover:text-primary hover:underline cursor-pointer transition-colors">
                   {email}
-                </div>
+                </Link>
                 <Button
                   onClick={logout}
                   variant="outline"
@@ -110,14 +118,14 @@ export default function Header({ onLoginClick }: HeaderProps) {
         {isOpen && (
           <div className="md:hidden pb-4 space-y-3 animate-slide-up border-t border-primary/30 mt-4 pt-4">
             <Link
-              to="/features"
+              to="/landing"
               className="block px-4 py-2 rounded-sm hover:bg-card transition-colors text-sm font-mono text-primary hover:glow-pulse uppercase"
               onClick={() => setIsOpen(false)}
             >
-              &gt; features
+              &gt; home
             </Link>
             <Link
-              to="/machines"
+              to="/"
               className="block px-4 py-2 rounded-sm hover:bg-card transition-colors text-sm font-mono text-primary hover:glow-pulse uppercase"
               onClick={() => setIsOpen(false)}
             >
@@ -129,13 +137,22 @@ export default function Header({ onLoginClick }: HeaderProps) {
             >
               &gt; skill tree
             </Link>
-            <a
-              href="#certifications"
+            <Link
+              to="/certs"
               className="block px-4 py-2 rounded-sm hover:bg-card transition-colors text-sm font-mono text-primary hover:glow-pulse uppercase"
               onClick={() => setIsOpen(false)}
             >
               &gt; certs
-            </a>
+            </Link>
+            {!isAuthenticated && (
+              <Link
+                to="/features"
+                className="block px-4 py-2 rounded-sm hover:bg-card transition-colors text-sm font-mono text-primary hover:glow-pulse uppercase"
+                onClick={() => setIsOpen(false)}
+              >
+                &gt; features
+              </Link>
+            )}
             <div className="flex flex-col gap-2 pt-2 border-t border-primary/30">
               {loading ? (
                 <div className="text-sm font-mono text-primary/70 px-4 py-2">
@@ -143,9 +160,9 @@ export default function Header({ onLoginClick }: HeaderProps) {
                 </div>
               ) : isAuthenticated ? (
                 <>
-                  <div className="text-sm font-mono text-primary/70 px-4 py-2 truncate">
+                  <Link to="/profile" className="block text-sm font-mono text-primary/70 px-4 py-2 truncate hover:text-primary hover:bg-card transition-colors" onClick={() => setIsOpen(false)}>
                     {email}
-                  </div>
+                  </Link>
                   <Button
                     onClick={() => {
                       logout();

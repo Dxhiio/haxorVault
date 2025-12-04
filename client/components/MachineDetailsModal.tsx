@@ -20,7 +20,7 @@ export default function MachineDetailsModal({
   onClose,
 }: MachineDetailsModalProps) {
   const { isAuthenticated } = useAuth();
-  const { markAsCompleted, isCompleted } = useUserProgress();
+  const { markAsCompleted, unmarkAsCompleted, isCompleted } = useUserProgress();
   const [timeLeft, setTimeLeft] = useState(25 * 60); // 25 minutes in seconds
   const [isRunning, setIsRunning] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
@@ -304,15 +304,29 @@ export default function MachineDetailsModal({
           {/* Action Buttons */}
           <div className="grid grid-cols-2 gap-3 pt-2 pb-6">
              <Button 
-               onClick={() => machine && markAsCompleted.mutate(machine.id)}
-               disabled={!machine || (machine && isCompleted(machine.id)) || markAsCompleted.isPending}
+               onClick={() => {
+                 if (!machine) return;
+                 if (isCompleted(machine.id)) {
+                   unmarkAsCompleted.mutate(machine.id);
+                 } else {
+                   markAsCompleted.mutate(machine.id);
+                 }
+               }}
+               disabled={!machine || markAsCompleted.isPending || unmarkAsCompleted.isPending}
                className={`w-full button-glow font-mono uppercase tracking-widest rounded-sm h-12 font-bold transition-all ${
                  machine && isCompleted(machine.id)
-                   ? "bg-green-500 text-black hover:bg-green-600 border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)]" 
+                   ? "bg-green-500 text-black hover:bg-red-500 hover:text-white hover:border-red-500 hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] border-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)] group" 
                    : "bg-primary text-background hover:bg-primary/90"
                }`}
              >
-               {machine && isCompleted(machine.id) ? "$ SYSTEM PWNED" : "$ PWN MACHINE"}
+               {machine && isCompleted(machine.id) ? (
+                 <span className="group-hover:hidden">$ SYSTEM PWNED</span>
+               ) : (
+                 "$ PWN MACHINE"
+               )}
+               {machine && isCompleted(machine.id) && (
+                 <span className="hidden group-hover:inline">$ UNPWN SYSTEM</span>
+               )}
              </Button>
              <Button
                variant="outline"

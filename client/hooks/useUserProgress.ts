@@ -45,8 +45,18 @@ export const useUserProgress = () => {
         .insert({ user_id: user.id, machine_id: machineId });
 
       if (error) {
+        console.error("Supabase insert failed:", error);
+        
+        // Show error to user to help debugging
+        toast({
+          title: "Error Saving Progress to DB",
+          description: `DB Error: ${error.message || error.code || 'Unknown error'}`,
+          variant: "destructive",
+          duration: 9000, // Keep it longer
+        });
+
         // If table doesn't exist or RLS fails, use localStorage fallback
-        console.warn("Supabase insert failed, using localStorage fallback:", error);
+        console.warn("Using localStorage fallback");
         const current = JSON.parse(localStorage.getItem('mock_progress') || '[]');
         if (!current.find((p: any) => p.machine_id === machineId)) {
           current.push({ machine_id: machineId, completed_at: new Date().toISOString() });
@@ -57,7 +67,10 @@ export const useUserProgress = () => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['user-progress'] });
-      queryClient.invalidateQueries({ queryKey: ['skill-tree-machines'] }); // Refresh skill tree
+      queryClient.invalidateQueries({ queryKey: ['skill-tree-machines'] });
+      queryClient.invalidateQueries({ queryKey: ['certProgress'] });
+      queryClient.invalidateQueries({ queryKey: ['userProfile'] });
+      queryClient.invalidateQueries({ queryKey: ['userMachines'] });
       toast({
         title: "SYSTEM HACKED",
         description: "Machine pwned! XP added to your profile.",
@@ -73,6 +86,43 @@ export const useUserProgress = () => {
     }
   });
 
+  // Mutation to unmark as completed (Delete)
+  const unmarkAsCompleted = useMutation({
+    mutationFn: async (machineId: number) => {
+      if (!user) throw new Error("Must be logged in");
+
+      const { error } = await supabase
+        .from('user_progress')
+        .delete()
+        .eq('user_id', user.id)
+        .eq('machine_id', machineId);
+
+      if (error) {
+        console.error("Supabase delete failed:", error);
+        throw error;
+      }
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['user-progress'] });
+      queryClient.invalidateQueries({ queryKey: ['skill-tree-machines'] });
+      queryClient.invalidateQueries({ queryKey: ['certProgress'] });
+      queryClient.invalidateQueries({ queryKey: ['userProfile'] });
+      queryClient.invalidateQueries({ queryKey: ['userMachines'] });
+      toast({
+        title: "SYSTEM RESTORED",
+        description: "Machine un-pwned. XP removed.",
+        variant: "default",
+      });
+    },
+    onError: (error) => {
+      toast({
+        title: "Error",
+        description: "Failed to remove progress. " + error.message,
+        variant: "destructive",
+      });
+    }
+  });
+
   const isCompleted = (machineId: number) => {
     return completedMachines.some(p => p.machine_id === machineId);
   };
@@ -81,6 +131,7 @@ export const useUserProgress = () => {
     completedMachines,
     isLoading,
     markAsCompleted,
+    unmarkAsCompleted,
     isCompleted
   };
 };

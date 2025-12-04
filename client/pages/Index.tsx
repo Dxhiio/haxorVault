@@ -54,11 +54,7 @@ export default function Index() {
   const [selectedMachine, setSelectedMachine] = useState<Machine | null>(null);
   const [detailsModalOpen, setDetailsModalOpen] = useState(false);
 
-  useEffect(() => {
-    if (!authLoading && isAuthenticated) {
-      navigate("/machines");
-    }
-  }, [authLoading, isAuthenticated, navigate]);
+
 
   // Get random machine from the fetched list
   const getRandomMachine = () => {

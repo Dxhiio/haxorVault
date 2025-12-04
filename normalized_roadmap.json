@@ -1,0 +1,7356 @@
+[
+  {
+    "certification": "eJPT",
+    "week": 1,
+    "title": "Fundamentos - Semana 1",
+    "description": "Fundamentos de pentesting: OSINT, reconocimiento y enumeración",
+    "machines": [
+      {
+        "id": 636,
+        "name": "Alert"
+      },
+      {
+        "id": 400,
+        "name": "Antique"
+      },
+      {
+        "id": 118,
+        "name": "Bashed"
+      },
+      {
+        "id": 48,
+        "name": "Blocky"
+      },
+      {
+        "id": 603,
+        "name": "BoardLight"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4132,
+        "name": "Reconocimiento pasivo"
+      },
+      {
+        "id": null,
+        "name": "OSINT básico",
+        "error": "Not Found"
+      },
+      {
+        "id": 4132,
+        "name": "Footprinting"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 2,
+    "title": "Fundamentos - Semana 2",
+    "description": "Aprende a usar Metasploit y exploits públicos efectivamente",
+    "machines": [
+      {
+        "id": 351,
+        "name": "Cap"
+      },
+      {
+        "id": 631,
+        "name": "Chemistry"
+      },
+      {
+        "id": 653,
+        "name": "Code"
+      },
+      {
+        "id": 559,
+        "name": "CozyHosting"
+      },
+      {
+        "id": 587,
+        "name": "Crafty"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4132,
+        "name": "Escaneo de redes"
+      },
+      {
+        "id": null,
+        "name": "Enumeración de servicios",
+        "error": "Not Found"
+      },
+      {
+        "id": 4132,
+        "name": "Banner grabbing"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 3,
+    "title": "Fundamentos - Semana 3",
+    "description": "Domina técnicas básicas de explotación web y redes",
+    "machines": [
+      {
+        "id": 308,
+        "name": "Delivery"
+      },
+      {
+        "id": 3,
+        "name": "Devel"
+      },
+      {
+        "id": 387,
+        "name": "Driver"
+      },
+      {
+        "id": 608,
+        "name": "Editorial"
+      },
+      {
+        "id": 446,
+        "name": "GoodGames"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Explotación básica web",
+        "error": "Not Found"
+      },
+      {
+        "id": 1726631,
+        "name": "SQL injection manual"
+      },
+      {
+        "id": null,
+        "name": "XSS básico",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 4,
+    "title": "Fundamentos - Semana 4",
+    "description": "Practica post-explotación y movimiento dentro de sistemas",
+    "machines": [
+      {
+        "id": 13,
+        "name": "Grandpa"
+      },
+      {
+        "id": 14,
+        "name": "Granny"
+      },
+      {
+        "id": 374,
+        "name": "Horizontall"
+      },
+      {
+        "id": 163,
+        "name": "Irked"
+      },
+      {
+        "id": 144,
+        "name": "Jerry"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Metasploit Framework",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Uso de exploits públicos",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Meterpreter básico",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 5,
+    "title": "Fundamentos - Semana 5",
+    "description": "Consolida conocimientos de escalada de privilegios básica",
+    "machines": [
+      {
+        "id": 556,
+        "name": "Keeper"
+      },
+      {
+        "id": 347,
+        "name": "Knife"
+      },
+      {
+        "id": 1,
+        "name": "Lame"
+      },
+      {
+        "id": 2,
+        "name": "Legacy"
+      },
+      {
+        "id": 344,
+        "name": "Love"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Post-exploitation básico",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Escalada de privilegios Linux",
+        "error": "Not Found"
+      },
+      {
+        "id": 4150,
+        "name": "Hash cracking"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 6,
+    "title": "Fundamentos - Semana 6",
+    "description": "Consolida conocimientos de escalada de privilegios básica",
+    "machines": [
+      {
+        "id": 64,
+        "name": "Mirai"
+      },
+      {
+        "id": 177,
+        "name": "Netmon"
+      },
+      {
+        "id": 203,
+        "name": "Networked"
+      },
+      {
+        "id": 121,
+        "name": "Nibbles"
+      },
+      {
+        "id": 430,
+        "name": "NodeBlog"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Post-exploitation básico",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Escalada de privilegios Linux",
+        "error": "Not Found"
+      },
+      {
+        "id": 4150,
+        "name": "Hash cracking"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 7,
+    "title": "Fundamentos - Semana 7",
+    "description": "Consolida conocimientos de escalada de privilegios básica",
+    "machines": [
+      {
+        "id": 414,
+        "name": "NunChucks"
+      },
+      {
+        "id": 613,
+        "name": "PermX"
+      },
+      {
+        "id": 549,
+        "name": "Pilgrimage"
+      },
+      {
+        "id": 373,
+        "name": "Previse"
+      },
+      {
+        "id": 401,
+        "name": "Return"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Post-exploitation básico",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Escalada de privilegios Linux",
+        "error": "Not Found"
+      },
+      {
+        "id": 4150,
+        "name": "Hash cracking"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 8,
+    "title": "Fundamentos - Semana 8",
+    "description": "Consolida conocimientos de escalada de privilegios básica",
+    "machines": [
+      {
+        "id": 314,
+        "name": "ScriptKiddie"
+      },
+      {
+        "id": 108,
+        "name": "Shocker"
+      },
+      {
+        "id": 317,
+        "name": "Spectra"
+      },
+      {
+        "id": 339,
+        "name": "Toolbox"
+      },
+      {
+        "id": 382,
+        "name": "Validation"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Post-exploitation básico",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Escalada de privilegios Linux",
+        "error": "Not Found"
+      },
+      {
+        "id": 4150,
+        "name": "Hash cracking"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 9,
+    "title": "Nivel Intermedio - Semana 1",
+    "description": "Técnicas intermedias de network pivoting y man-in-the-middle",
+    "machines": [
+      {
+        "id": 57,
+        "name": "Apocalyst"
+      },
+      {
+        "id": 384,
+        "name": "Bolt"
+      },
+      {
+        "id": 167,
+        "name": "Chaos"
+      },
+      {
+        "id": 398,
+        "name": "Devzat"
+      },
+      {
+        "id": 437,
+        "name": "Flustered"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 1855415,
+        "name": "Network pivoting"
+      },
+      {
+        "id": null,
+        "name": "VLAN hopping",
+        "error": "Not Found"
+      },
+      {
+        "id": 4233,
+        "name": "ARP spoofing"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 10,
+    "title": "Nivel Intermedio - Semana 2",
+    "description": "Ataques web avanzados y command injection",
+    "machines": [
+      {
+        "id": 146,
+        "name": "Hawk"
+      },
+      {
+        "id": 630,
+        "name": "Instant"
+      },
+      {
+        "id": 114,
+        "name": "Jeeves"
+      },
+      {
+        "id": 132,
+        "name": "Poison"
+      },
+      {
+        "id": 4,
+        "name": "Popcorn"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Web attacks avanzados",
+        "error": "Not Found"
+      },
+      {
+        "id": 1206543,
+        "name": "Command injection"
+      },
+      {
+        "id": null,
+        "name": "File inclusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eJPT",
+    "week": 11,
+    "title": "Nivel Intermedio - Semana 3",
+    "description": "Password cracking y ataques de fuerza bruta optimizados",
+    "machines": [
+      {
+        "id": 85,
+        "name": "SolidState"
+      },
+      {
+        "id": 129,
+        "name": "Stratosphere"
+      },
+      {
+        "id": 8,
+        "name": "Tenten"
+      },
+      {
+        "id": 418,
+        "name": "Union"
+      },
+      {
+        "id": 149,
+        "name": "Waldo"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4150,
+        "name": "Password attacks"
+      },
+      {
+        "id": null,
+        "name": "Brute forcing",
+        "error": "Not Found"
+      },
+      {
+        "id": 4150,
+        "name": "Dictionary attacks"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 1,
+    "title": "Fundamentos - Semana 1",
+    "description": "Metodología profesional de pentesting y report writing",
+    "machines": [
+      {
+        "id": 148,
+        "name": "Active"
+      },
+      {
+        "id": 263,
+        "name": "Buff"
+      },
+      {
+        "id": 212,
+        "name": "Forest"
+      },
+      {
+        "id": 446,
+        "name": "GoodGames"
+      },
+      {
+        "id": 471,
+        "name": "OpenSource"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Metodología de pentesting profesional",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Scoping y planning",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Report writing",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 2,
+    "title": "Fundamentos - Semana 2",
+    "description": "Reconocimiento de red avanzado y network mapping",
+    "machines": [
+      {
+        "id": 229,
+        "name": "Sauna"
+      },
+      {
+        "id": 484,
+        "name": "Support"
+      },
+      {
+        "id": 452,
+        "name": "TimeLapse"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4132,
+        "name": "Network reconnaissance avanzado"
+      },
+      {
+        "id": 4132,
+        "name": "Network mapping"
+      },
+      {
+        "id": null,
+        "name": "Service fingerprinting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 3,
+    "title": "Nivel Intermedio - Semana 1",
+    "description": "Ataques avanzados a redes: VLAN bypass y network device exploitation",
+    "machines": [
+      {
+        "id": 634,
+        "name": "Administrator"
+      },
+      {
+        "id": 746,
+        "name": "BabyTwo"
+      },
+      {
+        "id": 235,
+        "name": "Cascade"
+      },
+      {
+        "id": 633,
+        "name": "Certified"
+      },
+      {
+        "id": 112,
+        "name": "Enterprise"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced network attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "VLAN segmentation bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Network device exploitation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 4,
+    "title": "Nivel Intermedio - Semana 2",
+    "description": "Pentesting de Active Directory completo",
+    "machines": [
+      {
+        "id": 437,
+        "name": "Flustered"
+      },
+      {
+        "id": 576,
+        "name": "Hospital"
+      },
+      {
+        "id": 117,
+        "name": "Inception"
+      },
+      {
+        "id": 357,
+        "name": "Intelligence"
+      },
+      {
+        "id": 589,
+        "name": "Jab"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Active Directory pentesting",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "AD enumeration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Credential harvesting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 5,
+    "title": "Nivel Intermedio - Semana 3",
+    "description": "Wireless pentesting: WPA2 enterprise y evil twin",
+    "machines": [
+      {
+        "id": 114,
+        "name": "Jeeves"
+      },
+      {
+        "id": 572,
+        "name": "Manager"
+      },
+      {
+        "id": 518,
+        "name": "Mentor"
+      },
+      {
+        "id": 223,
+        "name": "Monteverde"
+      },
+      {
+        "id": 490,
+        "name": "Outdated"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Wireless pentesting",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "WPA2 enterprise attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Evil twin attacks",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 6,
+    "title": "Nivel Intermedio - Semana 4",
+    "description": "VoIP security y ataques a Asterisk/SIP",
+    "machines": [
+      {
+        "id": 661,
+        "name": "Puppy"
+      },
+      {
+        "id": 175,
+        "name": "Querier"
+      },
+      {
+        "id": 220,
+        "name": "Resolute"
+      },
+      {
+        "id": 476,
+        "name": "Scrambled"
+      },
+      {
+        "id": 474,
+        "name": "StreamIO"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "VoIP security testing",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SIP attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Asterisk exploitation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 7,
+    "title": "Nivel Intermedio - Semana 5",
+    "description": "IoT testing y análisis de firmware",
+    "machines": [
+      {
+        "id": 626,
+        "name": "Trickster"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IoT device testing",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Embedded systems",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Firmware analysis",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 8,
+    "title": "Nivel Avanzado - Semana 1",
+    "description": "Escenarios de pivoting complejos en topologías multi-red",
+    "machines": [
+      {
+        "id": 438,
+        "name": "Acute"
+      },
+      {
+        "id": 584,
+        "name": "Analysis"
+      },
+      {
+        "id": 611,
+        "name": "Axlle"
+      },
+      {
+        "id": 255,
+        "name": "Blackfield"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 1855415,
+        "name": "Advanced pivoting scenarios"
+      },
+      {
+        "id": 1855415,
+        "name": "Multi-network traversal"
+      },
+      {
+        "id": null,
+        "name": "Complex network topologies",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 9,
+    "title": "Nivel Avanzado - Semana 2",
+    "description": "Simulación de red team completa con evasión",
+    "machines": [
+      {
+        "id": 614,
+        "name": "Blazorized"
+      },
+      {
+        "id": 478,
+        "name": "Carpediem"
+      },
+      {
+        "id": 375,
+        "name": "EarlyAccess"
+      },
+      {
+        "id": 274,
+        "name": "Feline"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Red team scenarios",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Full engagement simulation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Detection evasion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 10,
+    "title": "Nivel Avanzado - Semana 3",
+    "description": "Reporting avanzado con executive summaries",
+    "machines": [
+      {
+        "id": 604,
+        "name": "Freelancer"
+      },
+      {
+        "id": 101,
+        "name": "Kotarak"
+      },
+      {
+        "id": 98,
+        "name": "Mantis"
+      },
+      {
+        "id": 341,
+        "name": "Monitors"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced reporting",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Executive summaries",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Remediation guidance",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 11,
+    "title": "Nivel Avanzado - Semana 4",
+    "description": "Reporting avanzado con executive summaries",
+    "machines": [
+      {
+        "id": 447,
+        "name": "Object"
+      },
+      {
+        "id": 588,
+        "name": "Office"
+      },
+      {
+        "id": 231,
+        "name": "Oouch"
+      },
+      {
+        "id": 152,
+        "name": "Oz"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced reporting",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Executive summaries",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Remediation guidance",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 12,
+    "title": "Nivel Avanzado - Semana 5",
+    "description": "Reporting avanzado con executive summaries",
+    "machines": [
+      {
+        "id": 143,
+        "name": "Reel"
+      },
+      {
+        "id": 281,
+        "name": "Reel2"
+      },
+      {
+        "id": 422,
+        "name": "Search"
+      },
+      {
+        "id": 355,
+        "name": "Static"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced reporting",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Executive summaries",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Remediation guidance",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 13,
+    "title": "Nivel Avanzado - Semana 6",
+    "description": "Reporting avanzado con executive summaries",
+    "machines": [
+      {
+        "id": 458,
+        "name": "Talkative"
+      },
+      {
+        "id": 310,
+        "name": "Tentacle"
+      },
+      {
+        "id": 268,
+        "name": "Unbalanced"
+      },
+      {
+        "id": 338,
+        "name": "Unobtainium"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced reporting",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Executive summaries",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Remediation guidance",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 14,
+    "title": "Nivel Avanzado - Semana 7",
+    "description": "Reporting avanzado con executive summaries",
+    "machines": [
+      {
+        "id": 296,
+        "name": "APT"
+      },
+      {
+        "id": 115,
+        "name": "Ariekei"
+      },
+      {
+        "id": 116,
+        "name": "Fulcrum"
+      },
+      {
+        "id": 145,
+        "name": "Mischief"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced reporting",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Executive summaries",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Remediation guidance",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPPTv3",
+    "week": 15,
+    "title": "Nivel Avanzado - Semana 8",
+    "description": "Reporting avanzado con executive summaries",
+    "machines": [
+      {
+        "id": 232,
+        "name": "MultiMaster"
+      },
+      {
+        "id": 147,
+        "name": "Reddish"
+      },
+      {
+        "id": 169,
+        "name": "Sizzle"
+      },
+      {
+        "id": 409,
+        "name": "Toby"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced reporting",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Executive summaries",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Remediation guidance",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 1,
+    "title": "Fundamentos - Semana 1",
+    "description": "Aprende las bases del pentesting con máquinas entry-level. Enfócate en la metodología",
+    "machines": [
+      {
+        "id": 148,
+        "name": "Active"
+      },
+      {
+        "id": 248,
+        "name": "Admirer"
+      },
+      {
+        "id": 9,
+        "name": "Arctic"
+      },
+      {
+        "id": 416,
+        "name": "Backdoor"
+      },
+      {
+        "id": 51,
+        "name": "Blue"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4132,
+        "name": "Enumeración básica con Nmap"
+      },
+      {
+        "id": null,
+        "name": "Exploits públicos conocidos",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Windows privilege escalation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 2,
+    "title": "Fundamentos - Semana 2",
+    "description": "Consolida fundamentos de enumeración y explotación de servicios comunes",
+    "machines": [
+      {
+        "id": 142,
+        "name": "Bounty"
+      },
+      {
+        "id": 359,
+        "name": "BountyHunter"
+      },
+      {
+        "id": 263,
+        "name": "Buff"
+      },
+      {
+        "id": 627,
+        "name": "Cicada"
+      },
+      {
+        "id": 587,
+        "name": "Crafty"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Servicios vulnerables",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "File upload attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Linux privilege escalation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 3,
+    "title": "Fundamentos - Semana 3",
+    "description": "Practica escalada de privilegios en Linux y Windows con técnicas básicas",
+    "machines": [
+      {
+        "id": 3,
+        "name": "Devel"
+      },
+      {
+        "id": 212,
+        "name": "Forest"
+      },
+      {
+        "id": 13,
+        "name": "Grandpa"
+      },
+      {
+        "id": 14,
+        "name": "Granny"
+      },
+      {
+        "id": 594,
+        "name": "Headless"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 1784188,
+        "name": "SMB enumeration"
+      },
+      {
+        "id": 4135,
+        "name": "Web fuzzing básico"
+      },
+      {
+        "id": 4167,
+        "name": "Kernel exploits"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 4,
+    "title": "Fundamentos - Semana 4",
+    "description": "Introduce conceptos de Active Directory y ataques de red básicos",
+    "machines": [
+      {
+        "id": 201,
+        "name": "Heist"
+      },
+      {
+        "id": 298,
+        "name": "Laboratory"
+      },
+      {
+        "id": 463,
+        "name": "Late"
+      },
+      {
+        "id": 2,
+        "name": "Legacy"
+      },
+      {
+        "id": 600,
+        "name": "Mailing"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Active Directory básico",
+        "error": "Not Found"
+      },
+      {
+        "id": 4153,
+        "name": "Kerberoasting"
+      },
+      {
+        "id": 4150,
+        "name": "Password cracking"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 5,
+    "title": "Fundamentos - Semana 5",
+    "description": "Desarrolla habilidades de buffer overflow y explotación web básica",
+    "machines": [
+      {
+        "id": 177,
+        "name": "Netmon"
+      },
+      {
+        "id": 471,
+        "name": "OpenSource"
+      },
+      {
+        "id": 6,
+        "name": "Optimum"
+      },
+      {
+        "id": 423,
+        "name": "Pandora"
+      },
+      {
+        "id": 500,
+        "name": "Photobomb"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Buffer overflow básico",
+        "error": "Not Found"
+      },
+      {
+        "id": 1726631,
+        "name": "SQL injection"
+      },
+      {
+        "id": null,
+        "name": "Local File Inclusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 6,
+    "title": "Fundamentos - Semana 6",
+    "description": "Desarrolla habilidades de buffer overflow y explotación web básica",
+    "machines": [
+      {
+        "id": 481,
+        "name": "RedPanda"
+      },
+      {
+        "id": 229,
+        "name": "Sauna"
+      },
+      {
+        "id": 240,
+        "name": "Servmon"
+      },
+      {
+        "id": 496,
+        "name": "Shoppy"
+      },
+      {
+        "id": 514,
+        "name": "Squashed"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Buffer overflow básico",
+        "error": "Not Found"
+      },
+      {
+        "id": 1726631,
+        "name": "SQL injection"
+      },
+      {
+        "id": null,
+        "name": "Local File Inclusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 7,
+    "title": "Fundamentos - Semana 7",
+    "description": "Desarrolla habilidades de buffer overflow y explotación web básica",
+    "machines": [
+      {
+        "id": 484,
+        "name": "Support"
+      },
+      {
+        "id": 188,
+        "name": "SwagShop"
+      },
+      {
+        "id": 165,
+        "name": "Teacher"
+      },
+      {
+        "id": 452,
+        "name": "TimeLapse"
+      },
+      {
+        "id": 477,
+        "name": "Trick"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Buffer overflow básico",
+        "error": "Not Found"
+      },
+      {
+        "id": 1726631,
+        "name": "SQL injection"
+      },
+      {
+        "id": null,
+        "name": "Local File Inclusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 8,
+    "title": "Nivel Intermedio - Semana 1",
+    "description": "Profundiza en Active Directory: bloodhound, kerberos y movimiento lateral",
+    "machines": [
+      {
+        "id": 634,
+        "name": "Administrator"
+      },
+      {
+        "id": 499,
+        "name": "Ambassador"
+      },
+      {
+        "id": 340,
+        "name": "Atom"
+      },
+      {
+        "id": 746,
+        "name": "BabyTwo"
+      },
+      {
+        "id": 462,
+        "name": "Backend"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Active Directory intermedio",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "BloodHound analysis",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Credential dumping",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 9,
+    "title": "Nivel Intermedio - Semana 2",
+    "description": "Domina ataques web avanzados: XXE, SSRF y deserialización",
+    "machines": [
+      {
+        "id": 128,
+        "name": "Bart"
+      },
+      {
+        "id": 7,
+        "name": "Bastard"
+      },
+      {
+        "id": 230,
+        "name": "Book"
+      },
+      {
+        "id": 235,
+        "name": "Cascade"
+      },
+      {
+        "id": 130,
+        "name": "Celestial"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Web exploitation avanzado",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "XXE attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SSRF",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 10,
+    "title": "Nivel Intermedio - Semana 3",
+    "description": "Aprende pivoting avanzado y técnicas de post-explotación complejas",
+    "machines": [
+      {
+        "id": 633,
+        "name": "Certified"
+      },
+      {
+        "id": 123,
+        "name": "Chatterbox"
+      },
+      {
+        "id": 618,
+        "name": "Compiled"
+      },
+      {
+        "id": 11,
+        "name": "Cronos"
+      },
+      {
+        "id": 442,
+        "name": "Epsilon"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 1855415,
+        "name": "Pivoting y port forwarding"
+      },
+      {
+        "id": 4148,
+        "name": "Chisel/SSH tunneling"
+      },
+      {
+        "id": 1855415,
+        "name": "Multi-hop attacks"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 11,
+    "title": "Nivel Intermedio - Semana 4",
+    "description": "Desarrolla exploits personalizados y técnicas de binary exploitation",
+    "machines": [
+      {
+        "id": 27,
+        "name": "Europa"
+      },
+      {
+        "id": 480,
+        "name": "Faculty"
+      },
+      {
+        "id": 437,
+        "name": "Flustered"
+      },
+      {
+        "id": 376,
+        "name": "Forge"
+      },
+      {
+        "id": 256,
+        "name": "Fuse"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4136,
+        "name": "Binary exploitation"
+      },
+      {
+        "id": null,
+        "name": "Format string vulnerabilities",
+        "error": "Not Found"
+      },
+      {
+        "id": 4170,
+        "name": "ROP chains"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 12,
+    "title": "Nivel Intermedio - Semana 5",
+    "description": "Practica evasión de defensas y desarrollo de payloads custom",
+    "machines": [
+      {
+        "id": 153,
+        "name": "Giddy"
+      },
+      {
+        "id": 21,
+        "name": "Haircut"
+      },
+      {
+        "id": 491,
+        "name": "Health"
+      },
+      {
+        "id": 576,
+        "name": "Hospital"
+      },
+      {
+        "id": 357,
+        "name": "Intelligence"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Evasión de AV",
+        "error": "Not Found"
+      },
+      {
+        "id": 4222,
+        "name": "Code obfuscation"
+      },
+      {
+        "id": null,
+        "name": "Custom payloads",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 13,
+    "title": "Nivel Intermedio - Semana 6",
+    "description": "Practica evasión de defensas y desarrollo de payloads custom",
+    "machines": [
+      {
+        "id": 589,
+        "name": "Jab"
+      },
+      {
+        "id": 114,
+        "name": "Jeeves"
+      },
+      {
+        "id": 282,
+        "name": "Jewel"
+      },
+      {
+        "id": 210,
+        "name": "Json"
+      },
+      {
+        "id": 18,
+        "name": "Lazy"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Evasión de AV",
+        "error": "Not Found"
+      },
+      {
+        "id": 4222,
+        "name": "Code obfuscation"
+      },
+      {
+        "id": null,
+        "name": "Custom payloads",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 14,
+    "title": "Nivel Intermedio - Semana 7",
+    "description": "Practica evasión de defensas y desarrollo de payloads custom",
+    "machines": [
+      {
+        "id": 572,
+        "name": "Manager"
+      },
+      {
+        "id": 429,
+        "name": "Meta"
+      },
+      {
+        "id": 223,
+        "name": "Monteverde"
+      },
+      {
+        "id": 54,
+        "name": "Nineveh"
+      },
+      {
+        "id": 467,
+        "name": "Noter"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Evasión de AV",
+        "error": "Not Found"
+      },
+      {
+        "id": 4222,
+        "name": "Code obfuscation"
+      },
+      {
+        "id": null,
+        "name": "Custom payloads",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 15,
+    "title": "Nivel Intermedio - Semana 8",
+    "description": "Practica evasión de defensas y desarrollo de payloads custom",
+    "machines": [
+      {
+        "id": 490,
+        "name": "Outdated"
+      },
+      {
+        "id": 346,
+        "name": "Pit"
+      },
+      {
+        "id": 585,
+        "name": "Pov"
+      },
+      {
+        "id": 661,
+        "name": "Puppy"
+      },
+      {
+        "id": 175,
+        "name": "Querier"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Evasión de AV",
+        "error": "Not Found"
+      },
+      {
+        "id": 4222,
+        "name": "Code obfuscation"
+      },
+      {
+        "id": null,
+        "name": "Custom payloads",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 16,
+    "title": "Nivel Intermedio - Semana 9",
+    "description": "Practica evasión de defensas y desarrollo de payloads custom",
+    "machines": [
+      {
+        "id": 220,
+        "name": "Resolute"
+      },
+      {
+        "id": 598,
+        "name": "Runner"
+      },
+      {
+        "id": 476,
+        "name": "Scrambled"
+      },
+      {
+        "id": 151,
+        "name": "SecNotes"
+      },
+      {
+        "id": 483,
+        "name": "Shared"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Evasión de AV",
+        "error": "Not Found"
+      },
+      {
+        "id": 4222,
+        "name": "Code obfuscation"
+      },
+      {
+        "id": null,
+        "name": "Custom payloads",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 17,
+    "title": "Nivel Intermedio - Semana 10",
+    "description": "Practica evasión de defensas y desarrollo de payloads custom",
+    "machines": [
+      {
+        "id": 410,
+        "name": "Shibboleth"
+      },
+      {
+        "id": 131,
+        "name": "Silo"
+      },
+      {
+        "id": 262,
+        "name": "SneakyMailer"
+      },
+      {
+        "id": 211,
+        "name": "Sniper"
+      },
+      {
+        "id": 474,
+        "name": "StreamIO"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Evasión de AV",
+        "error": "Not Found"
+      },
+      {
+        "id": 4222,
+        "name": "Code obfuscation"
+      },
+      {
+        "id": null,
+        "name": "Custom payloads",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 18,
+    "title": "Nivel Intermedio - Semana 11",
+    "description": "Practica evasión de defensas y desarrollo de payloads custom",
+    "machines": [
+      {
+        "id": 138,
+        "name": "TartarSauce"
+      },
+      {
+        "id": 286,
+        "name": "Time"
+      },
+      {
+        "id": 493,
+        "name": "UpDown"
+      },
+      {
+        "id": 149,
+        "name": "Waldo"
+      },
+      {
+        "id": 270,
+        "name": "Worker"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Evasión de AV",
+        "error": "Not Found"
+      },
+      {
+        "id": 4222,
+        "name": "Code obfuscation"
+      },
+      {
+        "id": null,
+        "name": "Custom payloads",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 19,
+    "title": "Nivel Intermedio - Semana 12",
+    "description": "Practica evasión de defensas y desarrollo de payloads custom",
+    "machines": [
+      {
+        "id": 361,
+        "name": "Writer"
+      },
+      {
+        "id": 558,
+        "name": "Zipping"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Evasión de AV",
+        "error": "Not Found"
+      },
+      {
+        "id": 4222,
+        "name": "Code obfuscation"
+      },
+      {
+        "id": null,
+        "name": "Custom payloads",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 20,
+    "title": "Nivel Avanzado - Semana 1",
+    "description": "Máquinas que simulan entornos empresariales reales con AD complejo",
+    "machines": [
+      {
+        "id": 438,
+        "name": "Acute"
+      },
+      {
+        "id": 460,
+        "name": "Altered"
+      },
+      {
+        "id": 584,
+        "name": "Analysis"
+      },
+      {
+        "id": 611,
+        "name": "Axlle"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Active Directory avanzado",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Trust relationships",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Delegation attacks",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 21,
+    "title": "Nivel Avanzado - Semana 2",
+    "description": "Desarrolla tus habilidades de exploit development y bypass de protecciones",
+    "machines": [
+      {
+        "id": 255,
+        "name": "Blackfield"
+      },
+      {
+        "id": 614,
+        "name": "Blazorized"
+      },
+      {
+        "id": 316,
+        "name": "Breadcrumbs"
+      },
+      {
+        "id": 478,
+        "name": "Carpediem"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4145,
+        "name": "Exploit development"
+      },
+      {
+        "id": null,
+        "name": "Bypass protections",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Custom shellcode",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 22,
+    "title": "Nivel Avanzado - Semana 3",
+    "description": "Practica cadenas de ataque complejas que requieren múltiples vectores",
+    "machines": [
+      {
+        "id": 42,
+        "name": "Charon"
+      },
+      {
+        "id": 168,
+        "name": "Conceal"
+      },
+      {
+        "id": 218,
+        "name": "Control"
+      },
+      {
+        "id": 150,
+        "name": "Dab"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 1855415,
+        "name": "Advanced pivoting"
+      },
+      {
+        "id": null,
+        "name": "Múltiples vectores combinados",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Red teaming techniques",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 23,
+    "title": "Nivel Avanzado - Semana 4",
+    "description": "Prepárate para los desafíos más duros del examen OSCP real",
+    "machines": [
+      {
+        "id": 375,
+        "name": "EarlyAccess"
+      },
+      {
+        "id": 171,
+        "name": "Flujab"
+      },
+      {
+        "id": 604,
+        "name": "Freelancer"
+      },
+      {
+        "id": 180,
+        "name": "Helpline"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Zero-day research",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Vulnerability discovery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CVE hunting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 24,
+    "title": "Nivel Avanzado - Semana 5",
+    "description": "Prepárate para los desafíos más duros del examen OSCP real",
+    "machines": [
+      {
+        "id": 20,
+        "name": "Joker"
+      },
+      {
+        "id": 98,
+        "name": "Mantis"
+      },
+      {
+        "id": 341,
+        "name": "Monitors"
+      },
+      {
+        "id": 447,
+        "name": "Object"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Zero-day research",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Vulnerability discovery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CVE hunting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 25,
+    "title": "Nivel Avanzado - Semana 6",
+    "description": "Prepárate para los desafíos más duros del examen OSCP real",
+    "machines": [
+      {
+        "id": 588,
+        "name": "Office"
+      },
+      {
+        "id": 448,
+        "name": "Phoenix"
+      },
+      {
+        "id": 440,
+        "name": "Pressed"
+      },
+      {
+        "id": 198,
+        "name": "RE"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Zero-day research",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Vulnerability discovery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CVE hunting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 26,
+    "title": "Nivel Avanzado - Semana 7",
+    "description": "Prepárate para los desafíos más duros del examen OSCP real",
+    "machines": [
+      {
+        "id": 143,
+        "name": "Reel"
+      },
+      {
+        "id": 281,
+        "name": "Reel2"
+      },
+      {
+        "id": 422,
+        "name": "Search"
+      },
+      {
+        "id": 355,
+        "name": "Static"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Zero-day research",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Vulnerability discovery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CVE hunting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 27,
+    "title": "Nivel Avanzado - Semana 8",
+    "description": "Prepárate para los desafíos más duros del examen OSCP real",
+    "machines": [
+      {
+        "id": 113,
+        "name": "Tally"
+      },
+      {
+        "id": 310,
+        "name": "Tentacle"
+      },
+      {
+        "id": 204,
+        "name": "Zetta"
+      },
+      {
+        "id": 296,
+        "name": "APT"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Zero-day research",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Vulnerability discovery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CVE hunting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 28,
+    "title": "Nivel Avanzado - Semana 9",
+    "description": "Prepárate para los desafíos más duros del examen OSCP real",
+    "machines": [
+      {
+        "id": 544,
+        "name": "Bookworm"
+      },
+      {
+        "id": 137,
+        "name": "Fighter"
+      },
+      {
+        "id": 116,
+        "name": "Fulcrum"
+      },
+      {
+        "id": 145,
+        "name": "Mischief"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Zero-day research",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Vulnerability discovery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CVE hunting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSCP",
+    "week": 29,
+    "title": "Nivel Avanzado - Semana 10",
+    "description": "Prepárate para los desafíos más duros del examen OSCP real",
+    "machines": [
+      {
+        "id": 232,
+        "name": "MultiMaster"
+      },
+      {
+        "id": 169,
+        "name": "Sizzle"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Zero-day research",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Vulnerability discovery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CVE hunting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSED",
+    "week": 1,
+    "title": "Nivel Intermedio - Semana 1",
+    "description": "Construcción de ROP chains para bypass de DEP",
+    "machines": [
+      {
+        "id": 564,
+        "name": "Clicker"
+      },
+      {
+        "id": 19,
+        "name": "Sneaky"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4170,
+        "name": "ROP chains"
+      },
+      {
+        "id": 4145,
+        "name": "Bypass DEP"
+      },
+      {
+        "id": null,
+        "name": "ROP gadget hunting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSED",
+    "week": 2,
+    "title": "Nivel Avanzado - Semana 1",
+    "description": "Bypass de ASLR mediante information leaks",
+    "machines": [
+      {
+        "id": 570,
+        "name": "Drive"
+      },
+      {
+        "id": 388,
+        "name": "Hancliffe"
+      },
+      {
+        "id": 575,
+        "name": "Napper"
+      },
+      {
+        "id": 602,
+        "name": "MagicGardens"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4145,
+        "name": "ASLR bypass"
+      },
+      {
+        "id": null,
+        "name": "Information leak",
+        "error": "Not Found"
+      },
+      {
+        "id": 4145,
+        "name": "Partial overwrite"
+      }
+    ]
+  },
+  {
+    "certification": "OSEP",
+    "week": 1,
+    "title": "Fundamentos - Semana 1",
+    "description": "Enumeración avanzada con PowerShell y WMI en entornos corporativos",
+    "machines": [
+      {
+        "id": 148,
+        "name": "Active"
+      },
+      {
+        "id": 212,
+        "name": "Forest"
+      },
+      {
+        "id": 229,
+        "name": "Sauna"
+      },
+      {
+        "id": 484,
+        "name": "Support"
+      },
+      {
+        "id": 452,
+        "name": "TimeLapse"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced enumeration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "PowerShell for reconnaissance",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "WMI queries",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSEP",
+    "week": 2,
+    "title": "Nivel Intermedio - Semana 1",
+    "description": "Process injection avanzado: DLL injection y reflective loading",
+    "machines": [
+      {
+        "id": 634,
+        "name": "Administrator"
+      },
+      {
+        "id": 746,
+        "name": "BabyTwo"
+      },
+      {
+        "id": 235,
+        "name": "Cascade"
+      },
+      {
+        "id": 633,
+        "name": "Certified"
+      },
+      {
+        "id": 576,
+        "name": "Hospital"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Process injection",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "DLL injection",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Reflective DLL injection",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSEP",
+    "week": 3,
+    "title": "Nivel Intermedio - Semana 2",
+    "description": "Ataques avanzados a Kerberos y Active Directory",
+    "machines": [
+      {
+        "id": 357,
+        "name": "Intelligence"
+      },
+      {
+        "id": 589,
+        "name": "Jab"
+      },
+      {
+        "id": 572,
+        "name": "Manager"
+      },
+      {
+        "id": 223,
+        "name": "Monteverde"
+      },
+      {
+        "id": 490,
+        "name": "Outdated"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced AD attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Constrained delegation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Resource-based delegation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSEP",
+    "week": 4,
+    "title": "Nivel Intermedio - Semana 3",
+    "description": "Bypass de EDR y desarrollo de custom loaders",
+    "machines": [
+      {
+        "id": 661,
+        "name": "Puppy"
+      },
+      {
+        "id": 175,
+        "name": "Querier"
+      },
+      {
+        "id": 220,
+        "name": "Resolute"
+      },
+      {
+        "id": 476,
+        "name": "Scrambled"
+      },
+      {
+        "id": 474,
+        "name": "StreamIO"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Evasión avanzada",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "EDR bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Custom loaders",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSEP",
+    "week": 5,
+    "title": "Nivel Avanzado - Semana 1",
+    "description": "Desarrollo de C2 personalizado y custom implants",
+    "machines": [
+      {
+        "id": 438,
+        "name": "Acute"
+      },
+      {
+        "id": 584,
+        "name": "Analysis"
+      },
+      {
+        "id": 611,
+        "name": "Axlle"
+      },
+      {
+        "id": 255,
+        "name": "Blackfield"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced C2 development",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Custom implants",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Malleable C2 profiles",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSEP",
+    "week": 6,
+    "title": "Nivel Avanzado - Semana 2",
+    "description": "Ataques a nivel kernel y explotación de drivers",
+    "machines": [
+      {
+        "id": 614,
+        "name": "Blazorized"
+      },
+      {
+        "id": 604,
+        "name": "Freelancer"
+      },
+      {
+        "id": 98,
+        "name": "Mantis"
+      },
+      {
+        "id": 447,
+        "name": "Object"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4167,
+        "name": "Kernel-mode attacks"
+      },
+      {
+        "id": null,
+        "name": "Driver exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "BYOVD",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSEP",
+    "week": 7,
+    "title": "Nivel Avanzado - Semana 3",
+    "description": "Persistencia avanzada: bootkits y técnicas de rootkit",
+    "machines": [
+      {
+        "id": 588,
+        "name": "Office"
+      },
+      {
+        "id": 143,
+        "name": "Reel"
+      },
+      {
+        "id": 281,
+        "name": "Reel2"
+      },
+      {
+        "id": 422,
+        "name": "Search"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced persistence",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Bootkit/Rootkit basics",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Hardware attacks",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSEP",
+    "week": 8,
+    "title": "Nivel Avanzado - Semana 4",
+    "description": "Operaciones red team completas simulando APTs",
+    "machines": [
+      {
+        "id": 310,
+        "name": "Tentacle"
+      },
+      {
+        "id": 296,
+        "name": "APT"
+      },
+      {
+        "id": 116,
+        "name": "Fulcrum"
+      },
+      {
+        "id": 232,
+        "name": "MultiMaster"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Red team operations",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Full kill chain",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "APT simulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSEP",
+    "week": 9,
+    "title": "Nivel Avanzado - Semana 5",
+    "description": "Operaciones red team completas simulando APTs",
+    "machines": [
+      {
+        "id": 169,
+        "name": "Sizzle"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Red team operations",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Full kill chain",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "APT simulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 1,
+    "title": "Fundamentos - Semana 1",
+    "description": "Fundamentos sólidos de desarrollo y arquitectura web moderna",
+    "machines": [
+      {
+        "id": 248,
+        "name": "Admirer"
+      },
+      {
+        "id": 416,
+        "name": "Backdoor"
+      },
+      {
+        "id": 254,
+        "name": "Blunder"
+      },
+      {
+        "id": 142,
+        "name": "Bounty"
+      },
+      {
+        "id": 359,
+        "name": "BountyHunter"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Fundamentos de desarrollo web",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "HTTP protocol deep dive",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Session management",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 2,
+    "title": "Fundamentos - Semana 2",
+    "description": "Domina los ataques client-side: XSS, CSRF y clickjacking",
+    "machines": [
+      {
+        "id": 278,
+        "name": "Doctor"
+      },
+      {
+        "id": 195,
+        "name": "Haystack"
+      },
+      {
+        "id": 594,
+        "name": "Headless"
+      },
+      {
+        "id": 298,
+        "name": "Laboratory"
+      },
+      {
+        "id": 463,
+        "name": "Late"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Client-side attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "XSS variants",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CSRF",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 3,
+    "title": "Fundamentos - Semana 3",
+    "description": "Profundiza en SQL injection y otras técnicas de inyección",
+    "machines": [
+      {
+        "id": 539,
+        "name": "MonitorsTwo"
+      },
+      {
+        "id": 471,
+        "name": "OpenSource"
+      },
+      {
+        "id": 543,
+        "name": "PC"
+      },
+      {
+        "id": 590,
+        "name": "Perfection"
+      },
+      {
+        "id": 215,
+        "name": "Postman"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Injection básica",
+        "error": "Not Found"
+      },
+      {
+        "id": 1726631,
+        "name": "SQL injection avanzado"
+      },
+      {
+        "id": null,
+        "name": "NoSQL injection",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 4,
+    "title": "Fundamentos - Semana 4",
+    "description": "Aprende a explotar file inclusion y path traversal",
+    "machines": [
+      {
+        "id": 481,
+        "name": "RedPanda"
+      },
+      {
+        "id": 620,
+        "name": "Sea"
+      },
+      {
+        "id": 408,
+        "name": "Secret"
+      },
+      {
+        "id": 111,
+        "name": "Sense"
+      },
+      {
+        "id": 496,
+        "name": "Shoppy"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "File inclusion",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "LFI/RFI",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Path traversal",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 5,
+    "title": "Fundamentos - Semana 5",
+    "description": "Ataques a XML y técnicas de XXE básico",
+    "machines": [
+      {
+        "id": 624,
+        "name": "Sightless"
+      },
+      {
+        "id": 519,
+        "name": "Soccer"
+      },
+      {
+        "id": 443,
+        "name": "SteamCloud"
+      },
+      {
+        "id": 523,
+        "name": "Stocker"
+      },
+      {
+        "id": 188,
+        "name": "SwagShop"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "XML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "XXE",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "XPath injection",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 6,
+    "title": "Fundamentos - Semana 6",
+    "description": "Ataques a XML y técnicas de XXE básico",
+    "machines": [
+      {
+        "id": 165,
+        "name": "Teacher"
+      },
+      {
+        "id": 477,
+        "name": "Trick"
+      },
+      {
+        "id": 547,
+        "name": "TwoMillion"
+      },
+      {
+        "id": 597,
+        "name": "Usage"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "XML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "XXE",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "XPath injection",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 7,
+    "title": "Nivel Intermedio - Semana 1",
+    "description": "Explota template engines con SSTI avanzado",
+    "machines": [
+      {
+        "id": 503,
+        "name": "Awkward"
+      },
+      {
+        "id": 462,
+        "name": "Backend"
+      },
+      {
+        "id": 469,
+        "name": "BackendTwo"
+      },
+      {
+        "id": 128,
+        "name": "Bart"
+      },
+      {
+        "id": 605,
+        "name": "Blurry"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Template injection",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SSTI",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Client-side template injection",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 8,
+    "title": "Nivel Intermedio - Semana 2",
+    "description": "Deserialización en múltiples lenguajes: Java, PHP, Python",
+    "machines": [
+      {
+        "id": 384,
+        "name": "Bolt"
+      },
+      {
+        "id": 230,
+        "name": "Book"
+      },
+      {
+        "id": 521,
+        "name": "BroScience"
+      },
+      {
+        "id": 251,
+        "name": "Cache"
+      },
+      {
+        "id": 646,
+        "name": "Cat"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Deserialization attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Java/PHP/Python deserialization",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Object injection",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 9,
+    "title": "Nivel Intermedio - Semana 3",
+    "description": "Ataca OAuth, SAML y sistemas de autenticación complejos",
+    "machines": [
+      {
+        "id": 450,
+        "name": "Catch"
+      },
+      {
+        "id": 130,
+        "name": "Celestial"
+      },
+      {
+        "id": 564,
+        "name": "Clicker"
+      },
+      {
+        "id": 11,
+        "name": "Cronos"
+      },
+      {
+        "id": 140,
+        "name": "DevOops"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "OAuth/SAML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": 1360866,
+        "name": "Authentication bypass"
+      },
+      {
+        "id": null,
+        "name": "Token manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 10,
+    "title": "Nivel Intermedio - Semana 4",
+    "description": "Pentesting de APIs modernas: GraphQL y REST",
+    "machines": [
+      {
+        "id": 526,
+        "name": "Encoding"
+      },
+      {
+        "id": 442,
+        "name": "Epsilon"
+      },
+      {
+        "id": 27,
+        "name": "Europa"
+      },
+      {
+        "id": 480,
+        "name": "Faculty"
+      },
+      {
+        "id": 437,
+        "name": "Flustered"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "GraphQL attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "API security",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "REST API exploitation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 11,
+    "title": "Nivel Intermedio - Semana 5",
+    "description": "Explota WebSockets y vulnerabilidades de CORS",
+    "machines": [
+      {
+        "id": 119,
+        "name": "FluxCapacitor"
+      },
+      {
+        "id": 376,
+        "name": "Forge"
+      },
+      {
+        "id": 542,
+        "name": "Format"
+      },
+      {
+        "id": 153,
+        "name": "Giddy"
+      },
+      {
+        "id": 491,
+        "name": "Health"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "WebSocket attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CORS misconfiguration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Prototype pollution",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 12,
+    "title": "Nivel Intermedio - Semana 6",
+    "description": "Explota WebSockets y vulnerabilidades de CORS",
+    "machines": [
+      {
+        "id": 596,
+        "name": "IClean"
+      },
+      {
+        "id": 117,
+        "name": "Inception"
+      },
+      {
+        "id": 527,
+        "name": "Interface"
+      },
+      {
+        "id": 282,
+        "name": "Jewel"
+      },
+      {
+        "id": 545,
+        "name": "Jupiter"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "WebSocket attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CORS misconfiguration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Prototype pollution",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 13,
+    "title": "Nivel Intermedio - Semana 7",
+    "description": "Explota WebSockets y vulnerabilidades de CORS",
+    "machines": [
+      {
+        "id": 18,
+        "name": "Lazy"
+      },
+      {
+        "id": 214,
+        "name": "Mango"
+      },
+      {
+        "id": 518,
+        "name": "Mentor"
+      },
+      {
+        "id": 429,
+        "name": "Meta"
+      },
+      {
+        "id": 583,
+        "name": "Monitored"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "WebSocket attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CORS misconfiguration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Prototype pollution",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 14,
+    "title": "Nivel Intermedio - Semana 8",
+    "description": "Explota WebSockets y vulnerabilidades de CORS",
+    "machines": [
+      {
+        "id": 622,
+        "name": "MonitorsThree"
+      },
+      {
+        "id": 54,
+        "name": "Nineveh"
+      },
+      {
+        "id": 467,
+        "name": "Noter"
+      },
+      {
+        "id": 219,
+        "name": "Obscurity"
+      },
+      {
+        "id": 540,
+        "name": "OnlyForYou"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "WebSocket attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CORS misconfiguration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Prototype pollution",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 15,
+    "title": "Nivel Intermedio - Semana 9",
+    "description": "Explota WebSockets y vulnerabilidades de CORS",
+    "machines": [
+      {
+        "id": 275,
+        "name": "Passage"
+      },
+      {
+        "id": 585,
+        "name": "Pov"
+      },
+      {
+        "id": 598,
+        "name": "Runner"
+      },
+      {
+        "id": 335,
+        "name": "Schooled"
+      },
+      {
+        "id": 358,
+        "name": "Seal"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "WebSocket attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CORS misconfiguration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Prototype pollution",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 16,
+    "title": "Nivel Intermedio - Semana 10",
+    "description": "Explota WebSockets y vulnerabilidades de CORS",
+    "machines": [
+      {
+        "id": 474,
+        "name": "StreamIO"
+      },
+      {
+        "id": 644,
+        "name": "Strutted"
+      },
+      {
+        "id": 138,
+        "name": "TartarSauce"
+      },
+      {
+        "id": 320,
+        "name": "TheNotebook"
+      },
+      {
+        "id": 286,
+        "name": "Time"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "WebSocket attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CORS misconfiguration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Prototype pollution",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 17,
+    "title": "Nivel Intermedio - Semana 11",
+    "description": "Explota WebSockets y vulnerabilidades de CORS",
+    "machines": [
+      {
+        "id": 421,
+        "name": "Timing"
+      },
+      {
+        "id": 626,
+        "name": "Trickster"
+      },
+      {
+        "id": 439,
+        "name": "Undetected"
+      },
+      {
+        "id": 415,
+        "name": "Unicode"
+      },
+      {
+        "id": 493,
+        "name": "UpDown"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "WebSocket attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CORS misconfiguration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Prototype pollution",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 18,
+    "title": "Nivel Intermedio - Semana 12",
+    "description": "Explota WebSockets y vulnerabilidades de CORS",
+    "machines": [
+      {
+        "id": 208,
+        "name": "Wall"
+      },
+      {
+        "id": 361,
+        "name": "Writer"
+      },
+      {
+        "id": 558,
+        "name": "Zipping"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "WebSocket attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "CORS misconfiguration",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Prototype pollution",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 19,
+    "title": "Nivel Avanzado - Semana 1",
+    "description": "Deserialization avanzada: construcción de gadget chains personalizados",
+    "machines": [
+      {
+        "id": 427,
+        "name": "AdmirerToo"
+      },
+      {
+        "id": 460,
+        "name": "Altered"
+      },
+      {
+        "id": 584,
+        "name": "Analysis"
+      },
+      {
+        "id": 316,
+        "name": "Breadcrumbs"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced deserialization",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Custom gadget chains",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "POP chains",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 20,
+    "title": "Nivel Avanzado - Semana 2",
+    "description": "Type juggling, race conditions y ataques de timing",
+    "machines": [
+      {
+        "id": 478,
+        "name": "Carpediem"
+      },
+      {
+        "id": 42,
+        "name": "Charon"
+      },
+      {
+        "id": 218,
+        "name": "Control"
+      },
+      {
+        "id": 120,
+        "name": "CrimeStoppers"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Type juggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Race conditions",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Time-of-check attacks",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 21,
+    "title": "Nivel Avanzado - Semana 3",
+    "description": "SSTI avanzado con sandbox escape y filter bypass",
+    "machines": [
+      {
+        "id": 150,
+        "name": "Dab"
+      },
+      {
+        "id": 570,
+        "name": "Drive"
+      },
+      {
+        "id": 375,
+        "name": "EarlyAccess"
+      },
+      {
+        "id": 124,
+        "name": "Falafel"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced template injection",
+        "error": "Not Found"
+      },
+      {
+        "id": 4169,
+        "name": "Sandbox escape"
+      },
+      {
+        "id": null,
+        "name": "Filter bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 22,
+    "title": "Nivel Avanzado - Semana 4",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 274,
+        "name": "Feline"
+      },
+      {
+        "id": 171,
+        "name": "Flujab"
+      },
+      {
+        "id": 604,
+        "name": "Freelancer"
+      },
+      {
+        "id": 388,
+        "name": "Hancliffe"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 23,
+    "title": "Nivel Avanzado - Semana 5",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 22,
+        "name": "Holiday"
+      },
+      {
+        "id": 20,
+        "name": "Joker"
+      },
+      {
+        "id": 101,
+        "name": "Kotarak"
+      },
+      {
+        "id": 485,
+        "name": "Moderators"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 24,
+    "title": "Nivel Avanzado - Semana 6",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 341,
+        "name": "Monitors"
+      },
+      {
+        "id": 447,
+        "name": "Object"
+      },
+      {
+        "id": 231,
+        "name": "Oouch"
+      },
+      {
+        "id": 399,
+        "name": "Overflow"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 25,
+    "title": "Nivel Avanzado - Semana 7",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 464,
+        "name": "Overgraph"
+      },
+      {
+        "id": 152,
+        "name": "Oz"
+      },
+      {
+        "id": 448,
+        "name": "Phoenix"
+      },
+      {
+        "id": 196,
+        "name": "Player"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 26,
+    "title": "Nivel Avanzado - Semana 8",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 440,
+        "name": "Pressed"
+      },
+      {
+        "id": 244,
+        "name": "Quick"
+      },
+      {
+        "id": 355,
+        "name": "Static"
+      },
+      {
+        "id": 458,
+        "name": "Talkative"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 27,
+    "title": "Nivel Avanzado - Semana 9",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 310,
+        "name": "Tentacle"
+      },
+      {
+        "id": 252,
+        "name": "Travel"
+      },
+      {
+        "id": 268,
+        "name": "Unbalanced"
+      },
+      {
+        "id": 338,
+        "name": "Unobtainium"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 28,
+    "title": "Nivel Avanzado - Semana 10",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 628,
+        "name": "Yummy"
+      },
+      {
+        "id": 371,
+        "name": "Anubis"
+      },
+      {
+        "id": 115,
+        "name": "Ariekei"
+      },
+      {
+        "id": 209,
+        "name": "Bankrobber"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 29,
+    "title": "Nivel Avanzado - Semana 11",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 544,
+        "name": "Bookworm"
+      },
+      {
+        "id": 172,
+        "name": "CTF"
+      },
+      {
+        "id": 277,
+        "name": "Crossfit"
+      },
+      {
+        "id": 137,
+        "name": "Fighter"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 30,
+    "title": "Nivel Avanzado - Semana 12",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 178,
+        "name": "Fortune"
+      },
+      {
+        "id": 116,
+        "name": "Fulcrum"
+      },
+      {
+        "id": 176,
+        "name": "Hackback"
+      },
+      {
+        "id": 602,
+        "name": "MagicGardens"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 31,
+    "title": "Nivel Avanzado - Semana 13",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 109,
+        "name": "Minion"
+      },
+      {
+        "id": 145,
+        "name": "Mischief"
+      },
+      {
+        "id": 232,
+        "name": "MultiMaster"
+      },
+      {
+        "id": 122,
+        "name": "Nightmare"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "OSWE",
+    "week": 32,
+    "title": "Nivel Avanzado - Semana 14",
+    "description": "Code review y detección de logic flaws en frameworks custom",
+    "machines": [
+      {
+        "id": 313,
+        "name": "Sink"
+      },
+      {
+        "id": 379,
+        "name": "Stacked"
+      },
+      {
+        "id": 409,
+        "name": "Toby"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Custom framework exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Source code review",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Logic flaws",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 1,
+    "title": "Fundamentos - Semana 1",
+    "description": "Metodología profesional de web pentesting y OWASP Top 10",
+    "machines": [
+      {
+        "id": 248,
+        "name": "Admirer"
+      },
+      {
+        "id": 636,
+        "name": "Alert"
+      },
+      {
+        "id": 569,
+        "name": "Analytics"
+      },
+      {
+        "id": 9,
+        "name": "Arctic"
+      },
+      {
+        "id": 416,
+        "name": "Backdoor"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Metodología de pentesting web",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "OWASP Top 10",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Burp Suite basics",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 2,
+    "title": "Fundamentos - Semana 2",
+    "description": "SQL injection avanzado: blind, time-based y out-of-band",
+    "machines": [
+      {
+        "id": 26,
+        "name": "Bank"
+      },
+      {
+        "id": 5,
+        "name": "Beep"
+      },
+      {
+        "id": 582,
+        "name": "Bizness"
+      },
+      {
+        "id": 254,
+        "name": "Blunder"
+      },
+      {
+        "id": 603,
+        "name": "BoardLight"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 1726631,
+        "name": "Inyección SQL avanzada"
+      },
+      {
+        "id": 1726631,
+        "name": "Blind SQLi"
+      },
+      {
+        "id": 1726631,
+        "name": "Time-based attacks"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 3,
+    "title": "Fundamentos - Semana 3",
+    "description": "XSS avanzado con técnicas de bypass de filtros",
+    "machines": [
+      {
+        "id": 142,
+        "name": "Bounty"
+      },
+      {
+        "id": 359,
+        "name": "BountyHunter"
+      },
+      {
+        "id": 578,
+        "name": "Broker"
+      },
+      {
+        "id": 631,
+        "name": "Chemistry"
+      },
+      {
+        "id": 653,
+        "name": "Code"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "XSS avanzado",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "DOM XSS",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "XSS filter bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 4,
+    "title": "Fundamentos - Semana 4",
+    "description": "Ataques a autenticación y gestión de sesiones",
+    "machines": [
+      {
+        "id": 574,
+        "name": "Codify"
+      },
+      {
+        "id": 559,
+        "name": "CozyHosting"
+      },
+      {
+        "id": 160,
+        "name": "Curling"
+      },
+      {
+        "id": 308,
+        "name": "Delivery"
+      },
+      {
+        "id": 577,
+        "name": "Devvortex"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Authentication attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Session fixation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Broken auth",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 5,
+    "title": "Fundamentos - Semana 5",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 278,
+        "name": "Doctor"
+      },
+      {
+        "id": 651,
+        "name": "Dog"
+      },
+      {
+        "id": 608,
+        "name": "Editorial"
+      },
+      {
+        "id": 158,
+        "name": "Frolic"
+      },
+      {
+        "id": 446,
+        "name": "GoodGames"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 6,
+    "title": "Fundamentos - Semana 6",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 13,
+        "name": "Grandpa"
+      },
+      {
+        "id": 14,
+        "name": "Granny"
+      },
+      {
+        "id": 617,
+        "name": "GreenHorn"
+      },
+      {
+        "id": 195,
+        "name": "Haystack"
+      },
+      {
+        "id": 594,
+        "name": "Headless"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 7,
+    "title": "Fundamentos - Semana 7",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 374,
+        "name": "Horizontall"
+      },
+      {
+        "id": 533,
+        "name": "Inject"
+      },
+      {
+        "id": 298,
+        "name": "Laboratory"
+      },
+      {
+        "id": 463,
+        "name": "Late"
+      },
+      {
+        "id": 638,
+        "name": "LinkVortex"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 8,
+    "title": "Fundamentos - Semana 8",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 344,
+        "name": "Love"
+      },
+      {
+        "id": 302,
+        "name": "Luanne"
+      },
+      {
+        "id": 600,
+        "name": "Mailing"
+      },
+      {
+        "id": 504,
+        "name": "MetaTwo"
+      },
+      {
+        "id": 539,
+        "name": "MonitorsTwo"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 9,
+    "title": "Fundamentos - Semana 9",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 177,
+        "name": "Netmon"
+      },
+      {
+        "id": 203,
+        "name": "Networked"
+      },
+      {
+        "id": 656,
+        "name": "Nocturnal"
+      },
+      {
+        "id": 430,
+        "name": "NodeBlog"
+      },
+      {
+        "id": 414,
+        "name": "NunChucks"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 10,
+    "title": "Fundamentos - Semana 10",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 471,
+        "name": "OpenSource"
+      },
+      {
+        "id": 6,
+        "name": "Optimum"
+      },
+      {
+        "id": 543,
+        "name": "PC"
+      },
+      {
+        "id": 423,
+        "name": "Pandora"
+      },
+      {
+        "id": 432,
+        "name": "Paper"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 11,
+    "title": "Fundamentos - Semana 11",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 590,
+        "name": "Perfection"
+      },
+      {
+        "id": 613,
+        "name": "PermX"
+      },
+      {
+        "id": 500,
+        "name": "Photobomb"
+      },
+      {
+        "id": 549,
+        "name": "Pilgrimage"
+      },
+      {
+        "id": 215,
+        "name": "Postman"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 12,
+    "title": "Fundamentos - Semana 12",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 513,
+        "name": "Precious"
+      },
+      {
+        "id": 373,
+        "name": "Previse"
+      },
+      {
+        "id": 481,
+        "name": "RedPanda"
+      },
+      {
+        "id": 234,
+        "name": "Remote"
+      },
+      {
+        "id": 444,
+        "name": "RouterSpace"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 13,
+    "title": "Fundamentos - Semana 13",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 551,
+        "name": "Sau"
+      },
+      {
+        "id": 620,
+        "name": "Sea"
+      },
+      {
+        "id": 408,
+        "name": "Secret"
+      },
+      {
+        "id": 111,
+        "name": "Sense"
+      },
+      {
+        "id": 240,
+        "name": "Servmon"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 14,
+    "title": "Fundamentos - Semana 14",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 108,
+        "name": "Shocker"
+      },
+      {
+        "id": 496,
+        "name": "Shoppy"
+      },
+      {
+        "id": 624,
+        "name": "Sightless"
+      },
+      {
+        "id": 519,
+        "name": "Soccer"
+      },
+      {
+        "id": 317,
+        "name": "Spectra"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 15,
+    "title": "Fundamentos - Semana 15",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 523,
+        "name": "Stocker"
+      },
+      {
+        "id": 188,
+        "name": "SwagShop"
+      },
+      {
+        "id": 259,
+        "name": "Tabby"
+      },
+      {
+        "id": 165,
+        "name": "Teacher"
+      },
+      {
+        "id": 339,
+        "name": "Toolbox"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 16,
+    "title": "Fundamentos - Semana 16",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 546,
+        "name": "Topology"
+      },
+      {
+        "id": 217,
+        "name": "Traverxec"
+      },
+      {
+        "id": 477,
+        "name": "Trick"
+      },
+      {
+        "id": 547,
+        "name": "TwoMillion"
+      },
+      {
+        "id": 597,
+        "name": "Usage"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 17,
+    "title": "Fundamentos - Semana 17",
+    "description": "IDOR, mass assignment y manipulación de parámetros",
+    "machines": [
+      {
+        "id": 127,
+        "name": "Valentine"
+      },
+      {
+        "id": 382,
+        "name": "Validation"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "IDOR y mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Parameter tampering",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Price manipulation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 18,
+    "title": "Nivel Intermedio - Semana 1",
+    "description": "Server-side template injection en múltiples engines",
+    "machines": [
+      {
+        "id": 499,
+        "name": "Ambassador"
+      },
+      {
+        "id": 57,
+        "name": "Apocalyst"
+      },
+      {
+        "id": 126,
+        "name": "Aragog"
+      },
+      {
+        "id": 503,
+        "name": "Awkward"
+      },
+      {
+        "id": 462,
+        "name": "Backend"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "SSTI y template engines",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Jinja2/Twig exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Template sandbox escape",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 19,
+    "title": "Nivel Intermedio - Semana 2",
+    "description": "Deserialización en aplicaciones web: PHP y Java",
+    "machines": [
+      {
+        "id": 469,
+        "name": "BackendTwo"
+      },
+      {
+        "id": 128,
+        "name": "Bart"
+      },
+      {
+        "id": 7,
+        "name": "Bastard"
+      },
+      {
+        "id": 605,
+        "name": "Blurry"
+      },
+      {
+        "id": 384,
+        "name": "Bolt"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Deserialization web",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "PHP object injection",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Java deserialization",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 20,
+    "title": "Nivel Intermedio - Semana 3",
+    "description": "SSRF para acceso a redes internas y cloud metadata",
+    "machines": [
+      {
+        "id": 230,
+        "name": "Book"
+      },
+      {
+        "id": 521,
+        "name": "BroScience"
+      },
+      {
+        "id": 591,
+        "name": "Builder"
+      },
+      {
+        "id": 251,
+        "name": "Cache"
+      },
+      {
+        "id": 646,
+        "name": "Cat"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "SSRF attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Internal network access",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Cloud metadata abuse",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 21,
+    "title": "Nivel Intermedio - Semana 4",
+    "description": "Seguridad de WebSockets y ataques en tiempo real",
+    "machines": [
+      {
+        "id": 450,
+        "name": "Catch"
+      },
+      {
+        "id": 130,
+        "name": "Celestial"
+      },
+      {
+        "id": 167,
+        "name": "Chaos"
+      },
+      {
+        "id": 564,
+        "name": "Clicker"
+      },
+      {
+        "id": 11,
+        "name": "Cronos"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "WebSockets security",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Real-time attack vectors",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Socket.io exploitation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 22,
+    "title": "Nivel Intermedio - Semana 5",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 140,
+        "name": "DevOops"
+      },
+      {
+        "id": 398,
+        "name": "Devzat"
+      },
+      {
+        "id": 526,
+        "name": "Encoding"
+      },
+      {
+        "id": 112,
+        "name": "Enterprise"
+      },
+      {
+        "id": 442,
+        "name": "Epsilon"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 23,
+    "title": "Nivel Intermedio - Semana 6",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 27,
+        "name": "Europa"
+      },
+      {
+        "id": 480,
+        "name": "Faculty"
+      },
+      {
+        "id": 437,
+        "name": "Flustered"
+      },
+      {
+        "id": 119,
+        "name": "FluxCapacitor"
+      },
+      {
+        "id": 376,
+        "name": "Forge"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 24,
+    "title": "Nivel Intermedio - Semana 7",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 542,
+        "name": "Format"
+      },
+      {
+        "id": 153,
+        "name": "Giddy"
+      },
+      {
+        "id": 21,
+        "name": "Haircut"
+      },
+      {
+        "id": 146,
+        "name": "Hawk"
+      },
+      {
+        "id": 491,
+        "name": "Health"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 25,
+    "title": "Nivel Intermedio - Semana 8",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 596,
+        "name": "IClean"
+      },
+      {
+        "id": 117,
+        "name": "Inception"
+      },
+      {
+        "id": 527,
+        "name": "Interface"
+      },
+      {
+        "id": 114,
+        "name": "Jeeves"
+      },
+      {
+        "id": 282,
+        "name": "Jewel"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 26,
+    "title": "Nivel Intermedio - Semana 9",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 210,
+        "name": "Json"
+      },
+      {
+        "id": 545,
+        "name": "Jupiter"
+      },
+      {
+        "id": 18,
+        "name": "Lazy"
+      },
+      {
+        "id": 190,
+        "name": "Luke"
+      },
+      {
+        "id": 214,
+        "name": "Mango"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 27,
+    "title": "Nivel Intermedio - Semana 10",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 518,
+        "name": "Mentor"
+      },
+      {
+        "id": 429,
+        "name": "Meta"
+      },
+      {
+        "id": 583,
+        "name": "Monitored"
+      },
+      {
+        "id": 622,
+        "name": "MonitorsThree"
+      },
+      {
+        "id": 54,
+        "name": "Nineveh"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 28,
+    "title": "Nivel Intermedio - Semana 11",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 467,
+        "name": "Noter"
+      },
+      {
+        "id": 219,
+        "name": "Obscurity"
+      },
+      {
+        "id": 135,
+        "name": "Olympus"
+      },
+      {
+        "id": 540,
+        "name": "OnlyForYou"
+      },
+      {
+        "id": 275,
+        "name": "Passage"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 29,
+    "title": "Nivel Intermedio - Semana 12",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 346,
+        "name": "Pit"
+      },
+      {
+        "id": 132,
+        "name": "Poison"
+      },
+      {
+        "id": 4,
+        "name": "Popcorn"
+      },
+      {
+        "id": 585,
+        "name": "Pov"
+      },
+      {
+        "id": 457,
+        "name": "Ransom"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 30,
+    "title": "Nivel Intermedio - Semana 13",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 162,
+        "name": "RedCross"
+      },
+      {
+        "id": 598,
+        "name": "Runner"
+      },
+      {
+        "id": 335,
+        "name": "Schooled"
+      },
+      {
+        "id": 358,
+        "name": "Seal"
+      },
+      {
+        "id": 151,
+        "name": "SecNotes"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 31,
+    "title": "Nivel Intermedio - Semana 14",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 483,
+        "name": "Shared"
+      },
+      {
+        "id": 410,
+        "name": "Shibboleth"
+      },
+      {
+        "id": 211,
+        "name": "Sniper"
+      },
+      {
+        "id": 129,
+        "name": "Stratosphere"
+      },
+      {
+        "id": 474,
+        "name": "StreamIO"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 32,
+    "title": "Nivel Intermedio - Semana 15",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 644,
+        "name": "Strutted"
+      },
+      {
+        "id": 580,
+        "name": "Surveillance"
+      },
+      {
+        "id": 138,
+        "name": "TartarSauce"
+      },
+      {
+        "id": 309,
+        "name": "Tenet"
+      },
+      {
+        "id": 8,
+        "name": "Tenten"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 33,
+    "title": "Nivel Intermedio - Semana 16",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 320,
+        "name": "TheNotebook"
+      },
+      {
+        "id": 286,
+        "name": "Time"
+      },
+      {
+        "id": 421,
+        "name": "Timing"
+      },
+      {
+        "id": 626,
+        "name": "Trickster"
+      },
+      {
+        "id": 439,
+        "name": "Undetected"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 34,
+    "title": "Nivel Intermedio - Semana 17",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 415,
+        "name": "Unicode"
+      },
+      {
+        "id": 418,
+        "name": "Union"
+      },
+      {
+        "id": 493,
+        "name": "UpDown"
+      },
+      {
+        "id": 149,
+        "name": "Waldo"
+      },
+      {
+        "id": 208,
+        "name": "Wall"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 35,
+    "title": "Nivel Intermedio - Semana 18",
+    "description": "Ataques a JWT: forgery y algorithm confusion",
+    "machines": [
+      {
+        "id": 270,
+        "name": "Worker"
+      },
+      {
+        "id": 361,
+        "name": "Writer"
+      },
+      {
+        "id": 558,
+        "name": "Zipping"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "JWT attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Token forgery",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Algorithm confusion",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 36,
+    "title": "Nivel Avanzado - Semana 1",
+    "description": "XXE avanzado con técnicas out-of-band",
+    "machines": [
+      {
+        "id": 427,
+        "name": "AdmirerToo"
+      },
+      {
+        "id": 460,
+        "name": "Altered"
+      },
+      {
+        "id": 584,
+        "name": "Analysis"
+      },
+      {
+        "id": 316,
+        "name": "Breadcrumbs"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced XXE",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Out-of-band XXE",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "XXE filter bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 37,
+    "title": "Nivel Avanzado - Semana 2",
+    "description": "Explotación de logic flaws y race conditions",
+    "machines": [
+      {
+        "id": 478,
+        "name": "Carpediem"
+      },
+      {
+        "id": 42,
+        "name": "Charon"
+      },
+      {
+        "id": 168,
+        "name": "Conceal"
+      },
+      {
+        "id": 218,
+        "name": "Control"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Business logic flaws",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Race conditions web",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Payment bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 38,
+    "title": "Nivel Avanzado - Semana 3",
+    "description": "GraphQL avanzado: introspection y batching attacks",
+    "machines": [
+      {
+        "id": 120,
+        "name": "CrimeStoppers"
+      },
+      {
+        "id": 150,
+        "name": "Dab"
+      },
+      {
+        "id": 570,
+        "name": "Drive"
+      },
+      {
+        "id": 375,
+        "name": "EarlyAccess"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "GraphQL advanced",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Introspection abuse",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Batching attacks",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 39,
+    "title": "Nivel Avanzado - Semana 4",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 124,
+        "name": "Falafel"
+      },
+      {
+        "id": 274,
+        "name": "Feline"
+      },
+      {
+        "id": 171,
+        "name": "Flujab"
+      },
+      {
+        "id": 604,
+        "name": "Freelancer"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 40,
+    "title": "Nivel Avanzado - Semana 5",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 388,
+        "name": "Hancliffe"
+      },
+      {
+        "id": 180,
+        "name": "Helpline"
+      },
+      {
+        "id": 22,
+        "name": "Holiday"
+      },
+      {
+        "id": 20,
+        "name": "Joker"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 41,
+    "title": "Nivel Avanzado - Semana 6",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 101,
+        "name": "Kotarak"
+      },
+      {
+        "id": 485,
+        "name": "Moderators"
+      },
+      {
+        "id": 341,
+        "name": "Monitors"
+      },
+      {
+        "id": 231,
+        "name": "Oouch"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 42,
+    "title": "Nivel Avanzado - Semana 7",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 399,
+        "name": "Overflow"
+      },
+      {
+        "id": 464,
+        "name": "Overgraph"
+      },
+      {
+        "id": 152,
+        "name": "Oz"
+      },
+      {
+        "id": 448,
+        "name": "Phoenix"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 43,
+    "title": "Nivel Avanzado - Semana 8",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 196,
+        "name": "Player"
+      },
+      {
+        "id": 440,
+        "name": "Pressed"
+      },
+      {
+        "id": 244,
+        "name": "Quick"
+      },
+      {
+        "id": 202,
+        "name": "Scavenger"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 44,
+    "title": "Nivel Avanzado - Semana 9",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 355,
+        "name": "Static"
+      },
+      {
+        "id": 458,
+        "name": "Talkative"
+      },
+      {
+        "id": 310,
+        "name": "Tentacle"
+      },
+      {
+        "id": 252,
+        "name": "Travel"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 45,
+    "title": "Nivel Avanzado - Semana 10",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 268,
+        "name": "Unbalanced"
+      },
+      {
+        "id": 338,
+        "name": "Unobtainium"
+      },
+      {
+        "id": 628,
+        "name": "Yummy"
+      },
+      {
+        "id": 371,
+        "name": "Anubis"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 46,
+    "title": "Nivel Avanzado - Semana 11",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 115,
+        "name": "Ariekei"
+      },
+      {
+        "id": 209,
+        "name": "Bankrobber"
+      },
+      {
+        "id": 544,
+        "name": "Bookworm"
+      },
+      {
+        "id": 17,
+        "name": "Brainfuck"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 47,
+    "title": "Nivel Avanzado - Semana 12",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 172,
+        "name": "CTF"
+      },
+      {
+        "id": 137,
+        "name": "Fighter"
+      },
+      {
+        "id": 178,
+        "name": "Fortune"
+      },
+      {
+        "id": 116,
+        "name": "Fulcrum"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 48,
+    "title": "Nivel Avanzado - Semana 13",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 176,
+        "name": "Hackback"
+      },
+      {
+        "id": 602,
+        "name": "MagicGardens"
+      },
+      {
+        "id": 145,
+        "name": "Mischief"
+      },
+      {
+        "id": 232,
+        "name": "MultiMaster"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPT",
+    "week": 49,
+    "title": "Nivel Avanzado - Semana 14",
+    "description": "HTTP smuggling, request splitting y cache poisoning",
+    "machines": [
+      {
+        "id": 122,
+        "name": "Nightmare"
+      },
+      {
+        "id": 313,
+        "name": "Sink"
+      },
+      {
+        "id": 379,
+        "name": "Stacked"
+      },
+      {
+        "id": 409,
+        "name": "Toby"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Request splitting",
+        "error": "Not Found"
+      },
+      {
+        "id": 4301,
+        "name": "Cache poisoning"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 1,
+    "title": "Fundamentos - Semana 1",
+    "description": "Reconocimiento web avanzado y fingerprinting de tecnologías",
+    "machines": [
+      {
+        "id": 416,
+        "name": "Backdoor"
+      },
+      {
+        "id": 254,
+        "name": "Blunder"
+      },
+      {
+        "id": 278,
+        "name": "Doctor"
+      },
+      {
+        "id": 298,
+        "name": "Laboratory"
+      },
+      {
+        "id": 656,
+        "name": "Nocturnal"
+      }
+    ],
+    "techniques": [
+      {
+        "id": 4132,
+        "name": "Advanced web reconnaissance"
+      },
+      {
+        "id": 4132,
+        "name": "Technology fingerprinting"
+      },
+      {
+        "id": 4132,
+        "name": "Hidden endpoint discovery"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 2,
+    "title": "Fundamentos - Semana 2",
+    "description": "Inyecciones avanzadas: second-order y polyglot payloads",
+    "machines": [
+      {
+        "id": 471,
+        "name": "OpenSource"
+      },
+      {
+        "id": 543,
+        "name": "PC"
+      },
+      {
+        "id": 215,
+        "name": "Postman"
+      },
+      {
+        "id": 481,
+        "name": "RedPanda"
+      },
+      {
+        "id": 408,
+        "name": "Secret"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced injection",
+        "error": "Not Found"
+      },
+      {
+        "id": 1726631,
+        "name": "Second-order SQLi"
+      },
+      {
+        "id": null,
+        "name": "Polyglot payloads",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 3,
+    "title": "Fundamentos - Semana 3",
+    "description": "Explotación client-side: clickjacking y postmessage XSS",
+    "machines": [
+      {
+        "id": 111,
+        "name": "Sense"
+      },
+      {
+        "id": 519,
+        "name": "Soccer"
+      },
+      {
+        "id": 443,
+        "name": "SteamCloud"
+      },
+      {
+        "id": 165,
+        "name": "Teacher"
+      },
+      {
+        "id": 477,
+        "name": "Trick"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Client-side exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Clickjacking",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Postmessage XSS",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 4,
+    "title": "Fundamentos - Semana 4",
+    "description": "Explotación client-side: clickjacking y postmessage XSS",
+    "machines": [
+      {
+        "id": 597,
+        "name": "Usage"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Client-side exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Clickjacking",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Postmessage XSS",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 5,
+    "title": "Nivel Intermedio - Semana 1",
+    "description": "Prototype pollution en JavaScript client y server-side",
+    "machines": [
+      {
+        "id": 503,
+        "name": "Awkward"
+      },
+      {
+        "id": 469,
+        "name": "BackendTwo"
+      },
+      {
+        "id": 128,
+        "name": "Bart"
+      },
+      {
+        "id": 605,
+        "name": "Blurry"
+      },
+      {
+        "id": 384,
+        "name": "Bolt"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Prototype pollution",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "JavaScript exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Client-side prototype pollution",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 6,
+    "title": "Nivel Intermedio - Semana 2",
+    "description": "Deserialización avanzada con construcción de gadget chains",
+    "machines": [
+      {
+        "id": 521,
+        "name": "BroScience"
+      },
+      {
+        "id": 450,
+        "name": "Catch"
+      },
+      {
+        "id": 130,
+        "name": "Celestial"
+      },
+      {
+        "id": 11,
+        "name": "Cronos"
+      },
+      {
+        "id": 526,
+        "name": "Encoding"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced deserialization",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Gadget chain construction",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Custom POP chains",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 7,
+    "title": "Nivel Intermedio - Semana 3",
+    "description": "Seguridad de APIs: mass assignment y GraphQL avanzado",
+    "machines": [
+      {
+        "id": 442,
+        "name": "Epsilon"
+      },
+      {
+        "id": 27,
+        "name": "Europa"
+      },
+      {
+        "id": 480,
+        "name": "Faculty"
+      },
+      {
+        "id": 437,
+        "name": "Flustered"
+      },
+      {
+        "id": 542,
+        "name": "Format"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "API security advanced",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Mass assignment",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "GraphQL nested queries",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 8,
+    "title": "Nivel Intermedio - Semana 4",
+    "description": "OAuth 2.0: implicit flow attacks y code interception",
+    "machines": [
+      {
+        "id": 491,
+        "name": "Health"
+      },
+      {
+        "id": 596,
+        "name": "IClean"
+      },
+      {
+        "id": 527,
+        "name": "Interface"
+      },
+      {
+        "id": 545,
+        "name": "Jupiter"
+      },
+      {
+        "id": 583,
+        "name": "Monitored"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "OAuth 2.0 exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Implicit flow attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Authorization code interception",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 9,
+    "title": "Nivel Intermedio - Semana 5",
+    "description": "OAuth 2.0: implicit flow attacks y code interception",
+    "machines": [
+      {
+        "id": 622,
+        "name": "MonitorsThree"
+      },
+      {
+        "id": 467,
+        "name": "Noter"
+      },
+      {
+        "id": 540,
+        "name": "OnlyForYou"
+      },
+      {
+        "id": 598,
+        "name": "Runner"
+      },
+      {
+        "id": 335,
+        "name": "Schooled"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "OAuth 2.0 exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Implicit flow attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Authorization code interception",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 10,
+    "title": "Nivel Intermedio - Semana 6",
+    "description": "OAuth 2.0: implicit flow attacks y code interception",
+    "machines": [
+      {
+        "id": 358,
+        "name": "Seal"
+      },
+      {
+        "id": 474,
+        "name": "StreamIO"
+      },
+      {
+        "id": 644,
+        "name": "Strutted"
+      },
+      {
+        "id": 421,
+        "name": "Timing"
+      },
+      {
+        "id": 626,
+        "name": "Trickster"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "OAuth 2.0 exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Implicit flow attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Authorization code interception",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 11,
+    "title": "Nivel Intermedio - Semana 7",
+    "description": "OAuth 2.0: implicit flow attacks y code interception",
+    "machines": [
+      {
+        "id": 415,
+        "name": "Unicode"
+      },
+      {
+        "id": 493,
+        "name": "UpDown"
+      },
+      {
+        "id": 270,
+        "name": "Worker"
+      },
+      {
+        "id": 361,
+        "name": "Writer"
+      },
+      {
+        "id": 558,
+        "name": "Zipping"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "OAuth 2.0 exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Implicit flow attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Authorization code interception",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 12,
+    "title": "Nivel Avanzado - Semana 1",
+    "description": "Server-side prototype pollution en Node.js",
+    "machines": [
+      {
+        "id": 427,
+        "name": "AdmirerToo"
+      },
+      {
+        "id": 460,
+        "name": "Altered"
+      },
+      {
+        "id": 584,
+        "name": "Analysis"
+      },
+      {
+        "id": 316,
+        "name": "Breadcrumbs"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Server-side prototype pollution",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Node.js exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Framework-specific attacks",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 13,
+    "title": "Nivel Avanzado - Semana 2",
+    "description": "SSRF avanzado con explotación de servicios cloud",
+    "machines": [
+      {
+        "id": 478,
+        "name": "Carpediem"
+      },
+      {
+        "id": 375,
+        "name": "EarlyAccess"
+      },
+      {
+        "id": 124,
+        "name": "Falafel"
+      },
+      {
+        "id": 274,
+        "name": "Feline"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced SSRF",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Cloud metadata exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Internal service abuse",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 14,
+    "title": "Nivel Avanzado - Semana 3",
+    "description": "HTTP/2 attacks: H2C smuggling y stream abuse",
+    "machines": [
+      {
+        "id": 171,
+        "name": "Flujab"
+      },
+      {
+        "id": 604,
+        "name": "Freelancer"
+      },
+      {
+        "id": 388,
+        "name": "Hancliffe"
+      },
+      {
+        "id": 22,
+        "name": "Holiday"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "HTTP/2 attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "H2C smuggling",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Stream multiplexing abuse",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 15,
+    "title": "Nivel Avanzado - Semana 4",
+    "description": "Bypass de autenticación avanzado: SAML y MFA",
+    "machines": [
+      {
+        "id": 20,
+        "name": "Joker"
+      },
+      {
+        "id": 101,
+        "name": "Kotarak"
+      },
+      {
+        "id": 485,
+        "name": "Moderators"
+      },
+      {
+        "id": 341,
+        "name": "Monitors"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced authentication bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SAML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Multi-factor bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 16,
+    "title": "Nivel Avanzado - Semana 5",
+    "description": "Bypass de autenticación avanzado: SAML y MFA",
+    "machines": [
+      {
+        "id": 231,
+        "name": "Oouch"
+      },
+      {
+        "id": 399,
+        "name": "Overflow"
+      },
+      {
+        "id": 464,
+        "name": "Overgraph"
+      },
+      {
+        "id": 152,
+        "name": "Oz"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced authentication bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SAML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Multi-factor bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 17,
+    "title": "Nivel Avanzado - Semana 6",
+    "description": "Bypass de autenticación avanzado: SAML y MFA",
+    "machines": [
+      {
+        "id": 440,
+        "name": "Pressed"
+      },
+      {
+        "id": 244,
+        "name": "Quick"
+      },
+      {
+        "id": 310,
+        "name": "Tentacle"
+      },
+      {
+        "id": 252,
+        "name": "Travel"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced authentication bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SAML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Multi-factor bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 18,
+    "title": "Nivel Avanzado - Semana 7",
+    "description": "Bypass de autenticación avanzado: SAML y MFA",
+    "machines": [
+      {
+        "id": 268,
+        "name": "Unbalanced"
+      },
+      {
+        "id": 338,
+        "name": "Unobtainium"
+      },
+      {
+        "id": 628,
+        "name": "Yummy"
+      },
+      {
+        "id": 371,
+        "name": "Anubis"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced authentication bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SAML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Multi-factor bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 19,
+    "title": "Nivel Avanzado - Semana 8",
+    "description": "Bypass de autenticación avanzado: SAML y MFA",
+    "machines": [
+      {
+        "id": 209,
+        "name": "Bankrobber"
+      },
+      {
+        "id": 544,
+        "name": "Bookworm"
+      },
+      {
+        "id": 172,
+        "name": "CTF"
+      },
+      {
+        "id": 277,
+        "name": "Crossfit"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced authentication bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SAML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Multi-factor bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 20,
+    "title": "Nivel Avanzado - Semana 9",
+    "description": "Bypass de autenticación avanzado: SAML y MFA",
+    "machines": [
+      {
+        "id": 137,
+        "name": "Fighter"
+      },
+      {
+        "id": 178,
+        "name": "Fortune"
+      },
+      {
+        "id": 116,
+        "name": "Fulcrum"
+      },
+      {
+        "id": 176,
+        "name": "Hackback"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced authentication bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SAML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Multi-factor bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 21,
+    "title": "Nivel Avanzado - Semana 10",
+    "description": "Bypass de autenticación avanzado: SAML y MFA",
+    "machines": [
+      {
+        "id": 602,
+        "name": "MagicGardens"
+      },
+      {
+        "id": 109,
+        "name": "Minion"
+      },
+      {
+        "id": 145,
+        "name": "Mischief"
+      },
+      {
+        "id": 232,
+        "name": "MultiMaster"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced authentication bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SAML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Multi-factor bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eWPTXv2",
+    "week": 22,
+    "title": "Nivel Avanzado - Semana 11",
+    "description": "Bypass de autenticación avanzado: SAML y MFA",
+    "machines": [
+      {
+        "id": 313,
+        "name": "Sink"
+      },
+      {
+        "id": 379,
+        "name": "Stacked"
+      },
+      {
+        "id": 409,
+        "name": "Toby"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced authentication bypass",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "SAML attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Multi-factor bypass",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPTXv2",
+    "week": 1,
+    "title": "Nivel Intermedio - Semana 1",
+    "description": "Ataques de delegation: constrained, unconstrained y resource-based",
+    "machines": [
+      {
+        "id": 112,
+        "name": "Enterprise"
+      },
+      {
+        "id": 589,
+        "name": "Jab"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced delegation attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Constrained/unconstrained delegation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Resource-based delegation",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPTXv2",
+    "week": 2,
+    "title": "Nivel Avanzado - Semana 1",
+    "description": "Persistencia avanzada en AD: DCShadow y DCSync",
+    "machines": [
+      {
+        "id": 478,
+        "name": "Carpediem"
+      },
+      {
+        "id": 375,
+        "name": "EarlyAccess"
+      },
+      {
+        "id": 101,
+        "name": "Kotarak"
+      },
+      {
+        "id": 152,
+        "name": "Oz"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Advanced persistence AD",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "DCShadow",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "DCSync abuse",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPTXv2",
+    "week": 3,
+    "title": "Nivel Avanzado - Semana 2",
+    "description": "Azure AD attacks y explotación de identidad híbrida",
+    "machines": [
+      {
+        "id": 355,
+        "name": "Static"
+      },
+      {
+        "id": 310,
+        "name": "Tentacle"
+      },
+      {
+        "id": 268,
+        "name": "Unbalanced"
+      },
+      {
+        "id": 338,
+        "name": "Unobtainium"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Azure AD attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Hybrid identity exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Cloud-AD pivoting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPTXv2",
+    "week": 4,
+    "title": "Nivel Avanzado - Semana 3",
+    "description": "Azure AD attacks y explotación de identidad híbrida",
+    "machines": [
+      {
+        "id": 371,
+        "name": "Anubis"
+      },
+      {
+        "id": 115,
+        "name": "Ariekei"
+      },
+      {
+        "id": 116,
+        "name": "Fulcrum"
+      },
+      {
+        "id": 176,
+        "name": "Hackback"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Azure AD attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Hybrid identity exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Cloud-AD pivoting",
+        "error": "Not Found"
+      }
+    ]
+  },
+  {
+    "certification": "eCPTXv2",
+    "week": 5,
+    "title": "Nivel Avanzado - Semana 4",
+    "description": "Azure AD attacks y explotación de identidad híbrida",
+    "machines": [
+      {
+        "id": 145,
+        "name": "Mischief"
+      },
+      {
+        "id": 147,
+        "name": "Reddish"
+      },
+      {
+        "id": 409,
+        "name": "Toby"
+      }
+    ],
+    "techniques": [
+      {
+        "id": null,
+        "name": "Azure AD attacks",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Hybrid identity exploitation",
+        "error": "Not Found"
+      },
+      {
+        "id": null,
+        "name": "Cloud-AD pivoting",
+        "error": "Not Found"
+      }
+    ]
+  }
+]
