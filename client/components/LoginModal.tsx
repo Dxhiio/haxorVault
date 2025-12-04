@@ -23,6 +23,7 @@ const PASSWORD_REQUIREMENTS = {
 
 export default function LoginModal({ isOpen, onClose, initialView = 'login' }: LoginModalProps) {
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -75,6 +76,12 @@ export default function LoginModal({ isOpen, onClose, initialView = 'login' }: L
       return;
     }
 
+    if (isSignup && !username) {
+      setError("Usuario requerido");
+      setLoading(false);
+      return;
+    }
+
     if (isSignup) {
       if (!isPasswordValid) {
         setError("La contraseña no cumple los requisitos");
@@ -97,13 +104,14 @@ export default function LoginModal({ isOpen, onClose, initialView = 'login' }: L
 
     try {
       const result = isSignup
-        ? await signup(email, password)
+        ? await signup(email, password, username)
         : await login(email, password);
 
       if (result.success) {
         if (isSignup) {
           setError("");
           setPassword("");
+          setUsername("");
           setConfirmPassword("");
           setIsSignup(false);
         } else {
@@ -142,6 +150,26 @@ export default function LoginModal({ isOpen, onClose, initialView = 'login' }: L
 
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Username Input (only on signup) */}
+            {isSignup && (
+              <div className="space-y-2">
+                <label className="text-sm font-mono text-primary/70 uppercase tracking-wider">
+                  Usuario
+                </label>
+                <div className="relative">
+                  <div className="absolute left-3 top-3.5 w-5 h-5 text-primary/50 flex items-center justify-center font-mono font-bold">@</div>
+                  <input
+                    type="text"
+                    placeholder="hacker_01"
+                    className="w-full bg-background border border-primary/30 rounded-sm pl-10 pr-4 py-2.5 text-foreground font-mono text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 disabled:opacity-50"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    disabled={loading}
+                  />
+                </div>
+              </div>
+            )}
+
             {/* Email Input */}
             <div className="space-y-2">
               <label className="text-sm font-mono text-primary/70 uppercase tracking-wider">

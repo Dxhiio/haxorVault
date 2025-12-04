@@ -13,6 +13,7 @@ interface AuthContextType {
   signup: (
     email: string,
     password: string,
+    username: string,
   ) => Promise<{ success: boolean; error?: string }>;
   logout: () => Promise<void>;
   isAuthenticated: boolean;
@@ -81,15 +82,37 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signup = async (
     email: string,
     password: string,
+    username: string,
   ): Promise<{ success: boolean; error?: string }> => {
     try {
-      const { error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signUp({
         email,
         password,
+        options: {
+          data: { username },
+        },
       });
 
       if (error) {
         return { success: false, error: error.message };
+      }
+
+      if (data.user) {
+        // Create profile
+        const { error: profileError } = await supabase
+          .from("profiles")
+          .insert([
+            {
+              id: data.user.id,
+              username: username,
+            },
+          ]);
+
+        if (profileError) {
+          console.error("Error creating profile:", profileError);
+          // We don't fail the signup if profile creation fails, but we log it.
+          // Ideally we should use a trigger, but this works for now.
+        }
       }
 
       return { success: true };
