@@ -25,7 +25,7 @@ export default function Header({ onLoginClick }: HeaderProps) {
               <Terminal className="w-5 h-5 text-background" />
             </div>
             <span className="text-xl font-bold glow-text tracking-widest">
-              [VAULT]
+              [HAXOR VAULT]
             </span>
           </Link>
 
