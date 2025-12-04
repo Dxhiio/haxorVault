@@ -51,6 +51,7 @@ export default function Index() {
   const { machines, loading, error } = useMachines();
   const [randomMachine, setRandomMachine] = useState<Machine | null>(null);
   const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const [initialAuthView, setInitialAuthView] = useState<'login' | 'register'>('login');
   const [selectedMachine, setSelectedMachine] = useState<Machine | null>(null);
   const [detailsModalOpen, setDetailsModalOpen] = useState(false);
 
@@ -75,8 +76,18 @@ export default function Index() {
     setDetailsModalOpen(true);
   };
 
+  const openLogin = () => {
+    setInitialAuthView('login');
+    setLoginModalOpen(true);
+  };
+
+  const openRegister = () => {
+    setInitialAuthView('register');
+    setLoginModalOpen(true);
+  };
+
   return (
-    <Layout onLoginClick={() => setLoginModalOpen(true)}>
+    <Layout onLoginClick={openLogin} onRegisterClick={openRegister}>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="w-[95%] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -97,7 +108,7 @@ export default function Index() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <Button
-                onClick={() => setLoginModalOpen(true)}
+                onClick={openRegister}
                 className="button-glow bg-primary text-background hover:bg-primary/90 text-lg h-14 px-8 font-mono uppercase tracking-widest rounded-sm"
               >
                 $ iniciar_hack
@@ -355,7 +366,7 @@ export default function Index() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  onClick={() => setLoginModalOpen(true)}
+                  onClick={openRegister}
                   className="button-glow bg-primary text-background hover:bg-primary/90 text-base h-12 px-8 font-mono uppercase tracking-widest rounded-sm"
                 >
                   $ acceso
@@ -363,7 +374,7 @@ export default function Index() {
                 </Button>
                 <Button
                   variant="outline"
-                  onClick={() => setLoginModalOpen(true)}
+                  onClick={openRegister}
                   className="neon-border text-base h-12 px-8 font-mono uppercase tracking-widest rounded-sm hover:bg-card/50 hover:shadow-lg hover:shadow-primary/20"
                 >
                   $ explora
@@ -378,6 +389,7 @@ export default function Index() {
       <LoginModal
         isOpen={loginModalOpen}
         onClose={() => setLoginModalOpen(false)}
+        initialView={initialAuthView}
       />
       <MachineDetailsModal
         isOpen={detailsModalOpen}

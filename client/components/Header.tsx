@@ -6,9 +6,10 @@ import { useAuth } from "@/context/AuthContext";
 
 interface HeaderProps {
   onLoginClick?: () => void;
+  onRegisterClick?: () => void;
 }
 
-export default function Header({ onLoginClick }: HeaderProps) {
+export default function Header({ onLoginClick, onRegisterClick }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { isAuthenticated, email, loading, logout } = useAuth();
 
@@ -37,32 +38,34 @@ export default function Header({ onLoginClick }: HeaderProps) {
             >
               &gt; home
             </Link>
-            <Link
-              to="/"
-              className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
-            >
-              &gt; machines
-            </Link>
-            <Link
-              to="/skill-tree"
-              className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
-            >
-              &gt; skill tree
-            </Link>
-            <Link
-              to="/certs"
-              className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
-            >
-              &gt; certs
-            </Link>
-            {!isAuthenticated && (
-              <Link
-                to="/features"
-                className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
-              >
-                &gt; features
-              </Link>
+            {isAuthenticated && (
+              <>
+                <Link
+                  to="/machines"
+                  className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
+                >
+                  &gt; machines
+                </Link>
+                <Link
+                  to="/skill-tree"
+                  className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
+                >
+                  &gt; skill tree
+                </Link>
+                <Link
+                  to="/certs"
+                  className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
+                >
+                  &gt; certs
+                </Link>
+              </>
             )}
+            <Link
+              to="/features"
+              className="text-sm font-mono text-foreground/70 hover:text-primary transition-all hover:glow-pulse uppercase tracking-wide"
+            >
+              &gt; features
+            </Link>
           </nav>
 
           {/* Desktop CTA Buttons */}
@@ -94,8 +97,11 @@ export default function Header({ onLoginClick }: HeaderProps) {
                 >
                   $ login
                 </Button>
-                <Button className="text-sm font-mono uppercase tracking-widest button-glow bg-primary text-background hover:bg-primary/90">
-                  $ execute
+                <Button 
+                  onClick={onRegisterClick}
+                  className="text-sm font-mono uppercase tracking-widest button-glow bg-primary text-background hover:bg-primary/90"
+                >
+                  $ register
                 </Button>
               </>
             )}

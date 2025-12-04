@@ -25,14 +25,41 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+import ProtectedRoute from "@/components/ProtectedRoute";
+
+// ... (imports)
+
           <Routes>
-            <Route path="/" element={<Machines />} />
             <Route path="/landing" element={<Index />} />
-            <Route path="/machines" element={<Machines />} />
-            <Route path="/skill-tree" element={<SkillTree />} />
-            <Route path="/certs" element={<Roadmap />} />
-            <Route path="/profile" element={<Profile />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/features" element={<Features />} />
+            
+            {/* Protected Routes */}
+            <Route path="/" element={
+              <ProtectedRoute>
+                <Machines />
+              </ProtectedRoute>
+            } />
+            <Route path="/machines" element={
+              <ProtectedRoute>
+                <Machines />
+              </ProtectedRoute>
+            } />
+            <Route path="/skill-tree" element={
+              <ProtectedRoute>
+                <SkillTree />
+              </ProtectedRoute>
+            } />
+            <Route path="/certs" element={
+              <ProtectedRoute>
+                <Roadmap />
+              </ProtectedRoute>
+            } />
+            <Route path="/profile" element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            } />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

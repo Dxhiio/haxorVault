@@ -5,17 +5,18 @@ import { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode;
   onLoginClick?: () => void;
+  onRegisterClick?: () => void;
   disableDefaultParticles?: boolean;
 }
 
-export default function Layout({ children, onLoginClick, disableDefaultParticles = false }: LayoutProps) {
+export default function Layout({ children, onLoginClick, onRegisterClick, disableDefaultParticles = false }: LayoutProps) {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Background neural effect */}
       {!disableDefaultParticles && <NeuralParticles />}
 
       <div className="relative z-10">
-        <Header onLoginClick={onLoginClick} />
+        <Header onLoginClick={onLoginClick} onRegisterClick={onRegisterClick} />
         <main className="pt-16">{children}</main>
         <footer
           className="border-t border-primary/30 mt-20 bg-card/50 neon-border"

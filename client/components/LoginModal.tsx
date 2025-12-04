@@ -6,6 +6,7 @@ import { X, Lock, Mail, Loader, Check, AlertCircle } from "lucide-react";
 interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
+  initialView?: 'login' | 'register';
 }
 
 // Password validation requirements
@@ -20,26 +21,28 @@ const PASSWORD_REQUIREMENTS = {
   },
 };
 
-export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
+export default function LoginModal({ isOpen, onClose, initialView = 'login' }: LoginModalProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
-  const [isSignup, setIsSignup] = useState(false);
+  const [isSignup, setIsSignup] = useState(initialView === 'register');
   const [loading, setLoading] = useState(false);
   const { login, signup } = useAuth();
 
   // Prevent body scroll when modal is open
+  // Prevent body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      setIsSignup(initialView === 'register');
     } else {
       document.body.style.overflow = 'unset';
     }
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen]);
+  }, [isOpen, initialView]);
 
   // Validate password strength
   const validatePassword = (pwd: string) => {
