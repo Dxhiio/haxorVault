@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 
 import Roadmap from "./pages/Roadmap";
+import ProtectedRoute from "@/components/ProtectedRoute";
 
 const queryClient = new QueryClient();
 
@@ -25,9 +26,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-import ProtectedRoute from "@/components/ProtectedRoute";
 
-// ... (imports)
 
           <Routes>
             <Route path="/landing" element={<Index />} />
