@@ -77,7 +77,7 @@ export default function Header({ onLoginClick, onRegisterClick }: HeaderProps) {
             ) : isAuthenticated ? (
               <>
                 <Link to="/profile" className="text-sm font-mono text-primary/70 truncate max-w-xs hover:text-primary hover:underline cursor-pointer transition-colors">
-                  @{user?.user_metadata?.username || email?.split('@')[0]}
+                  user@{user?.user_metadata?.username || email?.split('@')[0]}
                 </Link>
                 <Button
                   onClick={logout}
@@ -167,7 +167,7 @@ export default function Header({ onLoginClick, onRegisterClick }: HeaderProps) {
               ) : isAuthenticated ? (
                 <>
                   <Link to="/profile" className="block text-sm font-mono text-primary/70 px-4 py-2 truncate hover:text-primary hover:bg-card transition-colors" onClick={() => setIsOpen(false)}>
-                    @{user?.user_metadata?.username || email?.split('@')[0]}
+                    user@{user?.user_metadata?.username || email?.split('@')[0]}
                   </Link>
                   <Button
                     onClick={() => {

@@ -155,17 +155,9 @@ export default function Profile() {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <span className="font-mono text-primary/80 text-sm">
-                {user?.email}
+              <span className="font-mono text-primary/80 text-sm glow-text">
+                user@{user?.user_metadata?.username || user?.email?.split('@')[0]}
               </span>
-              <Button 
-                variant="destructive" 
-                size="sm" 
-                onClick={logout}
-                className="font-mono uppercase tracking-widest"
-              >
-                [LOGOUT]
-              </Button>
             </div>
           </div>
 
